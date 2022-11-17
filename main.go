@@ -1,4 +1,4 @@
-package gostatus
+package main
 
 import "fmt"
 
