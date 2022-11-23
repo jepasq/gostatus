@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-    // Capture connection properties.
+	// Capture connection properties.
 	/*    cfg := mysql.Config{
         User:   os.Getenv("DBUSER"),
         Passwd: os.Getenv("DBPASS"),
@@ -12,17 +15,28 @@ func main() {
         DBName: "recordings",
     }
 	*/
-    // Get a database handle.
+	// Get a database handle.
 	/*    var err error
     db, err = sql.Open("mysql", cfg.FormatDSN())
     if err != nil {
         log.Fatal(err)
     }
-
+    
     pingErr := db.Ping()
     if pingErr != nil {
         log.Fatal(pingErr)
     }
 	*/
-    fmt.Println("Connected!")
+	
+	programName := os.Args[0]
+	fmt.Println(programName)
+
+	argLength := len(os.Args[1:])
+	fmt.Printf("Arg length is %d\n", argLength) 
+
+	for i, a := range os.Args[1:] {
+		fmt.Printf("Arg %d is %s\n", i+1, a) 
+	}
+	
+	fmt.Println("Connected!")
 }
