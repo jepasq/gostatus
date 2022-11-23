@@ -6,6 +6,6 @@
 **** Command line arguments handling
 - [ ] Handle interface type --web, --cli, --tui
 **** Correct project status
-- [ ] Add AGPL license
+- [X] Add AGPL license
 - [ ] May be multi interfaces (web, CLI, TUI)
 - [ ] Continue tutorial  https://go.dev/doc/tutorial/create-module
