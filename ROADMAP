@@ -7,8 +7,14 @@
 - [ ] Handle interface type --web, --cli, --tui
 **** Correct project status
 :LOGBOOK:
+CLOCK: [2022-11-30 mer. 19:06]--[2022-11-30 mer. 19:11] =>  0:05
 CLOCK: [2022-11-23 mer. 06:33]--[2022-11-23 mer. 06:49] =>  0:16
 :END:
 - [X] Add AGPL license
+- [ ] Create a basic HTTP server
+  https://www.digitalocean.com/community/tutorials/how-to-make-an-http-server-in-go
+  - [ ] Multiplexing Request Handlers
+  - [ ] Running Multiple Servers at One Time
+  - [ ] Inspecting a Request’s Query String  
 - [ ] May be multi interfaces (web, CLI, TUI)
 - [ ] Continue tutorial  https://go.dev/doc/tutorial/create-module

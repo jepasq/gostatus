@@ -3,4 +3,5 @@ gostatus - AGPLv3 - A microservices monitoring web application.
 === ChangeLog ===
 
 * v0.0.0-1 (16 Nov. 2022 - ???) SLOC ??
-- (1) Add AGPL licence file
+- (2) Add a very basic webserver
+- Add AGPL licence file

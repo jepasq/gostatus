@@ -1,8 +1,11 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"io"
 	"os"
+	"net/http"
 )
 
 func main() {
@@ -38,5 +41,20 @@ func main() {
 		fmt.Printf("Arg %d is %s\n", i+1, a) 
 	}
 	
-	fmt.Println("Connected!")
+
+	// Basic HTTP server
+	http.HandleFunc("/", getRoot)
+	err := http.ListenAndServe(":3333", nil)
+	fmt.Println("Listening localhost:3333")
+	if errors.Is(err, http.ErrServerClosed) {
+		fmt.Printf("server closed\n")
+	} else if err != nil {
+		fmt.Printf("error starting server: %s\n", err)
+		os.Exit(1)
+	}
+}
+
+func getRoot(w http.ResponseWriter, r *http.Request) {
+	fmt.Printf("got / request\n")
+	io.WriteString(w, "This is my website!\n")
 }
