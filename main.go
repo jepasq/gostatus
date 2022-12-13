@@ -43,9 +43,12 @@ func main() {
 	
 
 	// Basic HTTP server
-	http.HandleFunc("/", getRoot)
-	err := http.ListenAndServe(":3333", nil)
 	fmt.Println("Listening localhost:3333")
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", getRoot)
+	mux.HandleFunc("/hello", getHello)
+	
+	err := http.ListenAndServe(":3333", mux)
 	if errors.Is(err, http.ErrServerClosed) {
 		fmt.Printf("server closed\n")
 	} else if err != nil {
@@ -56,5 +59,13 @@ func main() {
 
 func getRoot(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("got / request\n")
-	io.WriteString(w, "This is my website!\n")
+	io.WriteString(w, `<HTML>
+<BODY>This is my website!\n You can also go to ".
+		"<a href='/hello'>HELLO</a> page.</BODY></HTML>`)
+}
+
+func getHello(w http.ResponseWriter, r *http.Request) {
+	fmt.Printf("got /hello request\n")
+	io.WriteString(w, `<HTML>
+<BODY><p>You're in the HELLO page!</p><p><a href="..">back</a></BODY></HTML>`)
 }
