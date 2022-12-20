@@ -75,10 +75,24 @@ func main() {
 
 func getRoot(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
-	fmt.Printf("%s: got / request\n", ctx.Value(keyServerAddr))
+
+	hasFirst := r.URL.Query().Has("first")
+	first := r.URL.Query().Get("first")
+	hasSecond := r.URL.Query().Has("second")
+	second := r.URL.Query().Get("second")
+
+	fmt.Printf("%s: got / request. first(%t)=%s, second(%t)=%s\n",
+		ctx.Value(keyServerAddr),
+		hasFirst, first,
+		hasSecond, second)
+	
 	io.WriteString(w, `<HTML>
-<BODY>This is my website!\n You can also go to ".
-		"<a href='/hello'>HELLO</a> page.</BODY></HTML>`)
+<BODY>This is my website!<br>
+You can also go to <a href='/hello'>HELLO</a> page.<br>
+Yoy may also want to test this page with parameters
+<a href="?first=aze">here</a> and 
+<a href="?first=aze&second=zer">here</a>.
+</BODY></HTML>`)
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {

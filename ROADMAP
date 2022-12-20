@@ -4,10 +4,14 @@
 ** v0.1.0
 *** v0.0.1
 **** May at least handle systemctl-powered daemon
+**** Start to handle webcontent
+- [ ] Must use a go-powered template engine
+- [ ] Use jquery/bootstrap  
 **** Command line arguments handling
 - [ ] Handle interface type --web, --cli, --tui
 **** TODO Correct project status
 :LOGBOOK:
+CLOCK: [2022-12-20 mar. 06:13]--[2022-12-20 mar. 06:28] =>  0:15
 CLOCK: [2022-12-15 jeu. 04:25]--[2022-12-15 jeu. 04:38] =>  0:13
 CLOCK: [2022-12-13 mar. 01:11]--[2022-12-13 mar. 01:23] =>  0:12
 CLOCK: [2022-11-30 mer. 19:06]--[2022-11-30 mer. 19:11] =>  0:05
@@ -19,6 +23,10 @@ CLOCK: [2022-11-23 mer. 06:33]--[2022-11-23 mer. 06:49] =>  0:16
   https://www.digitalocean.com/community/tutorials/how-to-make-an-http-server-in-go
   - [X] Multiplexing Request Handlers
   - [X] Running Multiple Servers at One Time
-  - [ ] Inspecting a Request’s Query String  
+  - [X] Inspecting a Request’s Query String
+  - [ ] Reading a Request Body
+  - [ ] Retrieving Form Data
+  - [ ] Responding with Headers and a Status Code
+  - [ ] Conclusion    
 - [ ] May be multi interfaces (web, CLI, TUI)
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
