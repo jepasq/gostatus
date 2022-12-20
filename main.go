@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"io"
+	"io/ioutil"
 	"net"
 	"net/http"
 )
@@ -97,7 +98,22 @@ Yoy may also want to test this page with parameters
 
 func getHello(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
-	fmt.Printf("%s: got /hello request\n", ctx.Value(keyServerAddr))
+
+	body, err := ioutil.ReadAll(r.Body)
+	if err != nil {
+		fmt.Printf("could not read body: '%s'\n", err)
+	}
+	
+	fmt.Printf("%s: got /hello request\nbody:\n%s",
+		ctx.Value(keyServerAddr),
+		body)
+	
 	io.WriteString(w, `<HTML>
-<BODY><p>You're in the HELLO page!</p><p><a href="..">back</a></BODY></HTML>`)
+<BODY><p>You're in the HELLO page!</p>
+<p>And read logs, we're reading full request body!<br>
+To test this, contactthis server with curl like :
+<pre>curl -X POST -d 'This is the body' 'http://localhost:3333/hello</pre>
+
+</p>
+<a href="..">back</a></BODY></HTML>`)
 }
