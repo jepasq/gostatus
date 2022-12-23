@@ -3,7 +3,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
 === ChangeLog ===
 
 * v0.0.0-1 (16 Nov. 2022 - ???) SLOC ??
-- (6) Read the request body using the tutorial
+- (7) Played with posted form data
+- Read the request body using the tutorial
 - Got some parameters from root using the tutorial
 - Add context code to run multiple servers at one time
 - Added multiplexing and hello page

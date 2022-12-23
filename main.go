@@ -51,7 +51,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", getRoot)
 	mux.HandleFunc("/hello", getHello)
-
+	mux.HandleFunc("/form",  getForm)
 
 	ctx, cancelCtx := context.WithCancel(context.Background())
 	serverOne := &http.Server{
@@ -90,6 +90,8 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, `<HTML>
 <BODY>This is my website!<br>
 You can also go to <a href='/hello'>HELLO</a> page.<br>
+Or test the <a href='/form'>FORM</a> posting page<br>
+<br>
 Yoy may also want to test this page with parameters
 <a href="?first=aze">here</a> and 
 <a href="?first=aze&second=zer">here</a>.
@@ -116,4 +118,27 @@ To test this, contactthis server with curl like :
 
 </p>
 <a href="..">back</a></BODY></HTML>`)
+}
+
+func getForm(w http.ResponseWriter, r *http.Request) {
+	ctx := r.Context()
+
+	fmt.Printf("%s: got /form request\n", ctx.Value(keyServerAddr))
+
+	myName := r.PostFormValue("myName")
+	if myName == "" {
+		myName = "<empty>"
+	}
+	io.WriteString(w, fmt.Sprintf(`<html><body>
+myName form value is %s!<br>
+<form action="" method="post">
+<fieldset>
+<legend>Change the posted name :</legend>
+  <input name="myName"></input>
+  <input type="submit" value="Post!">
+</fieldset>
+</form>
+
+`, myName))
+	
 }
