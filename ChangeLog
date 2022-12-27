@@ -1,0 +1,9 @@
+* v0.0.0-1 (16 Nov. 2022 - 27 Dec. 2022) SLOC 164
+- Finished tutorial and handle custom 404 page
+- Played with posted form data
+- Read the request body using the tutorial
+- Got some parameters from root using the tutorial
+- Add context code to run multiple servers at one time
+- Added multiplexing and hello page
+- Add a very basic webserver
+- Add AGPL licence file
