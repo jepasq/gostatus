@@ -47,7 +47,7 @@ func main() {
 	}
 	
 	// Basic HTTP server
-	fmt.Println("Listening localhost:3333")
+	fmt.Println("Listening http://localhost:3333")
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", getRoot)
 	mux.HandleFunc("/hello", getHello)
@@ -75,8 +75,16 @@ func main() {
 }
 
 func getRoot(w http.ResponseWriter, r *http.Request) {
-	ctx := r.Context()
 
+	// Ok for '/', root can be handled, everything else is 404
+	// It can works with only this test because getRoot() is a kind
+	// of fallback for all not-yet-handled URLs.
+	if r.URL.Path != "/" {
+		errorHandler(w, r, http.StatusNotFound)
+		return
+	}	
+
+	ctx := r.Context()
 	hasFirst := r.URL.Query().Has("first")
 	first := r.URL.Query().Get("first")
 	hasSecond := r.URL.Query().Has("second")
@@ -128,6 +136,11 @@ func getForm(w http.ResponseWriter, r *http.Request) {
 	myName := r.PostFormValue("myName")
 	if myName == "" {
 		myName = "<empty>"
+		/*
+		w.Header().Set("x-missing-field", "myName")
+		w.WriteHeader(http.StatusBadRequest)
+		return
+		*/
 	}
 	io.WriteString(w, fmt.Sprintf(`<html><body>
 myName form value is %s!<br>
@@ -141,4 +154,11 @@ myName form value is %s!<br>
 
 `, myName))
 	
+}
+
+func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
+	w.WriteHeader(status)
+	if status == http.StatusNotFound {
+		fmt.Fprint(w, "custom 404")
+	}
 }

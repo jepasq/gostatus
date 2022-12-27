@@ -11,6 +11,7 @@
 - [ ] Handle interface type --web, --cli, --tui
 **** TODO Correct project status and tutorial work
 :LOGBOOK:
+CLOCK: [2022-12-27 mar. 04:42]--[2022-12-27 mar. 05:03] =>  0:21
 CLOCK: [2022-12-23 ven. 03:10]--[2022-12-23 ven. 03:24] =>  0:14
 CLOCK: [2022-12-20 mar. 06:50]--[2022-12-20 mar. 06:57] =>  0:07
 CLOCK: [2022-12-20 mar. 06:13]--[2022-12-20 mar. 06:28] =>  0:15
@@ -21,14 +22,16 @@ CLOCK: [2022-11-23 mer. 06:33]--[2022-11-23 mer. 06:49] =>  0:16
 :END:
 - [X] Add AGPL license
 - [X] Continue tutorial  https://go.dev/doc/tutorial/create-module
-- [-] Create a basic HTTP server
+- [X] Create a basic HTTP server
   https://www.digitalocean.com/community/tutorials/how-to-make-an-http-server-in-go
   - [X] Multiplexing Request Handlers
   - [X] Running Multiple Servers at One Time
   - [X] Inspecting a Request’s Query String
   - [X] Reading a Request Body
   - [X] Retrieving Form Data
-  - [ ] Responding with Headers and a Status Code
-  - [ ] Conclusion    
+  - [X] Responding with Headers and a Status Code
+  - [X] Conclusion    
+- [X] May handle 404 error  
+- [ ] May add unit tests
 - [ ] May be multi interfaces (web, CLI, TUI)
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
