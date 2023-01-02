@@ -8,7 +8,10 @@
 - [ ] Must use a go-powered template engine
 - [ ] Use jquery/bootstrap  
 **** TODO Command line arguments handling
-- [ ] May print an intro in console containing version and revision
+:LOGBOOK:
+CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
+:END:
+- [X] May print an intro in console containing version and revision
 - [ ] Handle interface type --web, --cli, --tui
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 - [ ] May make this project public when it works

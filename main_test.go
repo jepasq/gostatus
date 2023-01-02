@@ -2,16 +2,15 @@ package main
 
 import (
 	"testing"
-	//	"regexp"
+	"regexp"
 )
 
-func TestHelloName(t *testing.T) {
-	//	name := "Gladys"
-	/*
-    want := regexp.MustCompile(`\b`+name+`\b`)
-    msg, err := Hello("Gladys")
-    if !want.MatchString(msg) || err != nil {
-        t.Fatalf(`Hello("Gladys") = %q, %v, want match for %#q, nil`, msg, err, want)
-    }
-	*/
+/// intro text copntains 'Welcome' word
+func TestIntroWelcome(t *testing.T) {
+	name := "Welcome"
+	want := regexp.MustCompile(`\b`+name+`\b`)
+	msg := getIntroText()
+	if !want.MatchString(msg) {
+		t.Fatalf(`Hello("Gladys") = %q, want match for %#q, nil`, msg, want)
+	}
 }

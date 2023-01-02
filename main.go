@@ -13,6 +13,13 @@ import (
 
 const keyServerAddr = "serverAddr"
 
+/// Return the intro text
+func getIntroText() (string) {
+	programName := os.Args[0]
+
+	return "Welcome to gostatus v0.0.0-2 (" + programName + ")"
+}
+
 func main() {
 	// Capture connection properties.
 	/*    cfg := mysql.Config{
@@ -36,8 +43,8 @@ func main() {
     }
 	*/
 	
-	programName := os.Args[0]
-	fmt.Println(programName)
+	fmt.Println(getIntroText())
+	
 
 	argLength := len(os.Args[1:])
 	fmt.Printf("Arg length is %d\n", argLength) 
