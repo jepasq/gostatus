@@ -7,3 +7,9 @@ A microservices monitoring application written in go.
 	go build
 
 	go run .	
+
+# Unit tests
+
+To run unit tests :
+
+	go test
