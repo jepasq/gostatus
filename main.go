@@ -9,6 +9,8 @@ import (
 	"io/ioutil"
 	"net"
 	"net/http"
+
+	"text/template"
 )
 
 const keyServerAddr = "serverAddr"
@@ -91,6 +93,12 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 		return
 	}	
 
+
+	template, err := template.ParseFiles("content/root.tmpl")
+	if err != nil {
+		fmt.Printf("can't find template file: '%s'\n", err)
+	}
+	
 	ctx := r.Context()
 	hasFirst := r.URL.Query().Has("first")
 	first := r.URL.Query().Get("first")
@@ -101,16 +109,8 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 		ctx.Value(keyServerAddr),
 		hasFirst, first,
 		hasSecond, second)
-	
-	io.WriteString(w, `<HTML>
-<BODY>This is my website!<br>
-You can also go to <a href='/hello'>HELLO</a> page.<br>
-Or test the <a href='/form'>FORM</a> posting page<br>
-<br>
-Yoy may also want to test this page with parameters
-<a href="?first=aze">here</a> and 
-<a href="?first=aze&second=zer">here</a>.
-</BODY></HTML>`)
+
+	template.Execute(w, nil)
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {
