@@ -5,6 +5,7 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     Add a git tag for r-1 then push --tags for each revision
 
 * v0.0.0-2 (27 Dec. 2022 - ???) SLOC ???
-- (3) Start to use tex/template for root page
+- (4) Implement a general template handling function
+- Start to use tex/template for root page
 - getIntroText implementation
 - Add empty unit test

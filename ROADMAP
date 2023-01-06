@@ -7,11 +7,15 @@
 May see grafana dashboard as graphical inspiration
 **** Start to handle webcontent
 :LOGBOOK:
+CLOCK: [2023-01-06 ven. 08:40]--[2023-01-06 ven. 08:57] =>  0:17
 CLOCK: [2023-01-06 ven. 06:49]--[2023-01-06 ven. 07:08] =>  0:19
 :END:
 - [X] Must use a go-powered template engine
   template/text seems to be the choice
-- [ ] Use jquery/bootstrap  
+- [X] Should have a global template handling function
+  but how to handle template variables ?
+- [ ] Continue to switch actual hardcoded pages in main to real templates
+- [ ] Use jquery/bootstrap
 **** TODO Command line arguments handling
 :LOGBOOK:
 CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10

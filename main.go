@@ -22,6 +22,18 @@ func getIntroText() (string) {
 	return "Welcome to gostatus v0.0.0-2 (" + programName + ")"
 }
 
+/**
+  * w the HTTP reponse writer
+  * t The templater name relative to template pdirectory
+ */
+func writeTemplate(w http.ResponseWriter, t string) {
+	template, err := template.ParseFiles("content/" + t + '.tmpl')
+	if err != nil {
+		fmt.Printf("can't find template file: '%s'\n", err)
+	}
+	template.Execute(w, nil)
+}
+
 func main() {
 	// Capture connection properties.
 	/*    cfg := mysql.Config{
@@ -94,11 +106,6 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 	}	
 
 
-	template, err := template.ParseFiles("content/root.tmpl")
-	if err != nil {
-		fmt.Printf("can't find template file: '%s'\n", err)
-	}
-	
 	ctx := r.Context()
 	hasFirst := r.URL.Query().Has("first")
 	first := r.URL.Query().Get("first")
@@ -110,7 +117,7 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 		hasFirst, first,
 		hasSecond, second)
 
-	template.Execute(w, nil)
+	writeTemplate(w, "root");
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {
@@ -125,14 +132,7 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 		ctx.Value(keyServerAddr),
 		body)
 	
-	io.WriteString(w, `<HTML>
-<BODY><p>You're in the HELLO page!</p>
-<p>And read logs, we're reading full request body!<br>
-To test this, contactthis server with curl like :
-<pre>curl -X POST -d 'This is the body' 'http://localhost:3333/hello</pre>
-
-</p>
-<a href="..">back</a></BODY></HTML>`)
+	writeTemplate(w, "hello");
 }
 
 func getForm(w http.ResponseWriter, r *http.Request) {
