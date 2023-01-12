@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"os"
-	"io"
 	"io/ioutil"
 	"net"
 	"net/http"
@@ -27,7 +26,7 @@ func getIntroText() (string) {
   * t The templater name relative to template pdirectory
  */
 func writeTemplate(w http.ResponseWriter, t string) {
-	template, err := template.ParseFiles("content/" + t + '.tmpl')
+	template, err := template.ParseFiles("content/" + t + ".tmpl")
 	if err != nil {
 		fmt.Printf("can't find template file: '%s'\n", err)
 	}
@@ -149,18 +148,14 @@ func getForm(w http.ResponseWriter, r *http.Request) {
 		return
 		*/
 	}
-	io.WriteString(w, fmt.Sprintf(`<html><body>
-myName form value is %s!<br>
-<form action="" method="post">
-<fieldset>
-<legend>Change the posted name :</legend>
-  <input name="myName"></input>
-  <input type="submit" value="Post!">
-</fieldset>
-</form>
 
-`, myName))
+	template, err := template.ParseFiles("content/form.tmpl")
+	if err != nil {
+		fmt.Printf("can't find template file: '%s'\n", err)
+	}
 	
+	// template.Execute(w, myName)
+	template.ExecuteTemplate(w, "form.tmpl", myName)
 }
 
 func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
