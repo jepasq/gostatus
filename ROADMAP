@@ -5,6 +5,8 @@
 *** v0.0.1
 **** May at least handle systemctl-powered daemon
 May see grafana dashboard as graphical inspiration
+- [ ] The configuration must be handled as a directory where each file
+  can be a different service configuration
 **** Start to handle webcontent
 :LOGBOOK:
 CLOCK: [2023-01-12 jeu. 07:47]--[2023-01-12 jeu. 07:58] =>  0:11
@@ -16,7 +18,7 @@ CLOCK: [2023-01-06 ven. 06:49]--[2023-01-06 ven. 07:08] =>  0:19
   template/text seems to be the choice
 - [X] Should have a global template handling function
   but how to handle template variables ?
-- [ ] Continue to switch actual hardcoded pages in main to real templates
+- [X] Continue to switch actual hardcoded pages in main to real templates
   The form page is remaining but actually, the page is half printed due
   to myName print.  
 - [ ] Use jquery/bootstrap

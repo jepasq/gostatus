@@ -134,6 +134,11 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 	writeTemplate(w, "hello");
 }
 
+/// Used to pass variable to the Post page
+type PostVars struct {
+	Name string
+}
+
 func getForm(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
@@ -141,7 +146,7 @@ func getForm(w http.ResponseWriter, r *http.Request) {
 
 	myName := r.PostFormValue("myName")
 	if myName == "" {
-		myName = "<empty>"
+		myName = "&lt;empty&gt;"
 		/*
 		w.Header().Set("x-missing-field", "myName")
 		w.WriteHeader(http.StatusBadRequest)
@@ -153,9 +158,15 @@ func getForm(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Printf("can't find template file: '%s'\n", err)
 	}
+
+	mn := PostVars{
+		Name: myName,
+	}
 	
-	// template.Execute(w, myName)
-	template.ExecuteTemplate(w, "form.tmpl", myName)
+	err = template.Execute(w, mn)
+	if err != nil {
+		fmt.Printf("Error processing template 'form.tmpl': '%s'\n", err)
+	}
 }
 
 func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
