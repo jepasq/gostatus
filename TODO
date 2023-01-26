@@ -4,13 +4,7 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     (8 items par revision)
     Update version and revision in main.go's getIntroText()
     Add a git tag for r-1 then push --tags for each revision
+    SLOC is the result of `sloc .`
 
-* v0.0.0-2 (27 Dec. 2022 - ???) SLOC ???
-- (8) Add bootstrap to root page
-- (7) Auto-open system browser at startup
-- Fix the Form page parameters with a struct
-- Add a basic form page template
-- Implement a general template handling function
-- Start to use tex/template for root page
-- getIntroText implementation
-- Add empty unit test
+* v0.0.0-3 (26 Jan. 2023 - ???) SLOC ???
+

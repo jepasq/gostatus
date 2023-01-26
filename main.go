@@ -19,7 +19,7 @@ const keyServerAddr = "serverAddr"
 func getIntroText() (string) {
 	programName := os.Args[0]
 
-	return "Welcome to gostatus v0.0.0-2 (" + programName + ")"
+	return "Welcome to gostatus v0.0.0-3 (" + programName + ")"
 }
 
 /**

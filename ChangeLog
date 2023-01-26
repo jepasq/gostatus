@@ -1,3 +1,13 @@
+* v0.0.0-2 (27 Dec. 2022 - 26 Jan. 2023) SLOC 206
+- Add bootstrap to root page
+- Auto-open system browser at startup
+- Fix the Form page parameters with a struct
+- Add a basic form page template
+- Implement a general template handling function
+- Start to use tex/template for root page
+- getIntroText implementation
+- Add empty unit test
+
 * v0.0.0-1 (16 Nov. 2022 - 27 Dec. 2022) SLOC 164
 - Finished tutorial and handle custom 404 page
 - Played with posted form data
