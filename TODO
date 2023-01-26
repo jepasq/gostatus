@@ -6,7 +6,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     Add a git tag for r-1 then push --tags for each revision
 
 * v0.0.0-2 (27 Dec. 2022 - ???) SLOC ???
-- (6) Fix the Form page parameters with a struct
+- (7) Auto-open system browser at startup
+- Fix the Form page parameters with a struct
 - Add a basic form page template
 - Implement a general template handling function
 - Start to use tex/template for root page

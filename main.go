@@ -10,6 +10,7 @@ import (
 	"net/http"
 
 	"text/template"
+	"github.com/pkg/browser"
 )
 
 const keyServerAddr = "serverAddr"
@@ -32,6 +33,7 @@ func writeTemplate(w http.ResponseWriter, t string) {
 	}
 	template.Execute(w, nil)
 }
+
 
 func main() {
 	// Capture connection properties.
@@ -67,12 +69,19 @@ func main() {
 	}
 	
 	// Basic HTTP server
-	fmt.Println("Listening http://localhost:3333")
+	fmt.Println("Listening http://localhost:3333 and opening browser...")
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", getRoot)
 	mux.HandleFunc("/hello", getHello)
 	mux.HandleFunc("/form",  getForm)
 
+	// Auto-open browser at startup
+	err := browser.OpenURL("localhost:3333");
+	if err != nil {
+		fmt.Printf("can't find template file: '%s'\n", err)
+	}
+
+	
 	ctx, cancelCtx := context.WithCancel(context.Background())
 	serverOne := &http.Server{
 		Addr:    ":3333",
@@ -92,6 +101,7 @@ func main() {
 		cancelCtx()
 	}()
 	<-ctx.Done()
+	
 }
 
 func getRoot(w http.ResponseWriter, r *http.Request) {
