@@ -9,6 +9,7 @@ May see grafana dashboard as graphical inspiration
   can be a different service configuration
 **** Start to handle webcontent
 :LOGBOOK:
+CLOCK: [2023-01-26 jeu. 10:56]--[2023-01-26 jeu. 11:26] =>  0:30
 CLOCK: [2023-01-12 jeu. 07:47]--[2023-01-12 jeu. 07:58] =>  0:11
 CLOCK: [2023-01-12 jeu. 07:40]--[2023-01-12 jeu. 07:47] =>  0:07
 CLOCK: [2023-01-06 ven. 08:40]--[2023-01-06 ven. 08:57] =>  0:17
@@ -20,8 +21,10 @@ CLOCK: [2023-01-06 ven. 06:49]--[2023-01-06 ven. 07:08] =>  0:19
   but how to handle template variables ?
 - [X] Continue to switch actual hardcoded pages in main to real templates
   The form page is remaining but actually, the page is half printed due
-  to myName print.  
-- [ ] Use jquery/bootstrap
+  to myName print.
+- [X] Add bootstrap  
+- [ ] Use jquery
+- [ ] Understand how to embed the layout/header template
 - [ ] Now to handle a layout template for example with header and footer
   partials  
 **** TODO Command line arguments handling

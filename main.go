@@ -31,7 +31,10 @@ func writeTemplate(w http.ResponseWriter, t string) {
 	if err != nil {
 		fmt.Printf("can't find template file: '%s'\n", err)
 	}
-	template.Execute(w, nil)
+	err = template.Execute(w, nil)
+	if err != nil {
+		fmt.Printf("can't execute template file: '%s'\n", err)
+	}
 }
 
 
