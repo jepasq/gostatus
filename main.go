@@ -8,12 +8,15 @@ import (
 	"io/ioutil"
 	"net"
 	"net/http"
+	"strings"
+	"path/filepath"
 
 	"text/template"
 	"github.com/pkg/browser"
 )
 
 const keyServerAddr = "serverAddr"
+var templateDirs = []string{"content"}
 
 /// Return the intro text
 func getIntroText() (string) {
@@ -22,18 +25,36 @@ func getIntroText() (string) {
 	return "Welcome to gostatus v0.0.0-3 (" + programName + ")"
 }
 
+func getTemplates() (templates *template.Template, err error) {
+	var allFiles []string
+	for _, dir := range templateDirs {
+		files2, _ := ioutil.ReadDir(dir)
+		for _, file := range files2 {
+			filename := file.Name()
+			if strings.HasSuffix(filename, ".tmpl") {
+				filePath := filepath.Join(dir, filename)
+				allFiles = append(allFiles, filePath)
+			}
+		}
+	}
+
+	templates, err = template.New("root.tmpl").ParseFiles(allFiles...)
+	return
+}
+
+
 /**
   * w the HTTP reponse writer
   * t The templater name relative to template pdirectory
  */
 func writeTemplate(w http.ResponseWriter, t string) {
-	template, err := template.ParseFiles("content/" + t + ".tmpl")
+	templates, err := getTemplates();
 	if err != nil {
-		fmt.Printf("can't find template file: '%s'\n", err)
+		fmt.Printf("Failed to get templates: '%s'\n", err)
 	}
-	err = template.Execute(w, nil)
+	err = templates.Execute(w, t)
 	if err != nil {
-		fmt.Printf("can't execute template file: '%s'\n", err)
+		fmt.Printf("can't execute template '%s': '%s'\n", t, err)
 	}
 }
 
