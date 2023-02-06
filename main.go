@@ -16,7 +16,7 @@ import (
 )
 
 const keyServerAddr = "serverAddr"
-var templateDirs = []string{"content"}
+var templateDirs = []string{"content", "content/partials"}
 
 /// Return the intro text
 func getIntroText() (string) {

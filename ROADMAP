@@ -7,8 +7,9 @@
 May see grafana dashboard as graphical inspiration
 - [ ] The configuration must be handled as a directory where each file
   can be a different service configuration
-**** [feature_Partials] Start to handle webcontent
+**** Start to handle webcontent
 :LOGBOOK:
+CLOCK: [2023-02-06 lun. 08:42]--[2023-02-06 lun. 08:46] =>  0:04
 CLOCK: [2023-02-01 mer. 12:31]--[2023-02-01 mer. 13:01] =>  0:30
 CLOCK: [2023-01-26 jeu. 10:56]--[2023-01-26 jeu. 11:26] =>  0:30
 CLOCK: [2023-01-12 jeu. 07:47]--[2023-01-12 jeu. 07:58] =>  0:11
@@ -24,11 +25,12 @@ CLOCK: [2023-01-06 ven. 06:49]--[2023-01-06 ven. 07:08] =>  0:19
   The form page is remaining but actually, the page is half printed due
   to myName print.
 - [X] Add bootstrap  
-- [ ] Understand how to embed the layout/header template as partials
+- [X] Understand how to embed the layout/header template as partials
   see https://stackoverflow.com/a/43818930
-  - [ ] Partials may go in another directory (add to main's templateDirs var)  
-  - [ ] Try to embed one partial
-  - [ ] The hello page doesn't work anymore
+  - [X] Partials may go in another directory (add to main's templateDirs var)  
+  - [X] Try to embed one partial
+    
+- [ ] The hello page doesn't work anymore
 - [ ] Use jquery
 - [ ] Add a body margin to CSS  
 - [ ] Now to handle a layout template for example with header and footer
