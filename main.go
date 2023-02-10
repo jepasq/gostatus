@@ -52,6 +52,7 @@ func writeTemplate(w http.ResponseWriter, t string) {
 	if err != nil {
 		fmt.Printf("Failed to get templates: '%s'\n", err)
 	}
+	
 	err = templates.Execute(w, t)
 	if err != nil {
 		fmt.Printf("can't execute template '%s': '%s'\n", t, err)
@@ -165,7 +166,7 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 		ctx.Value(keyServerAddr),
 		body)
 	
-	writeTemplate(w, "hello");
+	writeTemplate(w, "hello.tmpl");
 }
 
 /// Used to pass variable to the Post page
