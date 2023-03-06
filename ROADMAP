@@ -7,7 +7,7 @@
 May see grafana dashboard as graphical inspiration
 - [ ] The configuration must be handled as a directory where each file
   can be a different service configuration
-**** Start to handle webcontent
+**** TODO Start to handle webcontent
 :LOGBOOK:
 CLOCK: [2023-03-06 lun. 06:06]--[2023-03-06 lun. 06:17] =>  0:11
 CLOCK: [2023-02-20 lun. 06:19]--[2023-02-20 lun. 06:40] =>  0:21
@@ -38,7 +38,7 @@ CLOCK: [2023-01-06 ven. 06:49]--[2023-01-06 ven. 07:08] =>  0:19
   
 - [ ] The hello page doesn't work anymore
   Try to test it is correctly rendered
-  The hello page test but shouldn't
+  The hello page test pass but it shouldn't
 - [ ] Use jquery
 **** TODO Command line arguments handling
 :LOGBOOK:
