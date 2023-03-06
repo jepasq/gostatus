@@ -3,6 +3,7 @@ package main
 import (
 	"testing"
 	"regexp"
+	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
 )
@@ -34,12 +35,15 @@ func TestHelloPageRendering(t *testing.T) {
 	// We create a ResponseRecorder (which satisfies http.ResponseWriter)
 	// to record the response.
 	rr := httptest.NewRecorder()
+	writeTemplate(rr, "hello")
+	//	t.Fatalf(`HELLO page rendering failed %q`, want,)
+	res := rr.Result()	
+	data, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+	    t.Errorf("expected error to be nil got %v", err)
+	}
 	
-	t.Fatalf(`HELLO page rendering failed %q`, want,)
-
-	/*
-	if !want.MatchString(msg) {
+	if !want.MatchString(string(data)) {
 		t.Fatalf(`HELLO page rendering failed`)
 	}
-	*/
 }
