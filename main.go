@@ -25,6 +25,12 @@ func getIntroText() (string) {
 	return "Welcome to gostatus v0.0.0-3 (" + programName + ")"
 }
 
+/// Print usage text to terminal
+func usage() {
+	fmt.Println("Usage :\n");
+	fmt.Println("  --h|-?|--help Print this usage text and exit.");
+}
+
 func getTemplates() (templates *template.Template, err error) {
 	var allFiles []string
 	for _, dir := range templateDirs {
@@ -61,36 +67,18 @@ func writeTemplate(w http.ResponseWriter, t string) {
 
 
 func main() {
-	// Capture connection properties.
-	/*    cfg := mysql.Config{
-        User:   os.Getenv("DBUSER"),
-        Passwd: os.Getenv("DBPASS"),
-        Net:    "tcp",
-        Addr:   "127.0.0.1:3306",
-        DBName: "recordings",
-    }
-	*/
-	// Get a database handle.
-	/*    var err error
-    db, err = sql.Open("mysql", cfg.FormatDSN())
-    if err != nil {
-        log.Fatal(err)
-    }
-    
-    pingErr := db.Ping()
-    if pingErr != nil {
-        log.Fatal(pingErr)
-    }
-	*/
-	
 	fmt.Println(getIntroText())
-	
 
-	argLength := len(os.Args[1:])
+	/*argLength := len(os.Args[1:])
 	fmt.Printf("Arg length is %d\n", argLength) 
-
-	for i, a := range os.Args[1:] {
-		fmt.Printf("Arg %d is %s\n", i+1, a) 
+	*/
+	
+	for _, a := range os.Args[1:] { // Argument index, argument
+		//   fmt.Printf("Arg %d is %s\n", i+1, a)
+		if (a == "--help" || a== "-?" || a== "-h") {
+			usage()
+			os.Exit(0)
+		}
 	}
 	
 	// Basic HTTP server
@@ -102,7 +90,6 @@ func main() {
 
 	// Trying to handle static content
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-
 	
 	// Auto-open browser at startup
 	err := browser.OpenURL("localhost:3333");

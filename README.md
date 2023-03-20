@@ -13,3 +13,7 @@ A microservices monitoring application written in go.
 To run unit tests :
 
 	go test
+	
+# Usage
+	
+	go run . --help

@@ -14,12 +14,14 @@ May see grafana dashboard as graphical inspiration
 - [ ] Use jquery
 **** TODO Command line arguments handling
 :LOGBOOK:
+CLOCK: [2023-03-20 lun. 07:57]--[2023-03-20 lun. 08:11] =>  0:14
 CLOCK: [2023-01-26 jeu. 10:33]--[2023-01-26 jeu. 10:42] =>  0:09
 CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
 :END:
 - [X] May print an intro in console containing version and revision
 - [X] Auto-open system browser at startup
 - [ ] Handle interface type --web, --cli, --tui
+- [ ] See if this course can be interesting  
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 - [ ] May make this project public when it works
 **** DONE Start to handle webcontent
