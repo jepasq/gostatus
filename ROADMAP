@@ -9,12 +9,14 @@ May see grafana dashboard as graphical inspiration
   can be a different service configuration
 **** TODO Fix the hello/ page routing issue
 :LOGBOOK:
+CLOCK: [2023-03-23 jeu. 05:46]--[2023-03-23 jeu. 05:52] =>  0:06
 CLOCK: [2023-03-23 jeu. 05:33]--[2023-03-23 jeu. 05:37] =>  0:04
 :END:
+- [X] Use jquery and make the first page alert shake
 - [ ] The hello page doesn't work anymore
   Try to test if it is correctly rendered
   The hello page test pass but it shouldn't
-- [ ] Use jquery
+  
 **** TODO Command line arguments handling
 :LOGBOOK:
 CLOCK: [2023-03-20 lun. 07:57]--[2023-03-20 lun. 08:11] =>  0:14
