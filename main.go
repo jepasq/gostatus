@@ -27,8 +27,8 @@ func getIntroText() (string) {
 
 /// Print usage text to terminal
 func usage() {
-	fmt.Println("Usage :\n");
-	fmt.Println("  --h|-?|--help Print this usage text and exit.");
+	fmt.Println("Usage :");
+	fmt.Println("\n  --h|-?|--help Print this usage text and exit.");
 }
 
 func getTemplates() (templates *template.Template, err error) {
