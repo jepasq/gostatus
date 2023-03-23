@@ -1,3 +1,13 @@
+* v0.0.0-3 (26 Jan. 2023 - 23 Mar. 2023) SLOC 255
+- Add jquery and jqueryui in header partial
+- Fix a redundant newline error when running tests
+- Implement usage() and help command line option
+- Close the webcontent handling ROADMAP section
+- Make the hello page unit test compile correctly
+- Now serve static files (and add body margin)
+- Correctly handle header template in content/partials
+- Add main's getTemplates() implementation
+
 * v0.0.0-2 (27 Dec. 2022 - 26 Jan. 2023) SLOC 206
 - Add bootstrap to root page
 - Auto-open system browser at startup
