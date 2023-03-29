@@ -1,6 +1,7 @@
 package main
 
 import (
+	//	"fmt"
 	"testing"
 	"regexp"
 	"io/ioutil"
@@ -22,7 +23,7 @@ func TestIntroWelcome(t *testing.T) {
 /// We can render correctly the hello page.
 /// see https://blog.questionable.services/article/testing-http-handlers-go/
 func TestHelloPageRendering(t *testing.T) {
-	name := "HELLO"
+	name := "You're in the HELLO page!"
 	want := regexp.MustCompile(`\b`+name+`\b`)
 	
 	// Create a request to pass to our handler. We don't have any query
@@ -39,6 +40,7 @@ func TestHelloPageRendering(t *testing.T) {
 	//	t.Fatalf(`HELLO page rendering failed %q`, want,)
 	res := rr.Result()	
 	data, err := ioutil.ReadAll(res.Body)
+	//fmt.Println(string(data))
 	if err != nil {
 	    t.Errorf("expected error to be nil got %v", err)
 	}
