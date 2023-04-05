@@ -20,6 +20,16 @@ func TestIntroWelcome(t *testing.T) {
 	}
 }
 
+func TestWrongUrlRequestShouldFail(t *testing.T) {
+	// Create a request to pass to our handler. We don't have any query
+	// parameters for now, so we'll pass 'nil' as the third parameter.
+	_  , err := http.NewRequest("GET", "/unexistingPageUrl_com", nil)
+	if err == nil {
+		t.Fatal("Requesting a non existing page should fail")
+	}
+}
+
+
 /// We can render correctly the hello page.
 /// see https://blog.questionable.services/article/testing-http-handlers-go/
 func TestHelloPageRendering(t *testing.T) {
@@ -49,3 +59,33 @@ func TestHelloPageRendering(t *testing.T) {
 		t.Fatalf(`HELLO page rendering failed`)
 	}
 }
+
+/// We can render correctly the form page.
+func TestFormPageRendering(t *testing.T) {
+	name := "Form"
+	want := regexp.MustCompile(`\b`+name+`\b`)
+	
+	// Create a request to pass to our handler. We don't have any query
+	// parameters for now, so we'll pass 'nil' as the third parameter.
+	_ /*req*/ , err := http.NewRequest("GET", "/form", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	// We create a ResponseRecorder (which satisfies http.ResponseWriter)
+	// to record the response.
+	rr := httptest.NewRecorder()
+	writeTemplate(rr, "form")
+	//	t.Fatalf(`HELLO page rendering failed %q`, want,)
+	res := rr.Result()	
+	data, err := ioutil.ReadAll(res.Body)
+	//	fmt.Println(string(data))
+	if err != nil {
+	    t.Errorf("expected error to be nil got %v", err)
+	}
+	
+	if !want.MatchString(string(data)) {
+		t.Fatalf(`FORM page rendering failed`)
+	}
+}
+

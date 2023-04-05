@@ -9,6 +9,7 @@ May see grafana dashboard as graphical inspiration
   can be a different service configuration
 **** TODO Fix the hello/ page routing issue
 :LOGBOOK:
+CLOCK: [2023-04-05 mer. 12:30]--[2023-04-05 mer. 12:43] =>  0:13
 CLOCK: [2023-03-29 mer. 10:42]--[2023-03-29 mer. 10:48] =>  0:06
 CLOCK: [2023-03-23 jeu. 05:46]--[2023-03-23 jeu. 05:52] =>  0:06
 CLOCK: [2023-03-23 jeu. 05:33]--[2023-03-23 jeu. 05:37] =>  0:04
@@ -18,7 +19,8 @@ CLOCK: [2023-03-23 jeu. 05:33]--[2023-03-23 jeu. 05:37] =>  0:04
   Try to test if it is correctly rendered
   The hello page test pass but it shouldn't
 - [X] Home could have a title and other page too
-- [ ] Add a form page unit test  
+- [ ] Add a form page unit test
+  
 - [ ] See why the router doesn't work for this page because FORM page works
 **** TODO Command line arguments handling
 :LOGBOOK:
