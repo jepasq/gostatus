@@ -23,10 +23,10 @@ func TestIntroWelcome(t *testing.T) {
 func TestWrongUrlRequestShouldFail(t *testing.T) {
 	// Create a request to pass to our handler. We don't have any query
 	// parameters for now, so we'll pass 'nil' as the third parameter.
-	req  , err := http.NewRequest("GET", "/unexistingPageUrl_com", nil)
-	fmt.Print(req.Response)
-	req  , err = http.NewRequest("GET", "/home", nil)
-	fmt.Print(req.Response)
+	req, err := http.NewRequest("GET", "/unexistingPageUrl_com", nil)
+	fmt.Println(req)
+	req, err = http.NewRequest("GET", "/home", nil)
+	fmt.Println(req)
 
 	if err == nil {
 		t.Fatal("Requesting a non existing page should fail")

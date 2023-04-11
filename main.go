@@ -51,7 +51,7 @@ func getTemplates() (templates *template.Template, err error) {
 
 /**
   * w the HTTP reponse writer
-  * t The templater name relative to template pdirectory
+  * t The template name relative to template directory
  */
 func writeTemplate(w http.ResponseWriter, t string) {
 	templates, err := getTemplates();
