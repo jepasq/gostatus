@@ -40,6 +40,9 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 - [ ] May make this project public when it works
 **** go dependency upgrades
+:LOGBOOK:
+CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
+:END:
 - =go list -u -m all= to list upgradable dependencies
 - =go get -u ./...= to upgrade
 **** DONE Start to handle webcontent
