@@ -39,6 +39,13 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
 - [ ] See if this course can be interesting  
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 - [ ] May make this project public when it works
+**** Must generate API documentation
+:LOGBOOK:
+CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
+:END:
+Maybe with godoc ?
+Need to install go-tools package on manjaro : =pamac install go-tools=
+=godoc -http=:6060=
 **** go dependency upgrades
 :LOGBOOK:
 CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
