@@ -10,7 +10,7 @@ To compile and build dependencies and binary :
 
 Then, to run it :
 
-	go run .	
+	go run .
 
 It will auto-open a new browser window with the *gostatus* home page.
 
