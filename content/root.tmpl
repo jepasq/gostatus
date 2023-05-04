@@ -4,6 +4,10 @@
   {{template "headerTMPL"}}
   <title>Home | gostatus</title>
   <BODY>
+    <main>
+      {{template "sidebarTMPL"}}
+
+    <div class="d-flex flex-column">
     <h1>GoStatus</h1>
     <h2>Home</h2>
     <div class="alert alert-primary" role="alert" id="shake">
@@ -28,7 +32,8 @@
          $("#shake").effect( "shake", {times:8}, 1000 );
       });
 			
-      </script>
-    
+    </script>
+    </div> <!-- flex-column -->
+    </main>
   </BODY>
 </HTML>

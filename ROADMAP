@@ -7,6 +7,15 @@
 May see grafana dashboard as graphical inspiration
 - [ ] The configuration must be handled as a directory where each file
   can be a different service configuration
+**** Start to add a boostrap-based sidebar
+:LOGBOOK:
+CLOCK: [2023-05-04 jeu. 11:28]--[2023-05-04 jeu. 11:56] =>  0:28
+:END:
+see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
+Testing in root.tmpl
+
+- [ ] May create a partial
+
 **** TODO Fix the hello/ page routing issue
 :LOGBOOK:
 CLOCK: [2023-04-11 mar. 10:29]--[2023-04-11 mar. 10:59] =>  0:30
