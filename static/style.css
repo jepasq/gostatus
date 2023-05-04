@@ -1,3 +1,11 @@
+main {
+    display: flex;
+    flex-wrap : nowrap;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 body {
     margin: 0 1em;
     background-color: #303050;

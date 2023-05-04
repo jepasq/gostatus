@@ -9,6 +9,7 @@ May see grafana dashboard as graphical inspiration
   can be a different service configuration
 **** Start to add a boostrap-based sidebar
 :LOGBOOK:
+CLOCK: [2023-05-04 jeu. 12:43]--[2023-05-04 jeu. 12:47] =>  0:04
 CLOCK: [2023-05-04 jeu. 11:28]--[2023-05-04 jeu. 11:56] =>  0:28
 :END:
 see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
