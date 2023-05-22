@@ -9,6 +9,7 @@ May see grafana dashboard as graphical inspiration
   can be a different service configuration
 **** Start to add a boostrap-based sidebar
 :LOGBOOK:
+CLOCK: [2023-05-22 lun. 01:47]--[2023-05-22 lun. 02:24] =>  0:37
 CLOCK: [2023-05-22 lun. 01:20]--[2023-05-22 lun. 01:37] =>  0:17
 CLOCK: [2023-05-04 jeu. 12:43]--[2023-05-04 jeu. 12:47] =>  0:04
 CLOCK: [2023-05-04 jeu. 11:28]--[2023-05-04 jeu. 11:56] =>  0:28
@@ -16,8 +17,10 @@ CLOCK: [2023-05-04 jeu. 11:28]--[2023-05-04 jeu. 11:56] =>  0:28
 see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
 Testing in root.tmpl
 
-- [ ] May create a partial
-
+- [X] May create a partial : done but how can we handle =current page=
+- [ ] Change Sidebar's page name and links
+- [ ] SVG-based icon can't be seen
+  
 **** TODO Fix the hello/ page routing issue
 :LOGBOOK:
 CLOCK: [2023-04-11 mar. 10:29]--[2023-04-11 mar. 10:59] =>  0:30
