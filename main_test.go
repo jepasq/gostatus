@@ -20,11 +20,14 @@ func TestIntroWelcome(t *testing.T) {
 	}
 }
 
+/// Test with an unexisting URL
 func TestWrongUrlRequestShouldFail(t *testing.T) {
 	// Create a request to pass to our handler. We don't have any query
 	// parameters for now, so we'll pass 'nil' as the third parameter.
 	req, err := http.NewRequest("GET", "/unexistingPageUrl_com", nil)
 	fmt.Println(req)
+	fmt.Print("Err: ")
+	fmt.Println(err)
 	req, err = http.NewRequest("GET", "/home", nil)
 	fmt.Println(req)
 

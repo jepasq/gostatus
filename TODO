@@ -7,6 +7,7 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc .`
 
 * v0.0.0-5 (04 May 2023 - ???) SLOC ???
-- (3) Change Sidebar's page name and links
+- (4) More TestWrongUrlRequestShouldFail var printed
+- Change Sidebar's page name and links
 - Make the Hoe page content flex grow vertically
 - Add the main element css rule
