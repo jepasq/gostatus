@@ -19,6 +19,7 @@ Testing in root.tmpl
 
 - [X] May create a partial : done but how can we handle =current page=
 - [ ] Change Sidebar's page name and links
+  Actually trying in hello page using helloActive variable
 - [ ] SVG-based icon can't be seen
   
 **** TODO Fix the hello/ page routing issue
