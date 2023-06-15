@@ -1,6 +1,19 @@
 # gostatus
 
-A microservices monitoring application written in go.
+A microservices monitoring application written in *go*.
+
+# Dependencies
+
+To build and run this project, you need the Go programming language core
+compiler.
+
+To install it, on *Manjaro* :
+
+	sudo pacman install go
+	
+on *Debian* :
+
+	sudo apt-get install golang-go
 
 # Build and run
 
