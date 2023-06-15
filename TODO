@@ -7,7 +7,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc .`
 
 * v0.0.0-5 (04 May 2023 - ???) SLOC ???
-- (5) Fix a missing quote in sidebar.tmpl
+- (6) Add a template parameter to getTemplates function
+- Fix a missing quote in sidebar.tmpl
 - More TestWrongUrlRequestShouldFail var printed
 - Change Sidebar's page name and links
 - Make the Hoe page content flex grow vertically

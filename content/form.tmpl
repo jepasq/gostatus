@@ -1,7 +1,11 @@
 <!--             -*-html-*-  -->
 <HTML>
+  {{template "headerTMPL"}}
   <title>Form | gostatus</title>
   <BODY>
+    <main>
+      {{template "sidebarTMPL"}}
+
     <h1>GoStatus</h1>
     <h2>Form</h2>
     <p>myName form value is '{{.Name}}'!<br>
@@ -15,5 +19,6 @@
 
       You can go to <a href='/'>back</a> page.<br>
     </p>
+    </main>
   </BODY>
 </HTML>

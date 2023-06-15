@@ -31,7 +31,7 @@ func usage() {
 	fmt.Println("\n  --h|-?|--help Print this usage text and exit.");
 }
 
-func getTemplates() (templates *template.Template, err error) {
+func getTemplates(tmp string) (templates *template.Template, err error) {
 	var allFiles []string
 	for _, dir := range templateDirs {
 		files2, _ := ioutil.ReadDir(dir)
@@ -44,7 +44,7 @@ func getTemplates() (templates *template.Template, err error) {
 		}
 	}
 
-	templates, err = template.New("root.tmpl").ParseFiles(allFiles...)
+	templates, err = template.New(tmp).ParseFiles(allFiles...)
 	return
 }
 
@@ -54,7 +54,7 @@ func getTemplates() (templates *template.Template, err error) {
   * t The template name relative to template directory
  */
 func writeTemplate(w http.ResponseWriter, t string) {
-	templates, err := getTemplates();
+	templates, err := getTemplates(t);
 	if err != nil {
 		fmt.Printf("Failed to get templates: '%s'\n", err)
 	}
@@ -121,7 +121,6 @@ func main() {
 }
 
 func getRoot(w http.ResponseWriter, r *http.Request) {
-
 	// Ok for '/', root can be handled, everything else is 404
 	// It can works with only this test because getRoot() is a kind
 	// of fallback for all not-yet-handled URLs.
@@ -129,7 +128,6 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 		errorHandler(w, r, http.StatusNotFound)
 		return
 	}	
-
 
 	ctx := r.Context()
 	hasFirst := r.URL.Query().Has("first")
@@ -142,7 +140,7 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 		hasFirst, first,
 		hasSecond, second)
 
-	writeTemplate(w, "root");
+	writeTemplate(w, "root.tmpl");
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {
@@ -180,7 +178,7 @@ func getForm(w http.ResponseWriter, r *http.Request) {
 		*/
 	}
 
-	template, err := template.ParseFiles("content/form.tmpl")
+	template, err := getTemplates("form.tmpl")
 	if err != nil {
 		fmt.Printf("can't find template file: '%s'\n", err)
 	}
