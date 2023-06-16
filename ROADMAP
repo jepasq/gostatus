@@ -28,6 +28,7 @@ Testing in root.tmpl
   
 **** TODO Fix the hello/ page routing issue
 :LOGBOOK:
+CLOCK: [2023-06-16 ven. 06:28]--[2023-06-16 ven. 06:43] =>  0:15
 CLOCK: [2023-06-15 jeu. 06:15]--[2023-06-15 jeu. 06:19] =>  0:04
 CLOCK: [2023-05-30 mar. 05:32]--[2023-05-30 mar. 06:17] =>  0:45
 CLOCK: [2023-04-11 mar. 10:29]--[2023-04-11 mar. 10:59] =>  0:30
@@ -43,7 +44,7 @@ CLOCK: [2023-03-23 jeu. 05:33]--[2023-03-23 jeu. 05:37] =>  0:04
   The hello page test pass but it shouldn't
 - [X] Home could have a title and other page too
 - [X] Add a form page unit test
-- [ ] See why the router doesn't work for this page because FORM page works
+- [X] See why the router doesn't work for this page because FORM page works
   We don't have a error now
 - [ ] Must make the TestWrongUrlRequestShouldFail test work
   Returns Resquest and Error objects
