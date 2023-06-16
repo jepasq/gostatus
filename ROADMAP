@@ -43,11 +43,11 @@ CLOCK: [2023-03-23 jeu. 05:33]--[2023-03-23 jeu. 05:37] =>  0:04
   The hello page test pass but it shouldn't
 - [X] Home could have a title and other page too
 - [X] Add a form page unit test
+- [ ] See why the router doesn't work for this page because FORM page works
+  We don't have a error now
 - [ ] Must make the TestWrongUrlRequestShouldFail test work
   Returns Resquest and Error objects
   https://pkg.go.dev/net/http#Request
-  
-- [ ] See why the router doesn't work for this page because FORM page works
 **** TODO Command line arguments handling
 :LOGBOOK:
 CLOCK: [2023-03-20 lun. 07:57]--[2023-03-20 lun. 08:11] =>  0:14
@@ -69,6 +69,7 @@ Need to install go-tools package on manjaro : =pamac install go-tools=
 =godoc -http=:6060=
 **** go dependency upgrades
 :LOGBOOK:
+CLOCK: [2023-06-16 ven. 06:17]--[2023-06-16 ven. 06:22] =>  0:05
 CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
 :END:
 - =go list -u -m all= to list upgradable dependencies
