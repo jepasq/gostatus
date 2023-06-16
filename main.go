@@ -22,7 +22,7 @@ var templateDirs = []string{"content", "content/partials"}
 func getIntroText() (string) {
 	programName := os.Args[0]
 
-	return "Welcome to gostatus v0.0.0-4 (" + programName + ")"
+	return "Welcome to gostatus v0.0.0-5 (" + programName + ")"
 }
 
 /// Print usage text to terminal

@@ -1,3 +1,13 @@
+* v0.0.0-5 (04 May 2023 - 16 Jun. 2023) SLOC 312
+- Hello page routing works again
+- Upgrade x/sys dependency from 0.8 to 0.9
+- Add a template parameter to getTemplates function
+- Fix a missing quote in sidebar.tmpl
+- More TestWrongUrlRequestShouldFail var printed
+- Change Sidebar's page name and links
+- Make the Hoe page content flex grow vertically
+- Add the main element css rule
+
 * v0.0.0-4 (23 Mar. 2023 - 04 May 2023) SLOC ???
 - Add a basic flex-based sidebar partial to the root page
 - Switch body colors to a darker layout
