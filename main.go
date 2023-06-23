@@ -1,3 +1,5 @@
+// Package gostatus implements a microservices monitoring web application
+// written in go.
 package main
 
 import (
@@ -15,7 +17,11 @@ import (
 	"github.com/pkg/browser"
 )
 
-const keyServerAddr = "serverAddr"
+// Package constent
+const (
+	keyServerAddr = "serverAddr"  // the key server address
+)
+// Defines where the template partials are searched for
 var templateDirs = []string{"content", "content/partials"}
 
 /// Return the intro text
