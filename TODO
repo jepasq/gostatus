@@ -7,5 +7,6 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc .`
 
 * v0.0.0-6 (16 Jun. 2023 - ???) SLOC ???
-- (2) Add a module overview documentation comment
+- (3) Add an README section about API documentation
+- Add a module overview documentation comment
 - Close the hello page issue ROADMAP section

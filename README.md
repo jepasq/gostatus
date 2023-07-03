@@ -9,11 +9,14 @@ compiler.
 
 To install it, on *Manjaro* :
 
-	sudo pacman install go
+	sudo pacman install go go-tools
 	
 on *Debian* :
 
-	sudo apt-get install golang-go
+	sudo apt-get install golang-go golang-golang-x-tools
+
+The *-tools packages usually contain *godoc* package used to generate and 
+browse API documentation.
 
 # Build and run
 
@@ -38,3 +41,12 @@ To run unit tests :
 To print a short usage text and exit, run :
 
 	go run . --help
+
+# API documenation
+
+Run the following command :
+	
+	godoc -http=:6060
+
+and open the page http://127.0.0.1:6060/pkg/jepasq/gostatus/ with your 
+favorite browser.
