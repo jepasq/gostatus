@@ -39,9 +39,13 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 - [ ] May make this project public when it works
 **** Could make the TestWrongUrlRequestShouldFail test work
+:LOGBOOK:
+CLOCK: [2023-07-04 mar. 10:30]--[2023-07-04 mar. 11:03] =>  0:33
+:END:
 - [ ] Must make the TestWrongUrlRequestShouldFail test work
   Returns Resquest and Error objects
   https://pkg.go.dev/net/http#Request
+- [ ] Maybe we need a http.Client object ?
 **** Must generate API documentation with godoc
 :LOGBOOK:
 CLOCK: [2023-06-23 ven. 10:24]--[2023-06-23 ven. 10:40] =>  0:16
