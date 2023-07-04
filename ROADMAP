@@ -9,6 +9,7 @@ May see grafana dashboard as graphical inspiration
   can be a different service configuration
 **** Start to add a boostrap-based sidebar
 :LOGBOOK:
+CLOCK: [2023-07-04 mar. 11:40]--[2023-07-04 mar. 11:44] =>  0:04
 CLOCK: [2023-06-15 jeu. 07:14]--[2023-06-15 jeu. 07:43] =>  0:29
 CLOCK: [2023-05-22 lun. 01:47]--[2023-05-22 lun. 02:24] =>  0:37
 CLOCK: [2023-05-22 lun. 01:20]--[2023-05-22 lun. 01:37] =>  0:17
@@ -22,8 +23,9 @@ Testing in root.tmpl
 - [X] Add to form page
   Testing , template markup added but it doesn't work
   =template "sidebarTMPL" not defined'=
-- [ ] Change Sidebar's page name and links
+- [ ] Change Sidebar's page name and links in every page
   Actually trying in hello page using helloActive variable
+- [ ] Add sidebar to Hello page
 - [ ] SVG-based icon can't be seen
   
 **** TODO Command line arguments handling
