@@ -4,9 +4,15 @@
 ** v0.1.0
 *** v0.0.1
 **** May at least handle systemctl-powered daemon
+:LOGBOOK:
+CLOCK: [2023-07-04 mar. 11:52]--[2023-07-04 mar. 12:15] =>  0:23
+:END:
 May see grafana dashboard as graphical inspiration
 - [ ] The configuration must be handled as a directory where each file
   can be a different service configuration
+- [ ] getCfgDirectory impl
+  - [ ] Continue unit tests implementation
+  - [ ] Implement  
 **** Start to add a boostrap-based sidebar
 :LOGBOOK:
 CLOCK: [2023-07-04 mar. 11:40]--[2023-07-04 mar. 11:44] =>  0:04

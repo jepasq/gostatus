@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"fmt"
 	"testing"
 	"regexp"
@@ -96,3 +97,27 @@ func TestFormPageRendering(t *testing.T) {
 	}
 }
 
+func TestGetCfgDirectory(t *testing.T) {
+	cd := getCfgDirectory("")
+
+	// Must contain appname
+	dir := "gostatus"
+	want := regexp.MustCompile(`\b`+dir+`\b`)
+	if !want.MatchString(cd) {
+		t.Fatalf(`getCfgDirectory doesn't contain appname`)
+	}
+
+	// Must contain user's home dir
+	ud, err := os.UserHomeDir()
+	if err != nil {
+		t.Fatal( err )
+	}
+	want = regexp.MustCompile(`\b`+ud+`\b`)
+	if !want.MatchString(cd) {
+		t.Fatalf(`getCfgDirectory doesn't contain appname`)
+	}
+
+	// Must contain the string passed as parameter
+
+	
+}

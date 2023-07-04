@@ -31,6 +31,11 @@ func getIntroText() (string) {
 	return "Welcome to gostatus v0.0.0-5 (" + programName + ")"
 }
 
+/// Return a configuration directory (~/.gostatus)  content
+func getCfgDirectory(content string) (string) {
+	return ""
+}
+
 /// Print usage text to terminal
 func usage() {
 	fmt.Println("Usage :");
