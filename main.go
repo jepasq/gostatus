@@ -33,7 +33,11 @@ func getIntroText() (string) {
 
 /// Return a configuration directory (~/.gostatus)  content
 func getCfgDirectory(content string) (string) {
-	return ""
+	ud, err := os.UserHomeDir()
+	if err != nil {
+		fmt.Printf("Error getting User's home dir: '%s'\n", err)
+	}
+	return ud + "/.config/gostatus/"
 }
 
 /// Print usage text to terminal

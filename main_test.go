@@ -99,6 +99,7 @@ func TestFormPageRendering(t *testing.T) {
 
 func TestGetCfgDirectory(t *testing.T) {
 	cd := getCfgDirectory("")
+	fmt.Println("getCfgDirectory :" + cd);
 
 	// Must contain appname
 	dir := "gostatus"
@@ -114,10 +115,8 @@ func TestGetCfgDirectory(t *testing.T) {
 	}
 	want = regexp.MustCompile(`\b`+ud+`\b`)
 	if !want.MatchString(cd) {
-		t.Fatalf(`getCfgDirectory doesn't contain appname`)
+		t.Fatalf(`getCfgDirectory doesn't contain User's home dir`)
 	}
 
 	// Must contain the string passed as parameter
-
-	
 }

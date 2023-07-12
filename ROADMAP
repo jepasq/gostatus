@@ -46,8 +46,9 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
 - [ ] See if this course can be interesting  
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 - [ ] May make this project public when it works
-**** Could make the TestWrongUrlRequestShouldFail test work
+**** Could make the TestWrongUrlRequestShouldFail and other tests work
 :LOGBOOK:
+CLOCK: [2023-07-12 mer. 14:50]--[2023-07-12 mer. 15:03] =>  0:13
 CLOCK: [2023-07-04 mar. 10:30]--[2023-07-04 mar. 11:03] =>  0:33
 :END:
 - [ ] Must make the TestWrongUrlRequestShouldFail test work
