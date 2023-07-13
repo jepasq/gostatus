@@ -17,7 +17,7 @@ import (
 	"github.com/pkg/browser"
 )
 
-// Package constent
+// Package constants
 const (
 	keyServerAddr = "serverAddr"  // the key server address
 )
