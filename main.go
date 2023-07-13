@@ -37,7 +37,7 @@ func getCfgDirectory(content string) (string) {
 	if err != nil {
 		fmt.Printf("Error getting User's home dir: '%s'\n", err)
 	}
-	return ud + "/.config/gostatus/"
+	return ud + "/.config/gostatus/" + content
 }
 
 /// Print usage text to terminal

@@ -118,5 +118,9 @@ func TestGetCfgDirectory(t *testing.T) {
 	}
 
 	// Must contain the string passed as parameter
+	cd = getCfgDirectory("aze")
+	if !strings.Contains(cd, "aze") {
+		t.Fatalf(`getCfgDirectory doesn't contain the param content`)
+	}
 	
 }
