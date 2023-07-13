@@ -7,7 +7,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc .`
 
 * v0.0.0-6 (16 Jun. 2023 - ???) SLOC ???
-- (6) First getCfgDirectory implementation
+- (7) Upgrade x/sys dependency from 0.9.0 to 0.10.0
+- First getCfgDirectory implementation
 - getCfgDirectory unit tests implementation started
 - Improve homepage textual content
 - Add an README section about API documentation
