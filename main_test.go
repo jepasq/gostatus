@@ -3,8 +3,9 @@ package main
 import (
 	"os"
 	"fmt"
-	"testing"
 	"regexp"
+	"strings"           // USES strings.Contains
+	"testing"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -99,7 +100,6 @@ func TestFormPageRendering(t *testing.T) {
 
 func TestGetCfgDirectory(t *testing.T) {
 	cd := getCfgDirectory("")
-	fmt.Println("getCfgDirectory :" + cd);
 
 	// Must contain appname
 	dir := "gostatus"
@@ -113,10 +113,10 @@ func TestGetCfgDirectory(t *testing.T) {
 	if err != nil {
 		t.Fatal( err )
 	}
-	want = regexp.MustCompile(`\b`+ud+`\b`)
-	if !want.MatchString(cd) {
+	if !strings.Contains(cd, ud) {
 		t.Fatalf(`getCfgDirectory doesn't contain User's home dir`)
 	}
 
 	// Must contain the string passed as parameter
+	
 }
