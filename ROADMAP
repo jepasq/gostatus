@@ -61,6 +61,7 @@ CLOCK: [2023-07-04 mar. 10:30]--[2023-07-04 mar. 11:03] =>  0:33
 - [ ] Maybe we need a http.Client object ?
 **** Must generate API documentation with godoc
 :LOGBOOK:
+CLOCK: [2023-08-04 ven. 05:40]--[2023-08-04 ven. 05:43] =>  0:03
 CLOCK: [2023-07-13 jeu. 12:43]--[2023-07-13 jeu. 12:50] =>  0:07
 CLOCK: [2023-06-23 ven. 10:24]--[2023-06-23 ven. 10:40] =>  0:16
 CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
@@ -70,7 +71,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [X] In godoc homepage, jepasq/gostatus doesn't have an associated description
   Maybe it's the =module overview=
 - [X] Create a very simpla Makefile with build, check and doc
-- [ ] Maybe add a clean rule to Makefile
+- [X] Maybe add a clean rule to Makefile
 - [ ] Continue documentation
 https://go.dev/doc/comment
 

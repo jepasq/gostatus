@@ -1,3 +1,8 @@
+RMF=rm -f
+BIN=gostatus
+
+.PHONY: clean clean-binary
+
 default: usage
 
 usage:
@@ -13,3 +18,10 @@ doc:
 	@echo "Please open http://127.0.0.1:6060/pkg/jepasq/gostatus/ ..."
 	@echo "Ctrl+C to exit"
 	@godoc -http=:6060 > /dev/null
+
+clean-binary:
+	$(RMF) $(BIN)
+
+clean: clean-binary
+	$(RMF) *~
+	$(RMF) */*~
