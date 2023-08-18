@@ -77,11 +77,13 @@ https://go.dev/doc/comment
 
 **** go dependency upgrades
 :LOGBOOK:
+CLOCK: [2023-08-18 ven. 04:05]
 CLOCK: [2023-07-13 jeu. 12:06]--[2023-07-13 jeu. 12:08] =>  0:02
 CLOCK: [2023-06-16 ven. 06:17]--[2023-06-16 ven. 06:22] =>  0:05
 CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
 :END:
-- [X] 13 Jul. 2023 : Upgrade x/sys from 0.9.0 to 0.10.0  
+- [X] 13 Jul. 2023 : Upgrade x/sys from 0.9.0 to 0.10.0
+- [X] 18 Aug. 2023 : Upgrade x/sys from 0.10 to 0.11
 - =go list -u -m all= to list upgradable dependencies
 - =go get -u ./...= to upgrade
 **** DONE Fix the hello/ page routing issue
