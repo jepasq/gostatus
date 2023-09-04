@@ -46,8 +46,11 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
 - [ ] See if this course can be interesting  
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 - [ ] May make this project public when it works
+**** Must make the CI and unit test work
+- [ ] Some tests actually fail
 **** Could make the TestWrongUrlRequestShouldFail and other unit tests work
 :LOGBOOK:
+CLOCK: [2023-09-04 lun. 10:39]--[2023-09-04 lun. 10:52] =>  0:13
 CLOCK: [2023-07-13 jeu. 13:42]--[2023-07-13 jeu. 13:50] =>  0:08
 CLOCK: [2023-07-13 jeu. 13:27]--[2023-07-13 jeu. 13:36] =>  0:09
 CLOCK: [2023-07-12 mer. 14:50]--[2023-07-12 mer. 15:03] =>  0:13
@@ -77,7 +80,7 @@ https://go.dev/doc/comment
 
 **** go dependency upgrades
 :LOGBOOK:
-CLOCK: [2023-08-18 ven. 04:05]
+CLOCK: [2023-08-18 ven. 04:05]--[2023-08-18 ven. 04:20] =>  0:15
 CLOCK: [2023-07-13 jeu. 12:06]--[2023-07-13 jeu. 12:08] =>  0:02
 CLOCK: [2023-06-16 ven. 06:17]--[2023-06-16 ven. 06:22] =>  0:05
 CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00

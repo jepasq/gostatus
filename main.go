@@ -46,7 +46,7 @@ func usage() {
 	fmt.Println("\n  --h|-?|--help Print this usage text and exit.");
 }
 
-func getTemplates(tmp string) (templates *template.Template, err error) {
+func getAllFiles() ([]string) {
 	var allFiles []string
 	for _, dir := range templateDirs {
 		files2, _ := ioutil.ReadDir(dir)
@@ -58,7 +58,12 @@ func getTemplates(tmp string) (templates *template.Template, err error) {
 			}
 		}
 	}
+	return allFiles
+}	
 
+func getTemplates(tmp string) (templates *template.Template, err error) {
+
+	var allFiles = getAllFiles();
 	templates, err = template.New(tmp).ParseFiles(allFiles...)
 	return
 }
@@ -77,6 +82,8 @@ func writeTemplate(w http.ResponseWriter, t string) {
 	err = templates.Execute(w, t)
 	if err != nil {
 		fmt.Printf("can't execute template '%s': '%s'\n", t, err)
+		fmt.Printf("Known templates are : '%s'\n",
+			strings.Join(getAllFiles(), ", "))
 	}
 }
 
