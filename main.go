@@ -91,6 +91,9 @@ func writeTemplate(w http.ResponseWriter, t string) {
 func main() {
 	fmt.Println(getIntroText())
 
+	arr := SidebarArray();
+	fmt.Println(arr);
+	
 	/*argLength := len(os.Args[1:])
 	fmt.Printf("Arg length is %d\n", argLength) 
 	*/
