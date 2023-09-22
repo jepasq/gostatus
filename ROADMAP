@@ -48,6 +48,7 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
 - [ ] May make this project public when it works
 **** Must make the CI and unit test work
 - [ ] Some tests actually fail
+- [ ] Then, make github actions test for this
 **** Could make the TestWrongUrlRequestShouldFail and other unit tests work
 :LOGBOOK:
 CLOCK: [2023-09-04 lun. 10:39]--[2023-09-04 lun. 10:52] =>  0:13
