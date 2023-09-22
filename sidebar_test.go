@@ -12,3 +12,13 @@ func TestSidebarArrayCtor(t *testing.T) {
 	}
 	*/
 }
+
+func TestSidebarArrayCtor_GetItemByName(t *testing.T) {
+	arr = SidebarArray()
+	it = SidebarArray_GetItemByLabel(arr, "Home")
+	if (it.name != "Home") {
+		t.Fatalf("Can't get 'Home' item")
+	}
+
+}
+

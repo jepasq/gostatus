@@ -15,3 +15,13 @@ func SidebarArray() ([]sidebarItem) {
 	
 	return arr;
 }
+
+func SidebarArray_GetItemByLabel(list []sidebarItem, label string) (sidebarItem) {
+	for _, it := range list {
+		if it.label == label {
+			return it
+		}
+		
+	}
+	//	return nil
+}
