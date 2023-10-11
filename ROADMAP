@@ -57,6 +57,9 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 - [ ] May make this project public when it works
 **** Must make the CI and unit test work
+:LOGBOOK:
+CLOCK: [2023-10-12 jeu. 01:36]--[2023-10-12 jeu. 01:52] =>  0:16
+:END:
 - [ ] Some tests actually fail
 - [ ] Then, make github actions test for this
 **** Could make the TestWrongUrlRequestShouldFail and other unit tests work
