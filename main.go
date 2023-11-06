@@ -15,7 +15,6 @@ import (
 
 	"text/template"
 	"github.com/pkg/browser"
-	"github.com/jepasq/gostatus/ifacetype"
 )
 
 // Package constants
@@ -99,7 +98,8 @@ func main() {
 	fmt.Printf("Arg length is %d\n", argLength) 
 	*/
 
-	iftpe : ifacetype.Web;
+	iftpe := Web;
+	fmt.Printf("Using interface type '%s'\n", iftpe)
 	
 	for _, a := range os.Args[1:] { // Argument index, argument
 		//   fmt.Printf("Arg %d is %s\n", i+1, a)

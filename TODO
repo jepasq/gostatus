@@ -7,4 +7,5 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc .`
 
 * v0.0.0-8 (22 Sep. 2023 - ???) SLOC ???
-- (1) Make tests build again
+- (2) Main can now use ifacetype from other file
+- Make tests build again

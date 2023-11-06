@@ -1,4 +1,4 @@
-package ifacetype
+package main
 
 /// The interface used in this session
 
