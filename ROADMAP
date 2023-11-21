@@ -91,8 +91,9 @@ CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
 - [X] 18 Aug. 2023 : Upgrade x/sys from 0.10 to 0.11
 - =go list -u -m all= to list upgradable dependencies
 - =go get -u ./...= to upgrade
-**** TODO [feature_IfaceOwnFile] Command line arguments handling
+**** TODO Command line arguments handling
 :LOGBOOK:
+CLOCK: [2023-11-21 mar. 03:46]--[2023-11-21 mar. 04:05] =>  0:19
 CLOCK: [2023-10-27 ven. 04:21]--[2023-10-27 ven. 04:42] =>  0:21
 CLOCK: [2023-10-20 ven. 02:38]--[2023-10-20 ven. 02:53] =>  0:15
 CLOCK: [2023-03-20 lun. 07:57]--[2023-03-20 lun. 08:11] =>  0:14
@@ -102,12 +103,14 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
 - [X] May print an intro in console containing version and revision
 - [X] Auto-open system browser at startup
 - [X] May make this project public when it works
-- [ ] Handle interface type --web, --cli, --tui
+- [-] Handle interface type --web, --cli, --tui
   Trying to define ifacetype constants in a separate file
-  - [ ] Trying even to use a separate module
+  - [X] Trying even to use a separate module
     https://go.dev/doc/code#Library
   - [ ] Maybe a IfacetypeToStr string  to make debugging easier
-    
+
+- [ ] May move all .go files in a src/ directory
+
 - [ ] See if this course can be interesting  
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 **** DONE Fix the hello/ page routing issue

@@ -98,8 +98,7 @@ func main() {
 	fmt.Printf("Arg length is %d\n", argLength) 
 	*/
 
-	iftpe := Web;
-	fmt.Printf("Using interface type '%s'\n", iftpe)
+	fmt.Printf("Using interface type '%s'\n", IfacetypeToStr(Web))
 	
 	for _, a := range os.Args[1:] { // Argument index, argument
 		//   fmt.Printf("Arg %d is %s\n", i+1, a)
