@@ -110,7 +110,9 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
   - [ ] Maybe a IfacetypeToStr string  to make debugging easier
 
 - [ ] May move all .go files in a src/ directory
-
+  Seems to works but we have a segmentation violation here
+  Should change content/template names
+  
 - [ ] See if this course can be interesting  
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 **** DONE Fix the hello/ page routing issue

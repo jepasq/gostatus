@@ -22,7 +22,7 @@ const (
 	keyServerAddr = "serverAddr"  // the key server address
 )
 // Defines where the template partials are searched for
-var templateDirs = []string{"content", "content/partials"}
+var templateDirs = []string{"content", "../content/partials"}
 
 /// Return the intro text
 func getIntroText() (string) {
@@ -62,7 +62,6 @@ func getAllFiles() ([]string) {
 }	
 
 func getTemplates(tmp string) (templates *template.Template, err error) {
-
 	var allFiles = getAllFiles();
 	templates, err = template.New(tmp).ParseFiles(allFiles...)
 	return
