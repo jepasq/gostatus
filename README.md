@@ -20,7 +20,7 @@ browse API documentation.
 
 # Build and run
 
-To compile and build dependencies and binary :
+To compile and build dependencies and binary run these commands in *src/* :
 
 	go build
 

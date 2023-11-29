@@ -6,7 +6,7 @@ BIN=gostatus
 default: usage
 
 usage:
-	echo "Please call with build, doc or check action"
+	@echo "Please call 'make' with build, doc or check action"
 
 build:
 	go build
