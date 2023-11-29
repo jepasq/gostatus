@@ -17,10 +17,15 @@ const (
 
 // Returns an string that represent the given interface type
 func IfacetypeToStr(t Ifacetype) (string) {
-	if (t == Web) {
+	switch t {
+	case Web:
 		return "Web"
+	case Cli:
+		return "Cli"
+	case Tui:
+		return "Tui"
+	default:
+		return "Unset"
 	}
-
-	return "Unset"
 }
 
