@@ -1,3 +1,13 @@
+* v0.0.0-8 (22 Sep. 2023 - 06 Dec. 2023) SLOC 450
+- Fix bad content template location in main.go
+- Upgrade dependency x/sys from 0.13 to 0.15
+- IfacetypeToStr() uses a switch statement
+- Move Makefile in src/ to fix make check command
+- Move all .go files in src
+- Implement and test IfacetypeToStr function
+- Main can now use ifacetype from other file
+- Make tests build again
+
 * v0.0.0-7 (13 Jul. 2023 - 22 Sep. 2023) SLOC 415
 - Add a GetByLabel unit test
 - Add an array-returning function in sidebar.go
