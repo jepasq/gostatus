@@ -93,6 +93,7 @@ CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
 - =go get -u ./...= to upgrade
 **** TODO Command line arguments handling
 :LOGBOOK:
+CLOCK: [2023-12-06 mer. 13:26]--[2023-12-06 mer. 13:28] =>  0:02
 CLOCK: [2023-11-29 mer. 09:02]--[2023-11-29 mer. 09:15] =>  0:13
 CLOCK: [2023-11-21 mar. 03:46]--[2023-11-21 mar. 04:05] =>  0:19
 CLOCK: [2023-10-27 ven. 04:21]--[2023-10-27 ven. 04:42] =>  0:21
@@ -112,7 +113,8 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
   - [X] Trying even to use a separate module
     https://go.dev/doc/code#Library
   - [X] Maybe a IfacetypeToStr string  to make debugging easier
-  
+- [X] Currently have an error when we retrieve root.tmpl
+
 - [ ] See if this course can be interesting  
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 **** DONE Fix the hello/ page routing issue

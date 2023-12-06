@@ -22,7 +22,7 @@ const (
 	keyServerAddr = "serverAddr"  // the key server address
 )
 // Defines where the template partials are searched for
-var templateDirs = []string{"content", "../content/partials"}
+var templateDirs = []string{"../content", "../content/partials"}
 
 /// Return the intro text
 func getIntroText() (string) {
