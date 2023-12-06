@@ -7,7 +7,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc .`
 
 * v0.0.0-8 (22 Sep. 2023 - ???) SLOC ???
-- (6) IfacetypeToStr() uses a switch statement
+- (7) Upgrade dependency x/sys from 0.13 to 0.15
+- IfacetypeToStr() uses a switch statement
 - Move Makefile in src/ to fix make check command
 - Move all .go files in src
 - Implement and test IfacetypeToStr function
