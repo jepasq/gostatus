@@ -8,11 +8,14 @@
 CLOCK: [2023-07-04 mar. 11:52]--[2023-07-04 mar. 12:15] =>  0:23
 :END:
 May see grafana dashboard as graphical inspiration
+- [ ] Maybe a ServiceListener super class
 - [ ] The configuration must be handled as a directory where each file
   can be a different service configuration
 - [ ] getCfgDirectory impl
   - [ ] Continue unit tests implementation
   - [ ] Implement  
+- [ ] See if this course can be interesting  
+  https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 **** Start to add a array of struct-based sidebar
 :LOGBOOK:
 CLOCK: [2023-09-22 ven. 08:51]--[2023-09-22 ven. 09:00] =>  0:09
@@ -78,9 +81,9 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [X] Create a very simpla Makefile with build, check and doc
 - [X] Maybe add a clean rule to Makefile
 - [ ] Continue documentation
-https://go.dev/doc/comment
+  https://go.dev/doc/comment
 
-**** go dependency upgrades
+**** TODO go dependency upgrades
 :LOGBOOK:
 CLOCK: [2023-08-18 ven. 04:05]--[2023-08-18 ven. 04:20] =>  0:15
 CLOCK: [2023-07-13 jeu. 12:06]--[2023-07-13 jeu. 12:08] =>  0:02
@@ -91,7 +94,7 @@ CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
 - [X] 18 Aug. 2023 : Upgrade x/sys from 0.10 to 0.11
 - =go list -u -m all= to list upgradable dependencies
 - =go get -u ./...= to upgrade
-**** TODO Command line arguments handling
+**** DONE Command line arguments handling
 :LOGBOOK:
 CLOCK: [2023-12-06 mer. 13:26]--[2023-12-06 mer. 13:28] =>  0:02
 CLOCK: [2023-11-29 mer. 09:02]--[2023-11-29 mer. 09:15] =>  0:13
@@ -115,8 +118,6 @@ CLOCK: [2023-01-02 lun. 07:07]--[2023-01-02 lun. 07:17] =>  0:10
   - [X] Maybe a IfacetypeToStr string  to make debugging easier
 - [X] Currently have an error when we retrieve root.tmpl
 
-- [ ] See if this course can be interesting  
-  https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 **** DONE Fix the hello/ page routing issue
 :LOGBOOK:
 CLOCK: [2023-06-16 ven. 06:28]--[2023-06-16 ven. 06:43] =>  0:15
