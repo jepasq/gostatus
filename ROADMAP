@@ -19,37 +19,6 @@ May see grafana dashboard as graphical inspiration
   - [ ] Implement  
 - [ ] See if this course can be interesting  
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
-**** Start to add a array of struct-based sidebar
-:LOGBOOK:
-CLOCK: [2023-09-22 ven. 08:51]--[2023-09-22 ven. 09:00] =>  0:09
-CLOCK: [2023-09-22 ven. 08:04]--[2023-09-22 ven. 08:16] =>  0:12
-CLOCK: [2023-07-04 mar. 11:40]--[2023-07-04 mar. 11:44] =>  0:04
-CLOCK: [2023-06-15 jeu. 07:14]--[2023-06-15 jeu. 07:43] =>  0:29
-CLOCK: [2023-05-22 lun. 01:47]--[2023-05-22 lun. 02:24] =>  0:37
-CLOCK: [2023-05-22 lun. 01:20]--[2023-05-22 lun. 01:37] =>  0:17
-CLOCK: [2023-05-04 jeu. 12:43]--[2023-05-04 jeu. 12:47] =>  0:04
-CLOCK: [2023-05-04 jeu. 11:28]--[2023-05-04 jeu. 11:56] =>  0:28
-:END:
-see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
-Testing in root.tmpl
-
-- [X] May create a partial : done but how can we handle =current page=
-- [X] Add to form page
-  Testing , template markup added but it doesn't work
-  =template "sidebarTMPL" not defined'=
-- [ ] Or, we could handle a full Array of items as : in test in sidebar.go
-  [{ name, slur, active:bool}]
-  - But how to handle sub items ?
-  - [ ] Implement a getItemByName
-  - [ ] Maybe an util function to make a special named page active (making
-    all other page non-active). Unit test this.
-    
-- [ ] Change Sidebar's page name and links in every page
-  Actually trying in hello page using helloActive variable
-    
-- [ ] Add sidebar to Hello page
-- [ ] SVG-based icon can't be seen
-  
 **** Must make the CI and unit test work
 :LOGBOOK:
 CLOCK: [2023-10-12 jeu. 01:36]--[2023-10-12 jeu. 01:52] =>  0:16
@@ -86,6 +55,40 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [ ] Continue documentation
   https://go.dev/doc/comment
 
+**** TODO Start to add a array of struct-based sidebar
+:LOGBOOK:
+CLOCK: [2023-12-14 jeu. 08:59]--[2023-12-14 jeu. 09:11] =>  0:12
+CLOCK: [2023-09-22 ven. 08:51]--[2023-09-22 ven. 09:00] =>  0:09
+CLOCK: [2023-09-22 ven. 08:04]--[2023-09-22 ven. 08:16] =>  0:12
+CLOCK: [2023-07-04 mar. 11:40]--[2023-07-04 mar. 11:44] =>  0:04
+CLOCK: [2023-06-15 jeu. 07:14]--[2023-06-15 jeu. 07:43] =>  0:29
+CLOCK: [2023-05-22 lun. 01:47]--[2023-05-22 lun. 02:24] =>  0:37
+CLOCK: [2023-05-22 lun. 01:20]--[2023-05-22 lun. 01:37] =>  0:17
+CLOCK: [2023-05-04 jeu. 12:43]--[2023-05-04 jeu. 12:47] =>  0:04
+CLOCK: [2023-05-04 jeu. 11:28]--[2023-05-04 jeu. 11:56] =>  0:28
+:END:
+see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
+Testing in root.tmpl
+
+- [X] May create a partial : done but how can we handle =current page=
+- [X] Add to form page
+  Testing , template markup added but it doesn't work
+  =template "sidebarTMPL" not defined'=
+- [ ] Sidebar is actuallt broken
+  The page content is added below it.
+- [ ] Or, we could handle a full Array of items as : in test in sidebar.go
+  [{ name, slur, active:bool}]
+  - But how to handle sub items ?
+  - [ ] Implement a getItemByName
+  - [ ] Maybe an util function to make a special named page active (making
+    all other page non-active). Unit test this.
+    
+- [ ] Change Sidebar's page name and links in every page
+  Actually trying in hello page using helloActive variable
+    
+- [ ] Add sidebar to Hello page
+- [ ] SVG-based icon can't be seen
+  
 **** TODO go dependency upgrades
 :LOGBOOK:
 CLOCK: [2023-08-18 ven. 04:05]--[2023-08-18 ven. 04:20] =>  0:15

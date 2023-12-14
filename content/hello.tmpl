@@ -4,12 +4,20 @@
   {{template "headerTMPL"}}
   <title>Hello | gostatus</title>
   <BODY>
-    <p>You're in the HELLO page!</p>
-    <p>And read logs, we're reading full request body!<br>
-      To test this, contactthis server with curl like :
-      <pre>curl -X POST -d 'This is the body' 'http://localhost:3333/hello</pre>
+    <main>
+      {{template "sidebarTMPL"}}
+
+    <div class="d-flex flex-column flex-grow-1 p-3">
+    
+      <p>You're in the HELLO page!</p>
+      <p>And read logs, we're reading full request body!<br>
+	To test this, contactthis server with curl like :
+	<pre>curl -X POST -d 'This is the body' 'http://localhost:3333/hello
+	</pre>
       
-    </p>
-    <a href="..">back</a>
+      </p>
+      <a href="..">back</a>
+    </div> <!-- flex -->
+    </main>
   </BODY>
 </HTML>
