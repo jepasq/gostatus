@@ -5,10 +5,13 @@
 *** v0.0.1
 **** May at least handle systemctl-powered daemon
 :LOGBOOK:
+CLOCK: [2023-12-14 jeu. 08:26]--[2023-12-14 jeu. 08:40] =>  0:14
 CLOCK: [2023-07-04 mar. 11:52]--[2023-07-04 mar. 12:15] =>  0:23
 :END:
 May see grafana dashboard as graphical inspiration
-- [ ] Maybe a ServiceListener super class
+- [ ] Maybe a ServiceListener super class/interface in service.go
+  then a SystemctlServiceListener
+  - [ ] Now, try to use it as basic test for mongodb
 - [ ] The configuration must be handled as a directory where each file
   can be a different service configuration
 - [ ] getCfgDirectory impl
