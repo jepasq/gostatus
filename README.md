@@ -4,6 +4,8 @@ A microservices monitoring application written in *go*.
 
 # Dependencies
 
+## Install
+
 To build and run this project, you need the Go programming language core
 compiler.
 
@@ -17,6 +19,20 @@ on *Debian* :
 
 The *-tools packages usually contain *godoc* package used to generate and 
 browse API documentation.
+
+## Upgrade
+
+Once installed, you may need to upgrade dependencies. From the `src/`
+directory, run :
+
+	go list -u -m all
+
+to list upgradable dependencies
+
+	go get -u ./...
+	
+to upgrade.
+
 
 # Build and run
 
