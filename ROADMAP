@@ -58,6 +58,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 
 **** TODO Start to add a array of struct-based sidebar
 :LOGBOOK:
+CLOCK: [2024-01-18 jeu. 15:07]--[2024-01-18 jeu. 15:13] =>  0:06
 CLOCK: [2024-01-18 jeu. 14:07]--[2024-01-18 jeu. 14:26] =>  0:19
 CLOCK: [2023-12-14 jeu. 08:59]--[2023-12-14 jeu. 09:11] =>  0:12
 CLOCK: [2023-09-22 ven. 08:51]--[2023-09-22 ven. 09:00] =>  0:09
@@ -76,21 +77,22 @@ Testing in root.tmpl
 - [X] Add to form page
   Testing , template markup added but it doesn't work
   =template "sidebarTMPL" not defined'=
-- [ ] Sidebar is actually broken
+- [X] Sidebar is actually broken
   The page content is added below it.
+- [X] Add sidebar to Hello page
+
 - [ ] Or, we could handle a full Array of items as : in test in sidebar.go
   [{ name, slur, active:bool}]
   - But how to handle sub items ?
   - [ ] Implement a getItemByName
   - [ ] Maybe an util function to make a special named page active (making
     all other page non-active). Unit test this.
+
+- [ ] root.tmpl could be call home
     
 - [ ] Change Sidebar's page name and links in every page
   Actually trying in hello page using helloActive variable
-    
-- [ ] Add sidebar to Hello page
 - [ ] SVG-based icon can't be seen
-  
 **** TODO go dependency upgrades
 :LOGBOOK:
 CLOCK: [2023-08-18 ven. 04:05]--[2023-08-18 ven. 04:20] =>  0:15
