@@ -110,7 +110,7 @@ func main() {
 	// Basic HTTP server
 	fmt.Println("Listening http://localhost:3333 and opening browser...")
 	mux := http.NewServeMux()
-	mux.HandleFunc("/", getRoot)
+	mux.HandleFunc("/", getHome)
 	mux.HandleFunc("/hello", getHello)
 	mux.HandleFunc("/form",  getForm)
 
@@ -145,7 +145,7 @@ func main() {
 	<-ctx.Done()
 }
 
-func getRoot(w http.ResponseWriter, r *http.Request) {
+func getHome(w http.ResponseWriter, r *http.Request) {
 	// Ok for '/', root can be handled, everything else is 404
 	// It can works with only this test because getRoot() is a kind
 	// of fallback for all not-yet-handled URLs.
@@ -165,7 +165,7 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 		hasFirst, first,
 		hasSecond, second)
 
-	writeTemplate(w, "root.tmpl");
+	writeTemplate(w, "home.tmpl");
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {
