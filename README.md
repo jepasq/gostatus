@@ -60,9 +60,9 @@ To print a short usage text and exit, run :
 
 # API documenation
 
-Run the following command :
+From the  *src* directory, run the following command :
 	
-	godoc -http=:6060
+	make doc
 
-and open the page http://127.0.0.1:6060/pkg/jepasq/gostatus/ with your 
-favorite browser.
+This should automatically open the http://127.0.0.1:6060/pkg/jepasq/gostatus/ 
+URL in your favorite/system browser.

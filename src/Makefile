@@ -1,5 +1,6 @@
 RMF=rm -f
 BIN=gostatus
+URL="http://127.0.0.1:6060/pkg/jepasq/gostatus/"
 
 .PHONY: clean clean-binary
 
@@ -14,9 +15,13 @@ build:
 check:
 	go test
 
-doc:
-	@echo "Please open http://127.0.0.1:6060/pkg/jepasq/gostatus/ ..."
+# Thanks to https://askubuntu.com/a/1134795
+open-doc:
+	@echo "Opening $(URL)... (may need a refresh)"
+	@xdg-open $(URL) || @sensible-browser $(URL) || @x-www-browser $(URL) || @gnome-open $(URL)
 	@echo "Ctrl+C to exit"
+
+doc: open-doc
 	@godoc -http=:6060 > /dev/null
 
 clean-binary:
