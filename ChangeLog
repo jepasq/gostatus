@@ -1,3 +1,13 @@
+* v0.0.0-9 (06 Dec. 2023 - 25 Jan. 2024) SLOC 472
+- Make doc command automatically opens URL in browser
+- Rename root page and getRoot function to Home
+- Add sidebar placement fix to hello page
+- Fix the sidebar placement issue
+- Upgrade x/sys dependency and add commands to README
+- Add sidebar to hello page
+- Add basic service interface
+- Close te command line args-related ROADMAP section
+
 * v0.0.0-8 (22 Sep. 2023 - 06 Dec. 2023) SLOC 450
 - Fix bad content template location in main.go
 - Upgrade dependency x/sys from 0.13 to 0.15
