@@ -29,3 +29,16 @@ func SidebarArray_GetItemByLabel(list []SidebarItem, label string) (SidebarItem,
 	}
 	return SidebarItem{}, errors.New("Not found")
 }
+
+func SidebarArray_MakeActive(list []SidebarItem, label string) (SidebarItem, error) {
+	for _, it := range list {
+		if it.label == label {
+			it.active = true
+		} else {
+			it.active = false
+		}
+		
+	}
+	return SidebarItem{}, errors.New("Not found")
+}
+

@@ -59,6 +59,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [ ] Web page is now completely empty  
 **** TODO Start to add a array of struct-based sidebar
 :LOGBOOK:
+CLOCK: [2024-02-05 lun. 16:42]--[2024-02-05 lun. 17:27] =>  0:45
 CLOCK: [2024-01-25 jeu. 15:00]--[2024-01-25 jeu. 15:05] =>  0:05
 CLOCK: [2024-01-18 jeu. 15:07]--[2024-01-18 jeu. 15:13] =>  0:06
 CLOCK: [2024-01-18 jeu. 14:07]--[2024-01-18 jeu. 14:26] =>  0:19
@@ -83,16 +84,16 @@ Testing in root.tmpl
   The page content is added below it.
 - [X] Add sidebar to Hello page
 - [X] root.tmpl could be call home
-
-- [ ] Or, we could handle a full Array of items as : in test in sidebar.go
+- [X] Or, we could handle a full Array of items as : in test in sidebar.go
   [{ name, slur, active:bool}]
   - But how to handle sub items ?
-  - [ ] Implement a getItemByName
-  - [ ] Maybe an util function to make a special named page active (making
+  - [X] Implement a getItemByName
+  - [X] Maybe an util function to make a special named page active (making
     all other page non-active). Unit test this.
     
 - [ ] Change Sidebar's page name and links in every page
   Actually trying in hello page using helloActive variable
+  Try using the SidebarArray thing
 - [ ] SVG-based icon can't be seen
 **** TODO go dependency upgrades
 :LOGBOOK:
