@@ -69,16 +69,18 @@ func getTemplates(tmp string) (templates *template.Template, err error) {
 
 
 /**
-  * w the HTTP reponse writer
-  * t The template name relative to template directory
+ * w    The HTTP reponse writer
+ * t    The template name relative to template directory
+ * data Arbitrary data to be passed to template. May e nil.
+ *
  */
-func writeTemplate(w http.ResponseWriter, t string) {
+func writeTemplate(w http.ResponseWriter, t string, data any) {
 	templates, err := getTemplates(t);
 	if err != nil {
 		fmt.Printf("Failed to get templates: '%s'\n", err)
 	}
 	
-	err = templates.Execute(w, t)
+	err = templates.Execute(w, data)
 	if err != nil {
 		fmt.Printf("can't execute template '%s': '%s'\n", t, err)
 		fmt.Printf("Known templates are : '%s'\n",
@@ -165,7 +167,7 @@ func getHome(w http.ResponseWriter, r *http.Request) {
 		hasFirst, first,
 		hasSecond, second)
 
-	writeTemplate(w, "home.tmpl");
+	writeTemplate(w, "home.tmpl", nil);
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {
@@ -180,7 +182,7 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 		ctx.Value(keyServerAddr),
 		body)
 	
-	writeTemplate(w, "hello.tmpl");
+	writeTemplate(w, "hello.tmpl", nil);
 }
 
 /// Used to pass variable to the Post page

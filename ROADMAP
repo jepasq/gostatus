@@ -58,11 +58,17 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   https://go.dev/doc/comment
 - [ ] Web page is now completely empty  
 **** TODO Continue array-based sidebar implementation
+:LOGBOOK:
+CLOCK: [2024-02-14 mer. 18:04]--[2024-02-14 mer. 18:23] =>  0:19
+:END:
 see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
 Testing in root.tmpl
-- [ ] Change Sidebar's page name and links in every page
+- [-] Change Sidebar's page name and links in every page
   Actually trying in hello page using helloActive variable
-  Try using the SidebarArray thing
+  Try using the SidebarArray thing 
+  - [X] writeTemplate should take a SidebarArray parameter
+    added a any data parameter
+  - [ ] getHello shouls instanciate a SidebarArray and passed it to template  
 - [ ] SVG-based icon can't be seen
 **** TODO go dependency upgrades
 :LOGBOOK:
