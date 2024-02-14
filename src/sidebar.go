@@ -5,9 +5,9 @@ import (
 )
 
 type SidebarItem struct {
-	label  string
-	active bool
-	slur   string
+	Label  string
+	Active bool
+	Slur   string
 }
 
 func SidebarArray() ([]SidebarItem) {
@@ -22,7 +22,7 @@ func SidebarArray() ([]SidebarItem) {
 
 func SidebarArray_GetItemByLabel(list []SidebarItem, label string) (SidebarItem, error) {
 	for _, it := range list {
-		if it.label == label {
+		if it.Label == label {
 			return it, nil
 		}
 		
@@ -32,10 +32,10 @@ func SidebarArray_GetItemByLabel(list []SidebarItem, label string) (SidebarItem,
 
 func SidebarArray_MakeActive(list []SidebarItem, label string) (SidebarItem, error) {
 	for _, it := range list {
-		if it.label == label {
-			it.active = true
+		if it.Label == label {
+			it.Active = true
 		} else {
-			it.active = false
+			it.Active = false
 		}
 		
 	}

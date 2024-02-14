@@ -7,7 +7,10 @@
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
       <span class="fs-4">goStatus</span>
     </a>
-    <hr>
+ <hr>
+ {{range .}}
+ <strong>{{ .Label }}, {{.Active }}, {{.Slur }}</strong><br>
+ {{end}}
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
         <a href="/" class="nav-link active" aria-current="page">

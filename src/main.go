@@ -182,7 +182,9 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 		ctx.Value(keyServerAddr),
 		body)
 	
-	writeTemplate(w, "hello.tmpl", nil);
+	arr := SidebarArray()
+	SidebarArray_MakeActive(arr, "Hello")
+	writeTemplate(w, "hello.tmpl", arr);
 }
 
 /// Used to pass variable to the Post page
