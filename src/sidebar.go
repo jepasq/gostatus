@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 )
 
 type SidebarItem struct {
@@ -19,6 +20,8 @@ func SidebarArray() ([]SidebarItem) {
 	
 	return arr;
 }
+
+type Sidebar []SidebarItem
 
 func SidebarArray_GetItemByLabel(list []SidebarItem, label string) (SidebarItem, error) {
 	for _, it := range list {
@@ -42,3 +45,13 @@ func SidebarArray_MakeActive(list []SidebarItem, label string) (SidebarItem, err
 	return SidebarItem{}, errors.New("Not found")
 }
 
+func (arr Sidebar) GetItemByLabel(label string) SidebarItem {
+	si, err := SidebarArray_GetItemByLabel(arr, label)
+	
+	if err != nil {
+		fmt.Printf("Failed to get Sidebar item from label '%s'\n",
+			label)
+	}
+
+	return si
+}
