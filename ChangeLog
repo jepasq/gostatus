@@ -1,3 +1,13 @@
+* v0.0.0-10 (25 Jan. 2024 - 05 Mar. 2024) SLOC 524
+- Add sidebar-based menu to homepage
+- Make the sidebar partial draw items according to the array
+- Fix sidebar template compilation error
+- Playing with Sidebar method and active status in hello page
+- Sidebar partial starts to use SidebarArray content
+- writeTemplate function takes a data any parameter
+- Close a sidebar-related ROADMAP section
+- Implement SideArray_MakeActive function
+
 * v0.0.0-9 (06 Dec. 2023 - 25 Jan. 2024) SLOC 472
 - Make doc command automatically opens URL in browser
 - Rename root page and getRoot function to Home
