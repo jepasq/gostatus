@@ -167,7 +167,8 @@ func getHome(w http.ResponseWriter, r *http.Request) {
 		hasFirst, first,
 		hasSecond, second)
 
-	writeTemplate(w, "home.tmpl", nil);
+	arr := SidebarArray() // Hello is active by default
+	writeTemplate(w, "home.tmpl", arr);
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {

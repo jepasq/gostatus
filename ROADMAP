@@ -59,6 +59,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [ ] Web page is now completely empty  
 **** TODO Continue array-based sidebar implementation
 :LOGBOOK:
+CLOCK: [2024-03-05 mar. 07:52]--[2024-03-05 mar. 08:14] =>  0:22
 CLOCK: [2024-03-05 mar. 07:07]--[2024-03-05 mar. 07:47] =>  0:40
 CLOCK: [2024-03-05 mar. 06:39]--[2024-03-05 mar. 07:06] =>  0:27
 CLOCK: [2024-02-15 jeu. 17:31]--[2024-02-15 jeu. 17:55] =>  0:24
@@ -80,6 +81,7 @@ Testing in root.tmpl
     - [X] Create the Sidebar type ([]SidebarItem)
     - The, {{with .}} We should be able to call a method
 - [ ] SidebarItem member in hello is spurious (only Home is true)      
+- [ ] More needed for the form page (has already vars)
 - [ ] Sidebar makeActive could be a member method
 - [ ] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
