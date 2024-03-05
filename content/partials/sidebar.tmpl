@@ -12,12 +12,27 @@
  <strong>{{ .Label }}, {{.Active }}, {{.Slur }}</strong><br>
  {{end}}
 
-{{with .}}
- <tt>
-   {{  .GetItemByLabel "Hello" }}
- </tt>
-{{ end}} 
     <ul class="nav nav-pills flex-column mb-auto">
+
+      {{range .}}
+      <li>
+        <a href="{{.Slur }}"
+	   {{if .Active}}
+	   class="nav-link text-white active"
+	   {{else}}
+	   class="nav-link text-white"
+	   {{end}}
+	   >
+          <svg class="bi me-2" width="16" height="16">
+	    <use xlink:href="#people-circle"></use>
+	  </svg>
+          {{ .Label }}
+        </a>
+      </li>
+      {{end}}
+
+      
+<!--
       <li class="nav-item">
         <a href="/" class="nav-link active" aria-current="page">
           <svg class="bi me-2" width="16" height="16">
@@ -58,6 +73,7 @@
           Customers
         </a>
       </li>
+      -->
     </ul>
     <hr>
 </div>

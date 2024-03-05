@@ -13,8 +13,8 @@ type SidebarItem struct {
 
 func SidebarArray() (Sidebar) {
 	home  := SidebarItem{"Home",  true,  "/"}
-	hello := SidebarItem{"Hello", false, "hello/"}
-	form  := SidebarItem{"Form",  false, "hello/"}
+	hello := SidebarItem{"Hello", false, "hello"}
+	form  := SidebarItem{"Form",  false, "form"}
 
 	arr := []SidebarItem{home, hello, form}
 	
