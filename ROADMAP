@@ -59,24 +59,27 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [ ] Web page is now completely empty  
 **** TODO Continue array-based sidebar implementation
 :LOGBOOK:
+CLOCK: [2024-03-05 mar. 06:39]--[2024-03-05 mar. 07:06] =>  0:27
 CLOCK: [2024-02-15 jeu. 17:31]--[2024-02-15 jeu. 17:55] =>  0:24
 CLOCK: [2024-02-14 mer. 18:32]--[2024-02-14 mer. 18:58] =>  0:26
 CLOCK: [2024-02-14 mer. 18:04]--[2024-02-14 mer. 18:23] =>  0:19
 :END:
 see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
 Testing in root.tmpl
-- [-] Change Sidebar's page name and links in every page
+- [X] Change Sidebar's page name and links in every page
   Actually trying in hello page using helloActive variable
   Try using the SidebarArray thing 
   - [X] writeTemplate should take a SidebarArray parameter
     added a any data parameter
   - [X] getHello should instanciate a SidebarArray and passed it to template
-  - [ ] content/partial/sidebar must check/use for SidebarArray
+  - [X] content/partial/sidebar must check/use for SidebarArray
     Actually prints all array content. Now should use menu item label to check
     for active status
     - Using FuncMap to call arbitrary function is too complex now
-    - [ ] Create the Sidebar type ([]SidebarItem)
+    - [X] Create the Sidebar type ([]SidebarItem)
     - The, {{with .}} We should be able to call a method
+- [ ] Now that the sidebar template has the Hello Item, print all items
+  with active status with a range loop
 - [ ] SVG-based icon can't be seen
 **** TODO go dependency upgrades
 :LOGBOOK:

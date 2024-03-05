@@ -11,7 +11,7 @@ type SidebarItem struct {
 	Slur   string
 }
 
-func SidebarArray() ([]SidebarItem) {
+func SidebarArray() (Sidebar) {
 	home  := SidebarItem{"Home",  true,  "/"}
 	hello := SidebarItem{"Hello", false, "hello/"}
 	form  := SidebarItem{"Form",  false, "hello/"}

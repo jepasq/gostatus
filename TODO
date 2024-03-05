@@ -7,7 +7,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-10 (25 Jan. 2024 - ???) SLOC ???
-- (5) Playing with Sidebar method and active status in hello page
+- (6) Fix sidebar template compilation error
+- Playing with Sidebar method and active status in hello page
 - Sidebar partial starts to use SidebarArray content
 - writeTemplate function takes a data any parameter
 - Close a sidebar-related ROADMAP section
