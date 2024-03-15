@@ -34,7 +34,11 @@ func TestSidebar_MakeActive(t *testing.T) {
 		t.Fatalf("Item shouldn't be active")
 	}
 
-	SidebarArray_MakeActive(arr, "Form")
+	err = arr.MakeActive("Form")
+	if (err != nil) {
+		t.Fatalf("MakeActive returned an error")
+	}
+	
 	it, err = SidebarArray_GetItemByLabel(arr, "Form")
 	if (!it.active && err != nil) {
 		t.Fatalf("Item is not active")

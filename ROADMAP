@@ -59,6 +59,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [ ] Web page is now completely empty  
 **** TODO Continue array-based sidebar implementation
 :LOGBOOK:
+CLOCK: [2024-03-15 ven. 03:23]--[2024-03-15 ven. 03:51] =>  0:28
 CLOCK: [2024-03-05 mar. 07:52]--[2024-03-05 mar. 08:14] =>  0:22
 CLOCK: [2024-03-05 mar. 07:07]--[2024-03-05 mar. 07:47] =>  0:40
 CLOCK: [2024-03-05 mar. 06:39]--[2024-03-05 mar. 07:06] =>  0:27
@@ -80,9 +81,12 @@ Testing in root.tmpl
     - Using FuncMap to call arbitrary function is too complex now
     - [X] Create the Sidebar type ([]SidebarItem)
     - The, {{with .}} We should be able to call a method
-- [ ] SidebarItem member in hello is spurious (only Home is true)      
+- [X] Sidebar makeActive could be a member method
+- [ ] Sidebar may have a toStr representation method
+  To be able to add it to the error string of MakeActive (can't find x in {y})
+- [ ] Sidebar GetItemByLabel could be a member method
+- [ ] SidebarItem member in hello is spurious (only Home is true)
 - [ ] More needed for the form page (has already vars)
-- [ ] Sidebar makeActive could be a member method
 - [ ] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
 - [ ] SVG-based icon can't be seen
@@ -101,6 +105,7 @@ see README.md for commands
 - [X] 05 Feb. 2024 : no update available.
 - [X] 14 Feb. 2024 : Upgrade x/sys from 0.16 to 0.17
 - [X] 05 Mar. 2024 : Upgrade x/sys from 0.17 to 0.18
+- [ ] 15 Mar. 2024 : none
 **** DONE Start to add a array of struct-based sidebar
 :LOGBOOK:
 CLOCK: [2024-02-05 lun. 16:42]--[2024-02-05 lun. 17:27] =>  0:45

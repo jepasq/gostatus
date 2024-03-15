@@ -33,8 +33,10 @@ func SidebarArray_GetItemByLabel(list []SidebarItem, label string) (SidebarItem,
 	return SidebarItem{}, errors.New("Not found")
 }
 
-func SidebarArray_MakeActive(list []SidebarItem, label string) (SidebarItem, error) {
-	for _, it := range list {
+func (arr Sidebar) MakeActive(label string) (error) {
+	for _, it := range arr {
+		fmt.Printf(" > : '%s'\n", it.Label)
+
 		if it.Label == label {
 			it.Active = true
 		} else {
@@ -42,7 +44,8 @@ func SidebarArray_MakeActive(list []SidebarItem, label string) (SidebarItem, err
 		}
 		
 	}
-	return SidebarItem{}, errors.New("Not found")
+	return errors.New(fmt.Sprintf("Can't find irem '%s' in '%v'",
+		label, arr))
 }
 
 func (arr Sidebar) GetItemByLabel(label string) SidebarItem {
