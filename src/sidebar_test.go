@@ -14,7 +14,7 @@ func TestSidebarArrayCtor(t *testing.T) {
 func TestSidebar_GetItemByName(t *testing.T) {
 	arr := SidebarArray()
 	it, err := SidebarArray_GetItemByLabel(arr, "Home")
-	if (it.label != "Home" || err != nil) {
+	if (it.Label != "Home" || err != nil) {
 		t.Fatalf("Can't get 'Home' item")
 	}
 }
@@ -30,7 +30,7 @@ func TestSidebar_GetItemByName_error(t *testing.T) {
 func TestSidebar_MakeActive(t *testing.T) {
 	arr := SidebarArray()
 	it, err := SidebarArray_GetItemByLabel(arr, "Form")
-	if (it.active && err != nil) {
+	if (it.Active && err != nil) {
 		t.Fatalf("Item shouldn't be active")
 	}
 
@@ -40,7 +40,7 @@ func TestSidebar_MakeActive(t *testing.T) {
 	}
 	
 	it, err = SidebarArray_GetItemByLabel(arr, "Form")
-	if (!it.active && err != nil) {
+	if (!it.Active && err != nil) {
 		t.Fatalf("Item is not active")
 	}
 }

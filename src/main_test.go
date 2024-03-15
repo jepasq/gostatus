@@ -55,7 +55,7 @@ func TestHelloPageRendering(t *testing.T) {
 	// We create a ResponseRecorder (which satisfies http.ResponseWriter)
 	// to record the response.
 	rr := httptest.NewRecorder()
-	writeTemplate(rr, "hello")
+	writeTemplate(rr, "hello", nil)
 	//	t.Fatalf(`HELLO page rendering failed %q`, want,)
 	res := rr.Result()	
 	data, err := ioutil.ReadAll(res.Body)
@@ -84,7 +84,7 @@ func TestFormPageRendering(t *testing.T) {
 	// We create a ResponseRecorder (which satisfies http.ResponseWriter)
 	// to record the response.
 	rr := httptest.NewRecorder()
-	writeTemplate(rr, "form")
+	writeTemplate(rr, "form", nil)
 	//	t.Fatalf(`HELLO page rendering failed %q`, want,)
 	res := rr.Result()	
 	data, err := ioutil.ReadAll(res.Body)

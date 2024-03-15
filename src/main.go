@@ -186,7 +186,7 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 	arr := SidebarArray()
 	err = arr.MakeActive("Hello")
 	if err != nil {
-		fmt.Printf(err)
+		fmt.Printf("MakeActive: %s", err)
 	}
 	
 	writeTemplate(w, "hello.tmpl", arr);
