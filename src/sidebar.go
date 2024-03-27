@@ -54,13 +54,14 @@ func (arr Sidebar) MakeActive(label string) (error) {
 	}
 }
 
-func (arr Sidebar) GetItemByLabel(label string) SidebarItem {
-	si, err := SidebarArray_GetItemByLabel(arr, label)
-	
-	if err != nil {
-		fmt.Printf("Failed to get Sidebar item from label '%s'\n",
-			label)
+func (arr Sidebar) GetItemByLabel(label string) (SidebarItem, error) {
+	for _, it := range arr {
+		if it.Label == label {
+			return it, nil
+		}
+		
 	}
+	return SidebarItem{},
+		errors.New("Failed to get Sidebar item from label")
 
-	return si
 }

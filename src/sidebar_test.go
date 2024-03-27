@@ -19,9 +19,9 @@ func TestSidebar_GetItemByName(t *testing.T) {
 	}
 }
 
-func TestSidebar_GetItemByName_error(t *testing.T) {
+func TestSidebar_GetItemByLabel_error(t *testing.T) {
 	arr := SidebarArray()
-	_, err := SidebarArray_GetItemByLabel(arr, "UnknownTooLongLabel")
+	_, err := arr.GetItemByLabel("UnknownTooLongLabel")
 	if (err == nil) {
 		t.Fatalf("Unknown label didn't raise any error")
 	}
@@ -29,7 +29,7 @@ func TestSidebar_GetItemByName_error(t *testing.T) {
 
 func TestSidebar_MakeActive(t *testing.T) {
 	arr := SidebarArray()
-	it, err := SidebarArray_GetItemByLabel(arr, "Form")
+	it, err := arr.GetItemByLabel("Form")
 	if (it.Active && err != nil) {
 		t.Fatalf("Item shouldn't be active")
 	}
@@ -39,7 +39,7 @@ func TestSidebar_MakeActive(t *testing.T) {
 		t.Fatalf("MakeActive returned an error : %s", err)
 	}
 	
-	it, err = SidebarArray_GetItemByLabel(arr, "Form")
+	it, err = arr.GetItemByLabel("Form")
 	if (!it.Active && err != nil) {
 		t.Fatalf("Item is not active")
 	}
