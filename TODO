@@ -7,5 +7,6 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc src/`
 
 * v0.0.0-11 (05 Mar. 2024 - ???) SLOC ???
-- (2) Fix multiple test compilation errors
+- (3) Fix a Sidebar.MakeActive bug always returning an error
+- Fix multiple test compilation errors
 - Sidebar MakeActive is a member method

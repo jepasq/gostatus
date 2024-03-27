@@ -59,6 +59,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [ ] Web page is now completely empty  
 **** TODO Continue array-based sidebar implementation
 :LOGBOOK:
+CLOCK: [2024-03-27 mer. 05:14]--[2024-03-27 mer. 05:32] =>  0:18
 CLOCK: [2024-03-15 ven. 04:08]--[2024-03-15 ven. 04:18] =>  0:10
 CLOCK: [2024-03-15 ven. 03:23]--[2024-03-15 ven. 03:51] =>  0:28
 CLOCK: [2024-03-05 mar. 07:52]--[2024-03-05 mar. 08:14] =>  0:22
@@ -83,6 +84,8 @@ Testing in root.tmpl
     - [X] Create the Sidebar type ([]SidebarItem)
     - The, {{with .}} We should be able to call a method
 - [X] Sidebar makeActive could be a member method
+- [X] We have an issue with SideMakeActive (Form item is not found)
+  
 - [ ] Sidebar may have a toStr representation method
   To be able to add it to the error string of MakeActive (can't find x in {y})
 - [ ] Sidebar GetItemByLabel could be a member method
@@ -93,6 +96,7 @@ Testing in root.tmpl
 - [ ] SVG-based icon can't be seen
 **** TODO go dependency upgrades
 :LOGBOOK:
+CLOCK: [2024-03-27 mer. 05:01]--[2024-03-27 mer. 05:03] =>  0:02
 CLOCK: [2023-08-18 ven. 04:05]--[2023-08-18 ven. 04:20] =>  0:15
 CLOCK: [2023-07-13 jeu. 12:06]--[2023-07-13 jeu. 12:08] =>  0:02
 CLOCK: [2023-06-16 ven. 06:17]--[2023-06-16 ven. 06:22] =>  0:05
@@ -106,7 +110,8 @@ see README.md for commands
 - [X] 05 Feb. 2024 : no update available.
 - [X] 14 Feb. 2024 : Upgrade x/sys from 0.16 to 0.17
 - [X] 05 Mar. 2024 : Upgrade x/sys from 0.17 to 0.18
-- [ ] 15 Mar. 2024 : none
+- [X] 15 Mar. 2024 : none
+- [X] 27 Mar. 2024 : none
 **** DONE Start to add a array of struct-based sidebar
 :LOGBOOK:
 CLOCK: [2024-02-05 lun. 16:42]--[2024-02-05 lun. 17:27] =>  0:45

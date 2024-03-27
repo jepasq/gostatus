@@ -34,18 +34,24 @@ func SidebarArray_GetItemByLabel(list []SidebarItem, label string) (SidebarItem,
 }
 
 func (arr Sidebar) MakeActive(label string) (error) {
+	found := false
 	for _, it := range arr {
 		fmt.Printf(" > : '%s'\n", it.Label)
 
 		if it.Label == label {
 			it.Active = true
+			found = true
 		} else {
 			it.Active = false
 		}
 		
 	}
-	return errors.New(fmt.Sprintf("Can't find irem '%s' in '%v'",
-		label, arr))
+	if found == false {
+		return errors.New(fmt.Sprintf("Can't find irem '%s' in '%v'",
+			label, arr))
+	} else {
+		return nil
+	}
 }
 
 func (arr Sidebar) GetItemByLabel(label string) SidebarItem {

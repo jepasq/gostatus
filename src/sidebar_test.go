@@ -36,7 +36,7 @@ func TestSidebar_MakeActive(t *testing.T) {
 
 	err = arr.MakeActive("Form")
 	if (err != nil) {
-		t.Fatalf("MakeActive returned an error")
+		t.Fatalf("MakeActive returned an error : %s", err)
 	}
 	
 	it, err = SidebarArray_GetItemByLabel(arr, "Form")
