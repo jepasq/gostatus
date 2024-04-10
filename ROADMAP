@@ -113,6 +113,7 @@ see README.md for commands
 - [X] 05 Mar. 2024 : Upgrade x/sys from 0.17 to 0.18
 - [X] 15 Mar. 2024 : none
 - [X] 27 Mar. 2024 : none
+- [X] 10 Apr. 2024 : Upgrade x/sys from 0.18 tp 0.19
 **** DONE Start to add a array of struct-based sidebar
 :LOGBOOK:
 CLOCK: [2024-02-05 lun. 16:42]--[2024-02-05 lun. 17:27] =>  0:45
