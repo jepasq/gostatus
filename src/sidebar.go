@@ -35,14 +35,15 @@ func SidebarArray_GetItemByLabel(list []SidebarItem, label string) (SidebarItem,
 
 func (arr Sidebar) MakeActive(label string) (error) {
 	found := false
-	for _, it := range arr {
+	for i, it := range arr {
 		fmt.Printf(" > : '%s'\n", it.Label)
 
 		if it.Label == label {
-			it.Active = true
+			// see https://stackoverflow.com/a/15952415
+			arr[i].Active = true 
 			found = true
 		} else {
-			it.Active = false
+			arr[i].Active = false
 		}
 		
 	}

@@ -59,6 +59,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [ ] Web page is now completely empty  
 **** TODO Continue array-based sidebar implementation
 :LOGBOOK:
+CLOCK: [2024-04-10 mer. 11:04]--[2024-04-10 mer. 11:09] =>  0:05
 CLOCK: [2024-03-27 mer. 08:07]--[2024-03-27 mer. 09:01] =>  0:54
 CLOCK: [2024-03-27 mer. 05:14]--[2024-03-27 mer. 05:32] =>  0:18
 CLOCK: [2024-03-15 ven. 04:08]--[2024-03-15 ven. 04:18] =>  0:10
@@ -88,9 +89,9 @@ Testing in root.tmpl
 - [X] We have an issue with SideMakeActive (Form item is not found)  
 - [X] Sidebar may have a toStr representation method
   Not needed, %v works
-- [X] Sidebar GetItemByLabel could be a member method
-    
-- [ ] SidebarItem member in hello is spurious (only Home is true)
+- [X] Sidebar GetItemByLabel could be a member method  
+- [X] SidebarItem member in hello is spurious (only Home is true)
+  
 - [ ] More needed for the form page (has already vars)
 - [ ] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
