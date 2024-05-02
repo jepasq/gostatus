@@ -2,7 +2,7 @@
 
 * v1.0.0
 ** v0.1.0
-*** v0.0.1
+*** TODO v0.0.2
 **** May at least handle systemctl-powered daemon
 :LOGBOOK:
 CLOCK: [2023-12-14 jeu. 08:26]--[2023-12-14 jeu. 08:40] =>  0:14
@@ -58,8 +58,11 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   https://go.dev/doc/comment
 - [ ] Web page is now completely empty    
 **** TODO Continue array-based sidebar implementation (x2)
+:LOGBOOK:
+CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
+:END:
   see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
-- [ ] More needed for the form page (has already vars)
+- [ ] More work needed for the form page (has already vars)
 - [ ] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
 - [ ] SVG-based icon can't be seen

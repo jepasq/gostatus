@@ -4,7 +4,9 @@
   <title>Form | gostatus</title>
   <BODY>
     <main>
-      {{template "sidebarTMPL"}}
+      <div class="row">
+      {{template "sidebarTMPL" .Sidebar}}
+      <div class="col-9 col-lg-10">
 
     <h1>GoStatus</h1>
     <h2>Form</h2>
@@ -19,6 +21,8 @@
 
       You can go to <a href='/'>back</a> page.<br>
     </p>
+      </div> <!-- flex -->
+      </div> <!-- row -->
     </main>
   </BODY>
 </HTML>

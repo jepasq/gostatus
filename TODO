@@ -7,7 +7,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc src/`
 
 * v0.0.1-11 (05 Mar. 2024 - ???) SLOC ???
-- (7) Close a sidebar-related ROADMAP section and bump version to 0.0.1
+- (8) Make the Sidebar work for the Form page
+- Close a sidebar-related ROADMAP section and bump version to 0.0.1
 - Fix the affectation of range item in Sidebar.MakeActive
 - Upgrade x/sys from 0.18 tp 0.19
 - Sidebar.GetItemByLabel becomes a member method

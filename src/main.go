@@ -195,8 +195,14 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 /// Used to pass variable to the Post page
 type PostVars struct {
 	Name string
+	Sidebar Sidebar
 }
 
+// Form is a bit different, Instead of sending Sidebar as data, we send the
+// PostVars struct that contains posted vars but also Sidebar. The notable
+// difference here is in the template, where we must call the template
+// "sidebarTMPL" with the ".Sidebar" argument instead of the "." one. In fact
+// we are sending the PostVars.Sidebar content to sidebar.
 func getForm(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
@@ -217,8 +223,15 @@ func getForm(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("can't find template file: '%s'\n", err)
 	}
 
+	arr := SidebarArray()
+	err = arr.MakeActive("Form")
+	if err != nil {
+		fmt.Printf("MakeActive: %s", err)
+	}
+	
 	mn := PostVars{
 		Name: myName,
+		Sidebar: arr,
 	}
 	
 	err = template.Execute(w, mn)
