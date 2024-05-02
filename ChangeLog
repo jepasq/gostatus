@@ -1,3 +1,13 @@
+* v0.0.1-11 (05 Mar. 2024 - 02 May. 2024) SLOC 556
+- Make the Sidebar work for the Form page
+- Close a sidebar-related ROADMAP section and bump version to 0.0.1
+- Fix the affectation of range item in Sidebar.MakeActive
+- Upgrade x/sys from 0.18 tp 0.19
+- Sidebar.GetItemByLabel becomes a member method
+- Fix a Sidebar.MakeActive bug always returning an error
+- Fix multiple test compilation errors
+- Sidebar MakeActive is a member method
+
 * v0.0.0-10 (25 Jan. 2024 - 05 Mar. 2024) SLOC 524
 - Add sidebar-based menu to homepage
 - Make the sidebar partial draw items according to the array
