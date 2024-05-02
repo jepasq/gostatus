@@ -56,42 +56,9 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [X] Maybe add a clean rule to Makefile
 - [ ] Continue documentation
   https://go.dev/doc/comment
-- [ ] Web page is now completely empty  
-**** TODO Continue array-based sidebar implementation
-:LOGBOOK:
-CLOCK: [2024-04-10 mer. 11:04]--[2024-04-10 mer. 11:09] =>  0:05
-CLOCK: [2024-03-27 mer. 08:07]--[2024-03-27 mer. 09:01] =>  0:54
-CLOCK: [2024-03-27 mer. 05:14]--[2024-03-27 mer. 05:32] =>  0:18
-CLOCK: [2024-03-15 ven. 04:08]--[2024-03-15 ven. 04:18] =>  0:10
-CLOCK: [2024-03-15 ven. 03:23]--[2024-03-15 ven. 03:51] =>  0:28
-CLOCK: [2024-03-05 mar. 07:52]--[2024-03-05 mar. 08:14] =>  0:22
-CLOCK: [2024-03-05 mar. 07:07]--[2024-03-05 mar. 07:47] =>  0:40
-CLOCK: [2024-03-05 mar. 06:39]--[2024-03-05 mar. 07:06] =>  0:27
-CLOCK: [2024-02-15 jeu. 17:31]--[2024-02-15 jeu. 17:55] =>  0:24
-CLOCK: [2024-02-14 mer. 18:32]--[2024-02-14 mer. 18:58] =>  0:26
-CLOCK: [2024-02-14 mer. 18:04]--[2024-02-14 mer. 18:23] =>  0:19
-:END:
-see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
-Testing in root.tmpl
-- [X] Change Sidebar's page name and links in every page
-  Actually trying in hello page using helloActive variable
-  Try using the SidebarArray thing 
-  - [X] writeTemplate should take a SidebarArray parameter
-    added a any data parameter
-  - [X] getHello should instanciate a SidebarArray and passed it to template
-  - [X] content/partial/sidebar must check/use for SidebarArray
-    Actually prints all array content. Now should use menu item label to check
-    for active status
-    - Using FuncMap to call arbitrary function is too complex now
-    - [X] Create the Sidebar type ([]SidebarItem)
-    - The, {{with .}} We should be able to call a method
-- [X] Sidebar makeActive could be a member method
-- [X] We have an issue with SideMakeActive (Form item is not found)  
-- [X] Sidebar may have a toStr representation method
-  Not needed, %v works
-- [X] Sidebar GetItemByLabel could be a member method  
-- [X] SidebarItem member in hello is spurious (only Home is true)
-  
+- [ ] Web page is now completely empty    
+**** TODO Continue array-based sidebar implementation (x2)
+  see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
 - [ ] More needed for the form page (has already vars)
 - [ ] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
@@ -115,6 +82,40 @@ see README.md for commands
 - [X] 15 Mar. 2024 : none
 - [X] 27 Mar. 2024 : none
 - [X] 10 Apr. 2024 : Upgrade x/sys from 0.18 tp 0.19
+*** DONE v0.0.1
+**** DONE Continue array-based sidebar implementation (1)
+:LOGBOOK:
+CLOCK: [2024-04-10 mer. 11:04]--[2024-04-10 mer. 11:09] =>  0:05
+CLOCK: [2024-03-27 mer. 08:07]--[2024-03-27 mer. 09:01] =>  0:54
+CLOCK: [2024-03-27 mer. 05:14]--[2024-03-27 mer. 05:32] =>  0:18
+CLOCK: [2024-03-15 ven. 04:08]--[2024-03-15 ven. 04:18] =>  0:10
+CLOCK: [2024-03-15 ven. 03:23]--[2024-03-15 ven. 03:51] =>  0:28
+CLOCK: [2024-03-05 mar. 07:52]--[2024-03-05 mar. 08:14] =>  0:22
+CLOCK: [2024-03-05 mar. 07:07]--[2024-03-05 mar. 07:47] =>  0:40
+CLOCK: [2024-03-05 mar. 06:39]--[2024-03-05 mar. 07:06] =>  0:27
+CLOCK: [2024-02-15 jeu. 17:31]--[2024-02-15 jeu. 17:55] =>  0:24
+CLOCK: [2024-02-14 mer. 18:32]--[2024-02-14 mer. 18:58] =>  0:26
+CLOCK: [2024-02-14 mer. 18:04]--[2024-02-14 mer. 18:23] =>  0:19
+:END:
+Testing in root.tmpl
+- [X] Change Sidebar's page name and links in every page
+  Actually trying in hello page using helloActive variable
+  Try using the SidebarArray thing 
+  - [X] writeTemplate should take a SidebarArray parameter
+    added a any data parameter
+  - [X] getHello should instanciate a SidebarArray and passed it to template
+  - [X] content/partial/sidebar must check/use for SidebarArray
+    Actually prints all array content. Now should use menu item label to check
+    for active status
+    - Using FuncMap to call arbitrary function is too complex now
+    - [X] Create the Sidebar type ([]SidebarItem)
+    - The, {{with .}} We should be able to call a method
+- [X] Sidebar makeActive could be a member method
+- [X] We have an issue with SideMakeActive (Form item is not found)  
+- [X] Sidebar may have a toStr representation method
+  Not needed, %v works
+- [X] Sidebar GetItemByLabel could be a member method  
+- [X] SidebarItem member in hello is spurious (only Home is true)
 **** DONE Start to add a array of struct-based sidebar
 :LOGBOOK:
 CLOCK: [2024-02-05 lun. 16:42]--[2024-02-05 lun. 17:27] =>  0:45
