@@ -25,6 +25,8 @@ We can test with mongodb or cups
 CLOCK: [2023-10-12 jeu. 01:36]--[2023-10-12 jeu. 01:52] =>  0:16
 :END:
 - [ ] Some tests actually fail
+  Trying to build from src/ with =working-directory: src=
+
 - [ ] Then, make github actions test for this
 **** Could make the TestWrongUrlRequestShouldFail and other unit tests work
 :LOGBOOK:
