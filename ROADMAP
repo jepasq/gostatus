@@ -24,10 +24,10 @@ We can test with mongodb or cups
 :LOGBOOK:
 CLOCK: [2023-10-12 jeu. 01:36]--[2023-10-12 jeu. 01:52] =>  0:16
 :END:
-- [ ] Some tests actually fail
+- [X] Some tests actually fail
   Trying to build from src/ with =working-directory: src=
-
-- [ ] Then, make github actions test for this
+- [X] Then, make github actions test for this
+- [ ] Must now fix unit tests  
 **** Could make the TestWrongUrlRequestShouldFail and other unit tests work
 :LOGBOOK:
 CLOCK: [2023-09-04 lun. 10:39]--[2023-09-04 lun. 10:52] =>  0:13
@@ -87,6 +87,7 @@ see README.md for commands
 - [X] 15 Mar. 2024 : none
 - [X] 27 Mar. 2024 : none
 - [X] 10 Apr. 2024 : Upgrade x/sys from 0.18 tp 0.19
+- [X] 27 May 2024 :  Upgrade x/sys from 0.19 tp 0.20
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:
