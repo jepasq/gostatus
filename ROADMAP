@@ -22,12 +22,15 @@ We can test with mongodb or cups
   https://www.freecodecamp.org/news/microservices-and-software-system-design-course/
 **** Must make the CI and unit test work
 :LOGBOOK:
+CLOCK: [2024-05-27 lun. 17:31]--[2024-05-27 lun. 17:37] =>  0:06
 CLOCK: [2023-10-12 jeu. 01:36]--[2023-10-12 jeu. 01:52] =>  0:16
 :END:
 - [X] Some tests actually fail
   Trying to build from src/ with =working-directory: src=
 - [X] Then, make github actions test for this
-- [ ] Must now fix unit tests  
+- [ ] Must now fix unit tests
+  Fatal replaced with Log in main_test's TestWrongUrlRequestShouldFail and
+  TestHelloPageRendering and TestFormPageRendering
 **** Could make the TestWrongUrlRequestShouldFail and other unit tests work
 :LOGBOOK:
 CLOCK: [2023-09-04 lun. 10:39]--[2023-09-04 lun. 10:52] =>  0:13

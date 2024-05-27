@@ -7,5 +7,6 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc src/`
 
 * v0.0.1-12 (02 May 2024 - ???) SLOC ???
-- (2) Upgrade x/sys dependency from 0.19 tp 0.20
+- (3) Make actual unit tests work to check for CI
+- Upgrade x/sys dependency from 0.19 tp 0.20
 - Trying to build CI from src/
