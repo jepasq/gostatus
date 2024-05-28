@@ -65,7 +65,8 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 - [X] Maybe add a clean rule to Makefile
 - [ ] Continue documentation
   https://go.dev/doc/comment
-- [ ] Web page is now completely empty    
+- [ ] Web page is now completely empty
+  Maybe we need to go for a flat 
 **** TODO Continue array-based sidebar implementation (x2)
 :LOGBOOK:
 CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
@@ -73,7 +74,8 @@ CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
   see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
 - [X] More work needed for the form page (has already vars)
 - [ ] May need an icon to page and sidebar item
-- [ ] Sidebar should be wider for the Administration link to be in one line  
+- [ ] Sidebar should be wider for the Administration link to be in one line
+  Sidebar becomes lg-3 and right pan switch from lg-10 to lg-9
 - [ ] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
 - [ ] SVG-based icon can't be seen
