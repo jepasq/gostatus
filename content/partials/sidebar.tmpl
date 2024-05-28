@@ -3,78 +3,33 @@
 {{define "sidebarTMPL"}}
 
 <div class="col-3 col-lg-2 text-white bg-dark">
- <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white	text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">goStatus</span>
-    </a>
- <hr>
- {{range .}}
- <strong>{{ .Label }}, {{.Active }}, {{.Slur }}</strong><br>
- {{end}}
-
-    <ul class="nav nav-pills flex-column mb-auto">
-
-      {{range .}}
-      <li>
-        <a href="{{.Slur }}"
-	   {{if .Active}}
-	   class="nav-link text-white active"
-	   {{else}}
-	   class="nav-link text-white"
-	   {{end}}
-	   >
-          <svg class="bi me-2" width="16" height="16">
-	    <use xlink:href="#people-circle"></use>
-	  </svg>
-          {{ .Label }}
-        </a>
-      </li>
-      {{end}}
-
-      
-<!--
-      <li class="nav-item">
-        <a href="/" class="nav-link active" aria-current="page">
-          <svg class="bi me-2" width="16" height="16">
-	    <use xlink:href="/"></use>
-	  </svg>
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="/hello" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16">
-	    <use xlink:href="/"></use>
-	  </svg>
-          Hello
-        </a>
-      </li>
-      <li>
-        <a href="/form" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16">
-	    <use xlink:href="/form"></use>
-	  </svg>
-          Form
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16">
-	    <use xlink:href="#grid"></use>
-	  </svg>
-          Products
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16">
-	    <use xlink:href="#people-circle"></use>
-	  </svg>
-          Customers
-        </a>
-      </li>
-      -->
-    </ul>
-    <hr>
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white	text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap">
+    </use></svg>
+    <span class="fs-4">goStatus</span>
+  </a>
+  <hr>
+  
+  <ul class="nav nav-pills flex-column mb-auto col-md-1">
+    
+    {{range .}}
+    <li>
+      <a href="{{.Slur }}"
+	 {{if .Active}}
+	 class="nav-link text-white active"
+	 {{else}}
+	 class="nav-link text-white"
+	 {{end}}
+	 >
+	<svg class="bi me-2" width="16" height="16">
+	  <use xlink:href="#people-circle"></use>
+	</svg>
+	{{ .Label }}
+      </a>
+    </li>
+    {{end}}
+    
+  </ul>
+  <hr>
 </div>
 {{end}}

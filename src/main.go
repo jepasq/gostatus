@@ -113,7 +113,7 @@ func main() {
 	fmt.Println("Listening http://localhost:3333 and opening browser...")
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", getHome)
-	mux.HandleFunc("/hello", getHello)
+	mux.HandleFunc("/admin", getAdmin)
 	mux.HandleFunc("/form",  getForm)
 
 	// Trying to handle static content
@@ -171,7 +171,7 @@ func getHome(w http.ResponseWriter, r *http.Request) {
 	writeTemplate(w, "home.tmpl", arr);
 }
 
-func getHello(w http.ResponseWriter, r *http.Request) {
+func getAdmin(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
 	body, err := ioutil.ReadAll(r.Body)
@@ -184,7 +184,7 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 		body)
 	
 	arr := SidebarArray()
-	err = arr.MakeActive("Hello")
+	err = arr.MakeActive("Administration")
 	if err != nil {
 		fmt.Printf("MakeActive: %s", err)
 	}

@@ -5,14 +5,18 @@
 *** TODO v0.0.2
 **** May at least handle systemctl-powered daemon
 :LOGBOOK:
+CLOCK: [2024-05-28 mar. 15:28]--[2024-05-28 mar. 15:51] =>  0:23
 CLOCK: [2023-12-14 jeu. 08:26]--[2023-12-14 jeu. 08:40] =>  0:14
 CLOCK: [2023-07-04 mar. 11:52]--[2023-07-04 mar. 12:15] =>  0:23
 :END:
 May see grafana dashboard as graphical inspiration
 We can test with mongodb or cups
-- [ ] Maybe a ServiceListener super class/interface in service.go
+- [ ] Add a Webpage to manager (add, delete) listener
+  Maybe Administration/Listeners
+- [-] Maybe a ServiceListenerinterface in service.go
   then a SystemctlServiceListener
-  - [ ] Now, try to use it as basic test for mongodb
+  - [X] Added
+  - [ ] Now, try to use it to monitor mongodb
 - [ ] The configuration must be handled as a directory where each file
   can be a different service configuration
 - [ ] getCfgDirectory impl
@@ -67,7 +71,9 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
 CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
 :END:
   see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
-- [ ] More work needed for the form page (has already vars)
+- [X] More work needed for the form page (has already vars)
+- [ ] May need an icon to page and sidebar item
+- [ ] Sidebar should be wider for the Administration link to be in one line  
 - [ ] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
 - [ ] SVG-based icon can't be seen
