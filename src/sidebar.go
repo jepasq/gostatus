@@ -5,16 +5,18 @@ import (
 	"fmt"
 )
 
+/// IconClass can be find here https://icons.getbootstrap.com/
 type SidebarItem struct {
-	Label  string
-	Active bool
-	Slur   string
+	Label     string
+	Active    bool
+	Slur      string
+	IconClass string
 }
 
 func SidebarArray() (Sidebar) {
-	home  := SidebarItem{"Home",  true,  "/"}
-	hello := SidebarItem{"Admin", false, "admin"}
-	form  := SidebarItem{"Form",  false, "form"}
+	home  := SidebarItem{"Home",  true,  "/",     "house"}
+	hello := SidebarItem{"Admin", false, "admin", "gear"}
+	form  := SidebarItem{"Form",  false, "form",  "input-cursor-text"}
 
 	arr := []SidebarItem{home, hello, form}
 	

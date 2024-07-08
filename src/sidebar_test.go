@@ -45,3 +45,11 @@ func TestSidebar_MakeActive(t *testing.T) {
 	}
 }
 
+/// The home element has a house icon field
+func TestSidebar_HomeHouse(t *testing.T) {
+	arr := SidebarArray()
+	it, err := arr.GetItemByLabel("Home")
+	if (it.IconClass != "house" && err != nil) {
+		t.Fatalf("Home item should have a bi-house icon")
+	}
+}
