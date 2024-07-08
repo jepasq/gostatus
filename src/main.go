@@ -184,7 +184,7 @@ func getAdmin(w http.ResponseWriter, r *http.Request) {
 		body)
 	
 	arr := SidebarArray()
-	err = arr.MakeActive("Administration")
+	err = arr.MakeActive("Admin")
 	if err != nil {
 		fmt.Printf("MakeActive: %s", err)
 	}

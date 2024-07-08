@@ -70,11 +70,15 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   Maybe we need to go for a flat. No it doesn't solve the issue.
 **** TODO Continue array-based sidebar implementation (x2)
 :LOGBOOK:
+CLOCK: [2024-07-08 lun. 03:40]--[2024-07-08 lun. 03:53] =>  0:13
 CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
 :END:
   see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
 - [X] More work needed for the form page (has already vars)
+- [ ] Must remove homepage link to HELLO page (404)
+  Must rename page as well (called hello.tmpl)
 - [ ] May need an icon to page and sidebar item
+  This should be added to sidebar fields (iconclass)
 - [ ] Sidebar should be wider for the Administration link to be in one line
   Sidebar becomes lg-3 and right pan switch from lg-10 to lg-9
 - [ ] Now that the sidebar template has the Hello Item, print all items
