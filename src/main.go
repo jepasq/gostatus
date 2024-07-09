@@ -179,7 +179,7 @@ func getAdmin(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("could not read body: '%s'\n", err)
 	}
 	
-	fmt.Printf("%s: got /hello request\nbody:\n%s",
+	fmt.Printf("%s: got /admin request\nbody:\n%s",
 		ctx.Value(keyServerAddr),
 		body)
 	
@@ -189,7 +189,7 @@ func getAdmin(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("MakeActive: %s", err)
 	}
 	
-	writeTemplate(w, "hello.tmpl", arr);
+	writeTemplate(w, "admin.tmpl", arr);
 }
 
 /// Used to pass variable to the Post page

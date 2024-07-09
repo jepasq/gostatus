@@ -1,0 +1,49 @@
+<!--             -*-html-*-  -->
+<HTML>
+  {{template "headerTMPL"}}
+  <title>Admin | gostatus</title>
+  <BODY>
+    <main>
+      <div class="row">
+      {{template "sidebarTMPL" .}}
+
+      <div class="col-9 col-lg-10">
+	<h2>Administration</h2>
+    
+	<p>You're in the Admin section of <em>goStatus</em>. Here you can
+	  manage listeners.</p>
+
+	<h3>Listeners</h3>
+	<button type="button" class="btn btn-primary">
+	  <i class="bi bi-plus-square-fill"></i>
+	  Add new listener
+	</button>
+	<table class="table">
+	  <thead>
+	    <th scope="col">ID</th>
+	    <th scope="col">Type</th>
+	    <th scope="col">Params</th>
+	    <th scope="col">Status</th>
+	    <th scope="col">Action</th>
+	  </thead>
+	  <tbody>
+	    <td>ID</td>
+	    <td>type</td>
+	    <td>params</td>
+	    <td>Listening?</td>
+	    <td>Stop/Resume/Delete</td>
+	  </tbody>
+
+	</table>
+	<p>And read logs, we're reading full request body!<br>
+	  To test this, contactthis server with curl like :
+	  <pre>curl -X POST -d 'This is the body' 'http://localhost:3333/hello
+	  </pre>
+      
+	</p>
+	<a href="..">back</a>
+      </div> <!-- flex -->
+      </div> <!-- row -->
+    </main>
+  </BODY>
+</HTML>
