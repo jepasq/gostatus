@@ -1,3 +1,13 @@
+* v0.0.1-12 (02 May 2024 - 09 Jul. 2024) SLOC 588
+- Rename hello page admin
+- Add IconClass to Sidebar struct and draw boostrap icons
+- Add bootstrap icons CDN link and fix active sidebar item width
+- Upgrade dependency x/sys from 0.20 tp 0.21
+- Replace Hello with Admin page
+- Make actual unit tests work to check for CI
+- Upgrade x/sys dependency from 0.19 tp 0.20
+- Trying to build CI from src/
+
 * v0.0.1-11 (05 Mar. 2024 - 02 May. 2024) SLOC 556
 - Make the Sidebar work for the Form page
 - Close a sidebar-related ROADMAP section and bump version to 0.0.1
