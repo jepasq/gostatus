@@ -37,6 +37,16 @@
 	    </div>
 	    <input type="text" class="form-control" id="listenerAddId">
 	  </div>
+	  <div class="input-group mb-3">
+	    <div class="input-group-prepend">
+	      <span class="input-group-text" id="listenerAdd">Type</span>
+	    </div>
+	    <select id="listenerType">
+	      <option value="A">systemctl</option>
+	      <option value="B">...</option>
+	    </select>
+	    <input type="text" class="form-control" id="listenerAddId">
+	  </div>
 	  <button id="addListener" type="button" class="btn btn-primary">
 	    <i class="bi bi-plus-square-fill"></i>
 	    Add new listener
@@ -54,14 +64,19 @@
     </main>
     <script type="text/javascript">
       $(document).ready(function() {
-      console.log($("#listenerAddId".text()))
+      let nameTxt = $('#listenerAddId').val();
+      if (!nameTxt) {
+      alert("ID can't be empty.");
+      return
+      }
       $("#addListener").on('click', function() {
         $.ajax({
-        url: "http://localhost:3333/listener/add",
+      url: "http://localhost:3333/listener/add",
+      data: { name: nameTxt, location: "Boston" },
       method: "GET",
       success: function(data) {
       // $("#response").html(data);
-      alert(data);
+      alert("ID is " + nameTxt);
       },
       });
       });
