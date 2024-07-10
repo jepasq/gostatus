@@ -64,19 +64,20 @@
     </main>
     <script type="text/javascript">
       $(document).ready(function() {
-      let nameTxt = $('#listenerAddId').val();
-      if (!nameTxt) {
-      alert("ID can't be empty.");
-      return
-      }
       $("#addListener").on('click', function() {
+      let nameTxt = $('#listenerAddId').val();
+      let typeTxt = $('#listenerType').find(":selected").val();
+        if (!nameTxt) {
+        alert("ID can't be empty.");
+        return
+        }
         $.ajax({
       url: "http://localhost:3333/listener/add",
-      data: { name: nameTxt, location: "Boston" },
+      data: { name: nameTxt, type: typeTxt },
       method: "GET",
       success: function(data) {
       // $("#response").html(data);
-      alert("ID is " + nameTxt);
+      alert("Success");
       },
       });
       });

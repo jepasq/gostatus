@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	//	"io/ioutil"
 	"net/http"
 )
 
@@ -42,14 +42,12 @@ func (l SystemCtlListener) status() string {
 func ServiceListenerAdd(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
-	body, err := ioutil.ReadAll(r.Body)
-	if err != nil {
-		fmt.Printf("could not read body: '%s'\n", err)
-	}
+	id := r.URL.Query().Get("name")
+	typ:= r.URL.Query().Get("type")
 	
-	fmt.Printf("%s: got /admin request\nbody:\n%s",
+	fmt.Printf("%s: got /admin request\nbody:\n  name:%s\n  type:%s\n",
 		ctx.Value(keyServerAddr),
-		body)
+		id, typ)
 
 }
 
