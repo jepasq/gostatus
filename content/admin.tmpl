@@ -14,10 +14,6 @@
 	  manage listeners.</p>
 
 	<h3>Listeners</h3>
-	<button type="button" class="btn btn-primary">
-	  <i class="bi bi-plus-square-fill"></i>
-	  Add new listener
-	</button>
 	<table class="table">
 	  <thead>
 	    <th scope="col">ID</th>
@@ -33,8 +29,19 @@
 	    <td>Listening?</td>
 	    <td>Stop/Resume/Delete</td>
 	  </tbody>
-
 	</table>
+	<form>
+	  <div class="input-group mb-3">
+	    <div class="input-group-prepend">
+	      <span class="input-group-text" id="listenerAdd">Name/ID</span>
+	    </div>
+	    <input type="text" class="form-control" id="listenerAddId">
+	  </div>
+	  <button id="addListener" type="button" class="btn btn-primary">
+	    <i class="bi bi-plus-square-fill"></i>
+	    Add new listener
+	  </button>
+	</form>
 	<p>And read logs, we're reading full request body!<br>
 	  To test this, contactthis server with curl like :
 	  <pre>curl -X POST -d 'This is the body' 'http://localhost:3333/hello
@@ -45,5 +52,20 @@
       </div> <!-- flex -->
       </div> <!-- row -->
     </main>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      console.log($("#listenerAddId".text()))
+      $("#addListener").on('click', function() {
+        $.ajax({
+        url: "http://localhost:3333/listener/add",
+      method: "GET",
+      success: function(data) {
+      // $("#response").html(data);
+      alert(data);
+      },
+      });
+      });
+      });
+    </script>
   </BODY>
 </HTML>

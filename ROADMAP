@@ -5,6 +5,7 @@
 *** TODO v0.0.2
 **** May at least handle systemctl-powered daemon
 :LOGBOOK:
+CLOCK: [2024-07-10 mer. 01:55]--[2024-07-10 mer. 02:35] =>  0:40
 CLOCK: [2024-05-28 mar. 15:28]--[2024-05-28 mar. 15:51] =>  0:23
 CLOCK: [2023-12-14 jeu. 08:26]--[2023-12-14 jeu. 08:40] =>  0:14
 CLOCK: [2023-07-04 mar. 11:52]--[2023-07-04 mar. 12:15] =>  0:23
@@ -17,6 +18,8 @@ We can test with mongodb or cups
   then a SystemctlServiceListener
   - [X] Added
   - [ ] Now, try to use it to monitor mongodb
+- [ ] Handle listener table in admin page
+  - [ ] The service/add callback, called from JS
 - [ ] The configuration must be handled as a directory where each file
   can be a different service configuration
 - [ ] getCfgDirectory impl
@@ -79,10 +82,10 @@ CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
 - [X] More work needed for the form page (has already vars)
 - [X] May need an icon to page and sidebar item
   This should be added to sidebar fields (iconclass)
-- [ ] Must remove homepage link to HELLO page (404)
-  Must rename page as well (called hello.tmpl)
-- [ ] Sidebar should be wider for the Administration link to be in one line
+- [X] Sidebar should be wider for the Administration link to be in one line
   Sidebar becomes lg-3 and right pan switch from lg-10 to lg-9
+- [X] Must remove homepage link to HELLO page (404)
+  Must rename page as well (called hello.tmpl)
 - [ ] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
 - [ ] SVG-based icon can't be seen

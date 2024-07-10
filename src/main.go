@@ -119,6 +119,10 @@ func main() {
 	// Trying to handle static content
 	mux.Handle("/static/", http.StripPrefix("/static/",
 		http.FileServer(http.Dir("static"))))
+
+	// Listener related CRUD
+	mux.HandleFunc("/listener/add",  ServiceListenerAdd)
+
 	
 	// Auto-open browser at startup
 	err := browser.OpenURL("localhost:3333");

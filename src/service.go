@@ -2,6 +2,13 @@ package main
 
 /// A basic implementation of the service listener ecosystem
 
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+)
+
+
 /// A listener abstract type used to monitor a service
 type ServiceListener interface {
 	/// The type of microservice (suystemctl, other...)
@@ -30,5 +37,19 @@ func (scl SystemCtlListener) typeName() string {
 
 func (l SystemCtlListener) status() string {
     return "result of service status " + l.serviceName
+}
+
+func ServiceListenerAdd(w http.ResponseWriter, r *http.Request) {
+	ctx := r.Context()
+
+	body, err := ioutil.ReadAll(r.Body)
+	if err != nil {
+		fmt.Printf("could not read body: '%s'\n", err)
+	}
+	
+	fmt.Printf("%s: got /admin request\nbody:\n%s",
+		ctx.Value(keyServerAddr),
+		body)
+
 }
 
