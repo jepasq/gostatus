@@ -38,8 +38,6 @@ func SidebarArray_GetItemByLabel(list []SidebarItem, label string) (SidebarItem,
 func (arr Sidebar) MakeActive(label string) (error) {
 	found := false
 	for i, it := range arr {
-		fmt.Printf(" > : '%s'\n", it.Label)
-
 		if it.Label == label {
 			// see https://stackoverflow.com/a/15952415
 			arr[i].Active = true 

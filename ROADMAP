@@ -76,6 +76,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   Maybe we need to go for a flat. No it doesn't solve the issue.
 **** TODO Continue array-based sidebar implementation (x2)
 :LOGBOOK:
+CLOCK: [2024-07-25 jeu. 07:50]--[2024-07-25 jeu. 08:04] =>  0:14
 CLOCK: [2024-07-09 mar. 04:59]--[2024-07-09 mar. 05:19] =>  0:20
 CLOCK: [2024-07-08 lun. 03:57]--[2024-07-08 lun. 04:07] =>  0:10
 CLOCK: [2024-07-08 lun. 03:40]--[2024-07-08 lun. 03:53] =>  0:13
@@ -111,9 +112,10 @@ see README.md for commands
 - [X] 15 Mar. 2024 : none
 - [X] 27 Mar. 2024 : none
 - [X] 10 Apr. 2024 : Upgrade x/sys from 0.18 tp 0.19
-- [X] 27 May 2024 :  Upgrade x/sys from 0.19 tp 0.20
+- [X] 27 May  2024 :  Upgrade x/sys from 0.19 tp 0.20
 - [X] 11 Jun. 2024 : Upgrade x/sys from 0.20 tp 0.21
 - [X] 08 Jul. 2024 : Upgrade x/sys from 0.21 tp 0.22
+- [ ] 25 Jul. 2024 : none  
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:

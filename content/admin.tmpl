@@ -27,7 +27,17 @@
 	    <td>type</td>
 	    <td>params</td>
 	    <td>Listening?</td>
-	    <td>Stop/Resume/Delete</td>
+	    <td>
+	      <button type="button" class="btn btn-secondary">
+		<i class="bi bi-stop-btn"></i>
+	      </button>
+	      <button type="button" class="btn btn-secondary">
+		<i class="bi bi-pause-btn"></i>
+	      </button>
+	      <button type="button" class="btn btn-secondary">
+		<i class="bi bi-trash"></i>
+	      </button>
+	      /Resume/Delete</td>
 	  </tbody>
 	</table>
 	<form>
@@ -45,7 +55,12 @@
 	      <option value="A">systemctl</option>
 	      <option value="B">...</option>
 	    </select>
-	    <input type="text" class="form-control" id="listenerAddId">
+	  </div>
+	  <div class="input-group mb-3">
+	    <div class="input-group-prepend">
+	      <span class="input-group-text" id="listenerParam">Params</span>
+	    </div>
+	    <input type="text" class="form-control" id="listenerParam">
 	  </div>
 	  <button id="addListener" type="button" class="btn btn-primary">
 	    <i class="bi bi-plus-square-fill"></i>
