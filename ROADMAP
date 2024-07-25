@@ -4,8 +4,10 @@
 ** v0.1.0
 *** TODO v0.0.2
 **** Start to use mongodb
+- [ ] Must check for MONGODB_URI envvar
 - [ ] Insert newly added listener
   https://www.mongodb.com/docs/drivers/go/current/usage-examples/insertOne/#std-label-golang-insert-one
+- [ ] See main(à if we want to use godotenv  
 **** May at least handle systemctl-powered daemon
 :LOGBOOK:
 CLOCK: [2024-07-10 mer. 04:07]--[2024-07-10 mer. 04:18] =>  0:11

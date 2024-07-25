@@ -92,6 +92,12 @@ func writeTemplate(w http.ResponseWriter, t string, data any) {
 func main() {
 	fmt.Println(getIntroText())
 
+	/*	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file found")
+	}
+	*/
+	CheckConnString();
+	
 	arr := SidebarArray();
 	fmt.Println(arr);
 	
