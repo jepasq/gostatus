@@ -3,6 +3,9 @@
 * v1.0.0
 ** v0.1.0
 *** TODO v0.0.2
+**** Start to use mongodb
+- [ ] Insert newly added listener
+  https://www.mongodb.com/docs/drivers/go/current/usage-examples/insertOne/#std-label-golang-insert-one
 **** May at least handle systemctl-powered daemon
 :LOGBOOK:
 CLOCK: [2024-07-10 mer. 04:07]--[2024-07-10 mer. 04:18] =>  0:11
