@@ -2,16 +2,9 @@ gostatus - AGPLv3 - A microservices monitoring web application.
 
 === ChangeLog ===
     (8 items par revision)
-    Update version and revision in main.go's getIntroText()
+    Update version and revision in src/main.go's getIntroText()
     Add a git tag for r-1 then push --tags for each revision
     SLOC is the result of `sloc src/`
 
-* v0.0.1-13 (09 Jul. 2024 - ???) SLOC ???
-- (8) Add a MONGODB_URI connstring section in README
-- Add Database type and Connect function
-- Check for MONGODB_URI
-- Add mongo driver dependency
-- Add params input label in admin interface
-- Server side Listener add callback get params
-- First basic check for added listener ID
-- Add a JQuery addListsner event handler in admin page
+* v0.0.1-14 (29 Jul. 2024 - ???) SLOC ???
+

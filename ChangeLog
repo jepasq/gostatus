@@ -1,3 +1,13 @@
+* v0.0.1-13 (09 Jul. 2024 - 29 Jul. 2024) SLOC 661
+- Add a MONGODB_URI connstring section in README
+- Add Database type and Connect function
+- Check for MONGODB_URI
+- Add mongo driver dependency
+- Add params input label in admin interface
+- Server side Listener add callback get params
+- First basic check for added listener ID
+- Add a JQuery addListsner event handler in admin page
+
 * v0.0.1-12 (02 May 2024 - 09 Jul. 2024) SLOC 588
 - Rename hello page admin
 - Add IconClass to Sidebar struct and draw boostrap icons
