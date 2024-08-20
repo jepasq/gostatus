@@ -125,7 +125,10 @@ see README.md for commands
 - [X] 27 May  2024 :  Upgrade x/sys from 0.19 tp 0.20
 - [X] 11 Jun. 2024 : Upgrade x/sys from 0.20 tp 0.21
 - [X] 08 Jul. 2024 : Upgrade x/sys from 0.21 tp 0.22
-- [X] 25 Jul. 2024 : none  
+- [X] 25 Jul. 2024 : none
+- [ ] Table versionning
+  | *Date*       | *Upgraded packages*                   |
+  | 20 Aug. 2024 | mongo-driver, crypto, sync, sys, text |
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:

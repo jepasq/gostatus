@@ -11,6 +11,14 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+// Package constants
+const (
+	// the local mongo URI given as example
+	local_URI = "mongodb://localhost:27017/<database>"
+	doc_URI = "www.mongodb.com/docs/drivers/go/current/usage-examples/#environment-variable"
+)
+
+
 type Database struct {
 	Client *mongo.Client
 }
@@ -18,9 +26,9 @@ type Database struct {
 func CheckConnString() {
 	uri := os.Getenv("MONGODB_URI")
 	if uri == "" {
-		log.Fatal("Set your 'MONGODB_URI' environment variable. " +
-			"See: " +
-			"www.mongodb.com/docs/drivers/go/current/usage-examples/#environment-variable")
+		log.Fatal("Set your 'MONGODB_URI' environment variable. \n" +
+			"  Should something like '" + local_URI + "'\n" +
+			"  See: " + doc_URI)
 	}
 }
 
