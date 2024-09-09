@@ -37,8 +37,11 @@ func Connect() (Database) {
 
 	var uri string
 	uri = os.Getenv("MONGODB_URI")
-	
-	client, err := mongo.NewClient(options.Client().ApplyURI(uri))
+
+	serverAPI := options.ServerAPI(options.ServerAPIVersion1)
+	opts := options.Client().ApplyURI(uri).SetServerAPIOptions(serverAPI)
+
+	client, err := mongo.Connect(context.TODO(), opts)
 	ret.Client = client
 	if err != nil {
 		panic(err)

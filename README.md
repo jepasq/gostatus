@@ -73,6 +73,9 @@ or, export the envvar definition and launch later :
 
 To check if you already defined this variable, use `env` commabnd.
 
+To create the database or check its content, you can use the `mongodb-compass`
+tool.
+
 # Usage
 
 To print a short usage text and exit, run :

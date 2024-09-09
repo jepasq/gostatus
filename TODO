@@ -7,6 +7,7 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc src/`
 
 * v0.0.1-14 (29 Jul. 2024 - ???) SLOC ???
-- (3) Trying to connect to MONGODB_URI's server
+- (4) Really connect to mongodb server usign server API version 1
+- Trying to connect to MONGODB_URI's server
 - Upgrade more dependencies and fix a typo in connstring message
 - Upgrade some deps and improve MONGODB_URI missing message

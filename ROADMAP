@@ -5,13 +5,14 @@
 *** TODO v0.0.2
 **** Start to use mongodb
 :LOGBOOK:
+CLOCK: [2024-09-09 lun. 10:03]--[2024-09-09 lun. 10:17] =>  0:14
 CLOCK: [2024-09-09 lun. 09:18]--[2024-09-09 lun. 09:27] =>  0:09
 CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
 :END:
 - [X] Must check for MONGODB_URI envvar
 - [X] Get a persistent connection
 - [X] Must explain MONGODB_URI usage in README  
-- [ ] Try to connect at startup
+- [X] Try to connect at startup
 - [ ] Insert newly added listener
   https://www.mongodb.com/docs/drivers/go/current/usage-examples/insertOne/#std-label-golang-insert-one
 - [ ] See main if we want to use godotenv  
