@@ -97,6 +97,8 @@ func main() {
 	}
 	*/
 	CheckConnString();
+	db := Connect()
+	fmt.Println(db);
 	
 	arr := SidebarArray();
 	fmt.Println(arr);
