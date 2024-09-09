@@ -27,7 +27,7 @@ func CheckConnString() {
 	uri := os.Getenv("MONGODB_URI")
 	if uri == "" {
 		log.Fatal("Set your 'MONGODB_URI' environment variable. \n" +
-			"  Should something like '" + local_URI + "'\n" +
+			"  Should be something like '" + local_URI + "'\n" +
 			"  See: " + doc_URI)
 	}
 }

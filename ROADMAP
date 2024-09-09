@@ -105,6 +105,7 @@ CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
 - [ ] SVG-based icon can't be seen
 **** TODO go dependency upgrades
 :LOGBOOK:
+CLOCK: [2024-09-09 lun. 09:06]--[2024-09-09 lun. 09:07] =>  0:01
 CLOCK: [2024-03-27 mer. 05:01]--[2024-03-27 mer. 05:03] =>  0:02
 CLOCK: [2023-08-18 ven. 04:05]--[2023-08-18 ven. 04:20] =>  0:15
 CLOCK: [2023-07-13 jeu. 12:06]--[2023-07-13 jeu. 12:08] =>  0:02
@@ -129,6 +130,7 @@ see README.md for commands
 - [ ] Table versionning
   | *Date*       | *Upgraded packages*                   |
   | 20 Aug. 2024 | mongo-driver, crypto, sync, sys, text |
+  | 09 Sep. 2024 | crypto, sys, text                     |
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:
