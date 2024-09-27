@@ -20,7 +20,7 @@ on *Debian* :
 The *-tools packages usually contain *godoc* package used to generate and 
 browse API documentation.
 
-## Upgrade
+## Dependencies upgrade
 
 Once installed, you may need to upgrade dependencies. From the `src/`
 directory, run :
