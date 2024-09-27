@@ -21,6 +21,7 @@ const (
 
 type Database struct {
 	Client *mongo.Client
+	Uri    string
 }
 
 func CheckConnString() {
@@ -37,7 +38,8 @@ func Connect() (Database) {
 
 	var uri string
 	uri = os.Getenv("MONGODB_URI")
-
+	ret.Uri = uri
+	
 	serverAPI := options.ServerAPI(options.ServerAPIVersion1)
 	opts := options.Client().ApplyURI(uri).SetServerAPIOptions(serverAPI)
 

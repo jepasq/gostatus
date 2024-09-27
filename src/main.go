@@ -98,7 +98,8 @@ func main() {
 	*/
 	CheckConnString();
 	db := Connect()
-	fmt.Printf("Connected to database '%s'\n", db);
+	fmt.Printf("Connected to database '%p' using uri '%s'\n",
+		db.Client, db.Uri);
 	
 	arr := SidebarArray();
 	fmt.Println(arr);

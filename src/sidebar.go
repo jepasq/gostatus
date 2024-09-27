@@ -48,7 +48,7 @@ func (arr Sidebar) MakeActive(label string) (error) {
 		
 	}
 	if found == false {
-		return errors.New(fmt.Sprintf("Can't find irem '%s' in '%v'",
+		return errors.New(fmt.Sprintf("Can't find item '%s' in '%v'",
 			label, arr))
 	} else {
 		return nil
