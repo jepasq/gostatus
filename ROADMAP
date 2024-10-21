@@ -19,6 +19,7 @@ CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
 - [ ] See main if we want to use godotenv  
 **** May at least handle systemctl-powered daemon
 :LOGBOOK:
+CLOCK: [2024-10-21 lun. 10:59]--[2024-10-21 lun. 11:28] =>  0:29
 CLOCK: [2024-07-10 mer. 04:07]--[2024-07-10 mer. 04:18] =>  0:11
 CLOCK: [2024-07-10 mer. 02:40]--[2024-07-10 mer. 03:10] =>  0:30
 CLOCK: [2024-07-10 mer. 01:55]--[2024-07-10 mer. 02:35] =>  0:40
@@ -28,13 +29,15 @@ CLOCK: [2023-07-04 mar. 11:52]--[2023-07-04 mar. 12:15] =>  0:23
 :END:
 May see grafana dashboard as graphical inspiration
 We can test with mongodb or cups
-- [ ] Add a Webpage to manage (add, delete) listener
+- [X] Add a Webpage to manage (add, delete) listener
   Maybe Administration/Listeners
+- [ ] Moving JS code to a static file but currentmy return error 404
+- [ ] Really add the listener
 - [-] Maybe a ServiceListenerinterface in service.go
   then a SystemctlServiceListener
   - [X] Added
   - [ ] Now, try to use it to monitor mongodb
-- [ ] static/style.css returns a 404 error
+- [ ] static/style.css returns MIME type error
 - [ ] Handle listener table in admin page
   - [ ] The service/add callback, called from JS
 - [ ] The configuration must be handled as a directory where each file
@@ -104,7 +107,7 @@ CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
   Sidebar becomes lg-3 and right pan switch from lg-10 to lg-9
 - [X] Must remove homepage link to HELLO page (404)
   Must rename page as well (called hello.tmpl)
-- [ ] Now that the sidebar template has the Hello Item, print all items
+- [X] Now that the sidebar template has the Hello Item, print all items
   with active status with a range loop
 - [ ] SVG-based icon can't be seen
 **** TODO go dependency upgrades
