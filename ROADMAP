@@ -74,6 +74,7 @@ CLOCK: [2023-07-04 mar. 10:30]--[2023-07-04 mar. 11:03] =>  0:33
 - [ ] Maybe we need a http.Client object ?
 **** Must generate API documentation with godoc
 :LOGBOOK:
+CLOCK: [2024-10-21 lun. 11:35]--[2024-10-21 lun. 11:42] =>  0:07
 CLOCK: [2024-06-11 mar. 20:40]--[2024-06-11 mar. 20:43] =>  0:03
 CLOCK: [2024-01-25 jeu. 15:28]--[2024-01-25 jeu. 15:33] =>  0:05
 CLOCK: [2023-08-04 ven. 05:40]--[2023-08-04 ven. 05:43] =>  0:03
@@ -91,6 +92,8 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   https://go.dev/doc/comment
 - [ ] Web page is now completely empty
   Maybe we need to go for a flat. No it doesn't solve the issue.
+- [ ] Must also generate API for JS code
+  jsdoc --destination doc/js/ 
 **** TODO Continue array-based sidebar implementation (x2)
 :LOGBOOK:
 CLOCK: [2024-07-25 jeu. 07:50]--[2024-07-25 jeu. 08:04] =>  0:14

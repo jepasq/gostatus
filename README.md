@@ -90,3 +90,6 @@ From the  *src* directory, run the following command :
 
 This should automatically open the http://127.0.0.1:6060/pkg/jepasq/gostatus/ 
 URL in your favorite/system browser.
+
+You can also generate javascript documentation calling the same command
+from the root directory.
