@@ -4,14 +4,7 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     (8 items par revision)
     Update version and revision in src/main.go's getIntroText()
     Add a git tag for r-1 then push --tags for each revision
-    SLOC is the result of `sloc src/`
+    SLOC is the result of `sloc src/ static/js/`
 
-* v0.0.1-14 (29 Jul. 2024 - ???) SLOC ???
-- (8) Start to generate JS documentation
-- Trying to move addListener JS callback to a satic file
-- Add Uri field to Database and fix test building
-- Upgrade dependencies (mongo-driver and compress)
-- Really connect to mongodb server using server API version 1
-- Trying to connect to MONGODB_URI's server
-- Upgrade more dependencies and fix a typo in connstring message
-- Upgrade some deps and improve MONGODB_URI missing message
+* v0.0.1-15 (21 Oct. 2024 - ???) SLOC ???
+

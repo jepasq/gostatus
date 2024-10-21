@@ -1,3 +1,13 @@
+* v0.0.1-14 (29 Jul. 2024 - 21 Oct. 2024) SLOC 692
+- Start to generate JS documentation
+- Trying to move addListener JS callback to a satic file
+- Add Uri field to Database and fix test building
+- Upgrade dependencies (mongo-driver and compress)
+- Really connect to mongodb server using server API version 1
+- Trying to connect to MONGODB_URI's server
+- Upgrade more dependencies and fix a typo in connstring message
+- Upgrade some deps and improve MONGODB_URI missing message
+
 * v0.0.1-13 (09 Jul. 2024 - 29 Jul. 2024) SLOC 661
 - Add a MONGODB_URI connstring section in README
 - Add Database type and Connect function
