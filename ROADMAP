@@ -3,24 +3,6 @@
 * v1.0.0
 ** v0.1.0
 *** TODO v0.0.2
-**** Start to use mongodb
-:LOGBOOK:
-CLOCK: [2024-11-08 ven. 12:17]--[2024-11-08 ven. 12:21] =>  0:04
-CLOCK: [2024-11-08 ven. 12:02]--[2024-11-08 ven. 12:07] =>  0:05
-CLOCK: [2024-09-27 ven. 13:02]--[2024-09-27 ven. 13:08] =>  0:06
-CLOCK: [2024-09-09 lun. 10:03]--[2024-09-09 lun. 10:17] =>  0:14
-CLOCK: [2024-09-09 lun. 09:18]--[2024-09-09 lun. 09:27] =>  0:09
-CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
-:END:
-- [X] Must check for MONGODB_URI envvar
-- [X] Get a persistent connection
-- [X] Must explain MONGODB_URI usage in README  
-- [X] Try to connect at startup
-- [X] We must have mongo started to show --help, fix this
-  
-- [ ] Insert newly added listener
-  https://www.mongodb.com/docs/drivers/go/current/usage-examples/insertOne/#std-label-golang-insert-one
-- [ ] See main if we want to use godotenv  
 **** May at least handle systemctl-powered daemon
 :LOGBOOK:
 CLOCK: [2024-10-21 lun. 10:59]--[2024-10-21 lun. 11:28] =>  0:29
@@ -76,6 +58,25 @@ CLOCK: [2023-07-04 mar. 10:30]--[2023-07-04 mar. 11:03] =>  0:33
   Returns Resquest and Error objects
   https://pkg.go.dev/net/http#Request
 - [ ] Maybe we need a http.Client object ?
+**** TODO Continue array-based sidebar implementation (x2)
+:LOGBOOK:
+CLOCK: [2024-07-25 jeu. 07:50]--[2024-07-25 jeu. 08:04] =>  0:14
+CLOCK: [2024-07-09 mar. 04:59]--[2024-07-09 mar. 05:19] =>  0:20
+CLOCK: [2024-07-08 lun. 03:57]--[2024-07-08 lun. 04:07] =>  0:10
+CLOCK: [2024-07-08 lun. 03:40]--[2024-07-08 lun. 03:53] =>  0:13
+CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
+:END:
+  see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
+- [X] More work needed for the form page (has already vars)
+- [X] May need an icon to page and sidebar item
+  This should be added to sidebar fields (iconclass)
+- [X] Sidebar should be wider for the Administration link to be in one line
+  Sidebar becomes lg-3 and right pan switch from lg-10 to lg-9
+- [X] Must remove homepage link to HELLO page (404)
+  Must rename page as well (called hello.tmpl)
+- [X] Now that the sidebar template has the Hello Item, print all items
+  with active status with a range loop
+- [ ] SVG-based icon can't be seen
 **** Must generate API documentation with godoc
 :LOGBOOK:
 CLOCK: [2024-10-21 lun. 11:35]--[2024-10-21 lun. 11:42] =>  0:07
@@ -98,25 +99,29 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   Maybe we need to go for a flat. No it doesn't solve the issue.
 - [ ] Must also generate API for JS code
   jsdoc --destination doc/js/ 
-**** TODO Continue array-based sidebar implementation (x2)
+**** TODO Start to use mongodb
 :LOGBOOK:
-CLOCK: [2024-07-25 jeu. 07:50]--[2024-07-25 jeu. 08:04] =>  0:14
-CLOCK: [2024-07-09 mar. 04:59]--[2024-07-09 mar. 05:19] =>  0:20
-CLOCK: [2024-07-08 lun. 03:57]--[2024-07-08 lun. 04:07] =>  0:10
-CLOCK: [2024-07-08 lun. 03:40]--[2024-07-08 lun. 03:53] =>  0:13
-CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
+CLOCK: [2024-11-08 ven. 12:24]--[2024-11-08 ven. 12:39] =>  0:15
+CLOCK: [2024-11-08 ven. 12:17]--[2024-11-08 ven. 12:21] =>  0:04
+CLOCK: [2024-11-08 ven. 12:02]--[2024-11-08 ven. 12:07] =>  0:05
+CLOCK: [2024-09-27 ven. 13:02]--[2024-09-27 ven. 13:08] =>  0:06
+CLOCK: [2024-09-09 lun. 10:03]--[2024-09-09 lun. 10:17] =>  0:14
+CLOCK: [2024-09-09 lun. 09:18]--[2024-09-09 lun. 09:27] =>  0:09
+CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
 :END:
-  see https://getbootstrap.com/docs/5.0/examples/sidebars/ for example
-- [X] More work needed for the form page (has already vars)
-- [X] May need an icon to page and sidebar item
-  This should be added to sidebar fields (iconclass)
-- [X] Sidebar should be wider for the Administration link to be in one line
-  Sidebar becomes lg-3 and right pan switch from lg-10 to lg-9
-- [X] Must remove homepage link to HELLO page (404)
-  Must rename page as well (called hello.tmpl)
-- [X] Now that the sidebar template has the Hello Item, print all items
-  with active status with a range loop
-- [ ] SVG-based icon can't be seen
+- [X] Must check for MONGODB_URI envvar
+- [X] Get a persistent connection
+- [X] Must explain MONGODB_URI usage in README  
+- [X] Try to connect at startup
+- [X] We must have mongo started to show --help, fix this
+- [ ] Actually getting 404 for static/ JS and CSS files  
+  - [ ] Get name and type in ServiceListenerAdd function
+    Works with =curl -X POST -d 'This is the body' 'http://localhost:3333/listener/add?name=aze&type=ert'=
+    - [ ] But we fail to call JS function addListenerCallback from template
+      because the admin.js inclusion returns a 404 error
+- [ ] Insert newly added listener
+  https://www.mongodb.com/docs/drivers/go/current/usage-examples/insertOne/#std-label-golang-insert-one
+- [ ] See main if we want to use godotenv  
 **** TODO go dependency upgrades
 :LOGBOOK:
 CLOCK: [2024-11-08 ven. 10:16]--[2024-11-08 ven. 10:23] =>  0:07
