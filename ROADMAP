@@ -115,6 +115,7 @@ CLOCK: [2024-05-02 jeu. 17:25]--[2024-05-02 jeu. 17:44] =>  0:19
 - [ ] SVG-based icon can't be seen
 **** TODO go dependency upgrades
 :LOGBOOK:
+CLOCK: [2024-11-08 ven. 10:16]--[2024-11-08 ven. 10:23] =>  0:07
 CLOCK: [2024-10-21 lun. 10:40]--[2024-10-21 lun. 10:44] =>  0:04
 CLOCK: [2024-09-27 ven. 11:31]--[2024-09-27 ven. 11:54] =>  0:23
 CLOCK: [2024-09-09 lun. 09:06]--[2024-09-09 lun. 09:07] =>  0:01
@@ -125,7 +126,7 @@ CLOCK: [2023-06-16 ven. 06:17]--[2023-06-16 ven. 06:22] =>  0:05
 CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
 :END:
 
-see README.md for commands
+see README.md for commands, then test and build
 - [X] 13 Jul. 2023 : Upgrade x/sys from 0.9.0 to 0.10.0
 - [X] 18 Aug. 2023 : Upgrade x/sys from 0.10 to 0.11
 - [X] 08 Jan. 2024 : Upgrade x/sys from 0.15 to 0.16
@@ -145,7 +146,7 @@ see README.md for commands
   | 09 Sep. 2024 | crypto, sys, text                         |
   | 27 Sep. 2024 | mongo-driver and compress                 |
   | 21 Oct. 2024 | x/sys+crypto+text, mongo-driver, compress |
-  |              |                                           |
+  | 08 Nov. 2024 | x/sys+crypto+text+sync                    |
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:
