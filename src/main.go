@@ -96,6 +96,15 @@ func main() {
 		log.Println("No .env file found")
 	}
 	*/
+	/// Chcking some args BEFORE checking db connection
+	for _, a := range os.Args[1:] { // Argument index, argument
+		if (a == "--help" || a== "-?" || a== "-h") {
+			usage()
+			os.Exit(0)
+		}
+	}
+
+	
 	CheckConnString();
 	db := Connect()
 	fmt.Printf("Connected to database '%p' using uri '%s'\n",
@@ -110,12 +119,10 @@ func main() {
 
 	fmt.Printf("Using interface type '%s'\n", IfacetypeToStr(Web))
 	
-	for _, a := range os.Args[1:] { // Argument index, argument
-		//   fmt.Printf("Arg %d is %s\n", i+1, a)
-		if (a == "--help" || a== "-?" || a== "-h") {
-			usage()
-			os.Exit(0)
-		}
+	/// Checking some args AFTER checking db connection
+	for i, a := range os.Args[1:] { // Argument index, argument
+		/// For instance, none
+		fmt.Printf("Arg %s (%d) not handled !\n", a, i+1)
 	}
 	
 	// Basic HTTP server
