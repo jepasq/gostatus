@@ -101,6 +101,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   jsdoc --destination doc/js/ 
 **** TODO Start to use mongodb
 :LOGBOOK:
+CLOCK: [2024-12-03 mar. 08:45]--[2024-12-03 mar. 09:16] =>  0:31
 CLOCK: [2024-11-08 ven. 12:24]--[2024-11-08 ven. 12:39] =>  0:15
 CLOCK: [2024-11-08 ven. 12:17]--[2024-11-08 ven. 12:21] =>  0:04
 CLOCK: [2024-11-08 ven. 12:02]--[2024-11-08 ven. 12:07] =>  0:05
@@ -114,7 +115,8 @@ CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
 - [X] Must explain MONGODB_URI usage in README  
 - [X] Try to connect at startup
 - [X] We must have mongo started to show --help, fix this
-- [ ] Actually getting 404 for static/ JS and CSS files  
+- [ ] Actually getting 404 for static/ JS and CSS files
+  Test with http://localhost:3333/static/style.css
   - [ ] Get name and type in ServiceListenerAdd function
     Works with =curl -X POST -d 'This is the body' 'http://localhost:3333/listener/add?name=aze&type=ert'=
     - [ ] But we fail to call JS function addListenerCallback from template
@@ -150,12 +152,14 @@ see README.md for commands, then test and build
 - [X] 08 Jul. 2024 : Upgrade x/sys from 0.21 tp 0.22
 - [X] 25 Jul. 2024 : none
 - [ ] Table versionning
-  | *Date*       | *Upgraded packages*                       |
-  | 20 Aug. 2024 | mongo-driver, crypto, sync, sys, text     |
-  | 09 Sep. 2024 | crypto, sys, text                         |
-  | 27 Sep. 2024 | mongo-driver and compress                 |
-  | 21 Oct. 2024 | x/sys+crypto+text, mongo-driver, compress |
-  | 08 Nov. 2024 | x/sys+crypto+text+sync                    |
+  | *Date*       | *Upgraded packages*                             |
+  | 20 Aug. 2024 | mongo-driver, crypto, sync, sys, text           |
+  | 09 Sep. 2024 | crypto, sys, text                               |
+  | 27 Sep. 2024 | mongo-driver and compress                       |
+  | 21 Oct. 2024 | x/sys+crypto+text, mongo-driver, compress       |
+  | 08 Nov. 2024 | x/sys+crypto+text+sync                          |
+  | 03 Dec. 2024 | go-spew snappy go-cmp compress mongo-driver x/* |
+  |              |                                                 |
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:

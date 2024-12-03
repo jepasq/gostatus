@@ -132,9 +132,12 @@ func main() {
 	mux.HandleFunc("/admin", getAdmin)
 	mux.HandleFunc("/form",  getForm)
 
-	// Trying to handle static content
-	mux.Handle("/static", http.FileServer(http.Dir("../static")))
-
+	// Trying to handle static content (from https://lets-go.alexedwards
+	//    .net/sample/02.09-serving-static-files.html
+	//	mux.Handle("/static", http.FileServer(http.Dir("../static")))
+	fileServer := http.FileServer(http.Dir("./../static/"))
+	mux.Handle("GET /static/", http.StripPrefix("/static", fileServer))
+	
 	// Listener related CRUD
 	mux.HandleFunc("/listener/add",  ServiceListenerAdd)
 
