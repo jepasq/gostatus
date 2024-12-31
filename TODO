@@ -7,7 +7,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc src/ static/js/`
 
 * v0.0.1-15 (21 Oct. 2024 - ???) SLOC ???
-- (5) Upgrade go-spew snappy go-cmp compress mongo-driver x/* and more
+- (6) Finally fix the static/dir handling issue
+- Upgrade go-spew snappy go-cmp compress mongo-driver x/* and more
 - Documenting 404 error on JS and CSS static/ files
 - Fix curl contact URL in admin page
 - Handle help command line argument before checking db connection

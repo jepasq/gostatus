@@ -136,7 +136,7 @@ func main() {
 	//    .net/sample/02.09-serving-static-files.html
 	//	mux.Handle("/static", http.FileServer(http.Dir("../static")))
 	fileServer := http.FileServer(http.Dir("./../static/"))
-	mux.Handle("GET /static/", http.StripPrefix("/static", fileServer))
+	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 	
 	// Listener related CRUD
 	mux.HandleFunc("/listener/add",  ServiceListenerAdd)
