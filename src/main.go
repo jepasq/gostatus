@@ -149,6 +149,8 @@ func main() {
 	}
 
 	ctx, cancelCtx := context.WithCancel(context.Background())
+	ctx = context.WithValue(ctx, "db", db)
+	
 	serverOne := &http.Server{
 		Addr:    ":3333",
 		Handler: mux,

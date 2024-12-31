@@ -56,3 +56,5 @@ func Connect() (Database) {
 
 	return ret
 }
+
+// func Connect() (Database) (name String, type /*etc...*/ ){ }

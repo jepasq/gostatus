@@ -42,6 +42,12 @@ func (l SystemCtlListener) status() string {
 func ServiceListenerAdd(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
+	db := ctx.Value("db");
+	if db == nil {
+		fmt.Printf("ERR: db from Context is nil. Can't continue.")
+		return
+	}
+	
 	id := r.URL.Query().Get("name")
 	typ:= r.URL.Query().Get("type")
 	
