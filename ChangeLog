@@ -1,3 +1,13 @@
+* v0.0.1-15 (21 Oct. 2024 - 31 Dec. 2024) SLOC 712
+- Pass connected db via Context.WithValue
+- Fix missingh parenthesis in addListenerCallback definition
+- Finally fix the static/dir handling issue
+- Upgrade go-spew snappy go-cmp compress mongo-driver x/* and more
+- Documenting 404 error on JS and CSS static/ files
+- Fix curl contact URL in admin page
+- Handle help command line argument before checking db connection
+- Upgrade several x dependencies
+
 * v0.0.1-14 (29 Jul. 2024 - 21 Oct. 2024) SLOC 692
 - Start to generate JS documentation
 - Trying to move addListener JS callback to a satic file

@@ -28,7 +28,7 @@ var templateDirs = []string{"../content", "../content/partials"}
 func getIntroText() (string) {
 	programName := os.Args[0]
 
-	return "Welcome to gostatus v0.0.1-14 (" + programName + ")"
+	return "Welcome to gostatus v0.0.1-15 (" + programName + ")"
 }
 
 /// Return a configuration directory (~/.gostatus)  content
