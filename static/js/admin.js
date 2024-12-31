@@ -1,4 +1,4 @@
-function addListenerCallback {
+function addListenerCallback() {
     let nameTxt = $('#listenerAddId').val();
     let typeTxt = $('#listenerType').find(":selected").val();
     if (!nameTxt) {

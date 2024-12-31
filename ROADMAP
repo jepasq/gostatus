@@ -101,6 +101,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   jsdoc --destination doc/js/ 
 **** TODO Start to use mongodb
 :LOGBOOK:
+CLOCK: [2024-12-31 mar. 10:33]--[2024-12-31 mar. 10:41] =>  0:08
 CLOCK: [2024-12-31 mar. 10:15]--[2024-12-31 mar. 10:20] =>  0:05
 CLOCK: [2024-12-03 mar. 08:45]--[2024-12-03 mar. 09:16] =>  0:31
 CLOCK: [2024-11-08 ven. 12:24]--[2024-11-08 ven. 12:39] =>  0:15
@@ -116,12 +117,13 @@ CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
 - [X] Must explain MONGODB_URI usage in README  
 - [X] Try to connect at startup
 - [X] We must have mongo started to show --help, fix this
-- [ ] Actually getting 404 for static/ JS and CSS files
+- [-] Actually getting 404 for static/ JS and CSS files
   Test with http://localhost:3333/static/style.css
-  - [ ] Get name and type in ServiceListenerAdd function
+  - [-] Get name and type in ServiceListenerAdd function
     Works with =curl -X POST -d 'This is the body' 'http://localhost:3333/listener/add?name=aze&type=ert'=
-    - [ ] But we fail to call JS function addListenerCallback from template
+    - [X] But we fail to call JS function addListenerCallback from template
       because the admin.js inclusion returns a 404 error
+    - [ ] Now, implement listener/add function to add to db
 - [ ] Insert newly added listener
   https://www.mongodb.com/docs/drivers/go/current/usage-examples/insertOne/#std-label-golang-insert-one
 - [ ] See main if we want to use godotenv  
