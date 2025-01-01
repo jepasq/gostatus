@@ -5,9 +5,15 @@ package main
 import (
 	"fmt"
 	//	"io/ioutil"
+	//	"context"
 	"net/http"
 )
 
+
+type Service struct {
+	Name  string
+	Stype string        `bson:"restaurant_id,omitempty"`
+}
 
 /// A listener abstract type used to monitor a service
 type ServiceListener interface {
@@ -55,5 +61,17 @@ func ServiceListenerAdd(w http.ResponseWriter, r *http.Request) {
 		ctx.Value(keyServerAddr),
 		id, typ)
 
+	
+	
+	// Insert value
+	newService := Service{Name: id, Stype: typ}
+	/*
+	coll := db.Client.Database("goStatus").Collection("services")
+	result, err := coll.InsertOne(context.TODO(), newService)
+	if err != nil {
+		panic(err)
+	}
+	*/
+	fmt.Printf("New service insertion result '%s'\n", newService /*result */)
 }
 

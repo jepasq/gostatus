@@ -20,8 +20,9 @@ const (
 
 
 type Database struct {
-	Client *mongo.Client
-	Uri    string
+	Client   *mongo.Client
+	Uri      string
+	OpenedDb *mongo.Database
 }
 
 func CheckConnString() {
@@ -48,6 +49,10 @@ func Connect() (Database) {
 	if err != nil {
 		panic(err)
 	}
+
+	/*	dba := client.Database("goStatus")
+	ret.OpenedDb = dba
+	*/
 	defer func() {
 		if err = client.Disconnect(context.TODO()); err != nil {
 			panic(err)

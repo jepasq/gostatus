@@ -101,6 +101,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   jsdoc --destination doc/js/ 
 **** TODO Start to use mongodb
 :LOGBOOK:
+CLOCK: [2025-01-01 mer. 12:11]--[2025-01-01 mer. 12:37] =>  0:26
 CLOCK: [2024-12-31 mar. 10:41]--[2024-12-31 mar. 10:58] =>  0:17
 CLOCK: [2024-12-31 mar. 10:33]--[2024-12-31 mar. 10:41] =>  0:08
 CLOCK: [2024-12-31 mar. 10:15]--[2024-12-31 mar. 10:20] =>  0:05
@@ -129,7 +130,8 @@ CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
   https://www.mongodb.com/docs/drivers/go/current/usage-examples/insertOne/#std-label-golang-insert-one
   - [X] How to pass db connection to callbacl, in context ?
     yes, via ctx.WithValue
-  - [ ] Implement db.InsertService  
+  - [ ] Implement db.InsertService
+    Have issue calling OpenendDb from Database object from context
 - [ ] See main if we want to use godotenv  
 **** TODO go dependency upgrades
 :LOGBOOK:
