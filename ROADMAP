@@ -170,8 +170,7 @@ see README.md for commands, then test and build
   | 08 Nov. 2024 | x/sys+crypto+text+sync                          |
   | 03 Dec. 2024 | go-spew snappy go-cmp compress mongo-driver x/* |
   | 31 Dec. 2024 | X/sys+crypto+sync+text                          |
-  | 28 Jan. 2025 | mongo-driver + s-sys+crypto                     |
-  |              |                                                 |
+  | 28 Jan. 2025 | mongo-driver + s-sys+crypto +                   |
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:
