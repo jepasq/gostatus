@@ -16,3 +16,10 @@ body {
     width: 100%;
     margin: 0;
 }
+
+table {
+    background-color: #EEC;
+    border-color: #303050;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 6px;
+}

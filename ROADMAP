@@ -137,6 +137,7 @@ CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
 - [ ] See main if we want to use godotenv  
 **** TODO go dependency upgrades
 :LOGBOOK:
+CLOCK: [2025-02-24 lun. 09:34]--[2025-02-24 lun. 09:40] =>  0:06
 CLOCK: [2024-12-31 mar. 09:20]--[2024-12-31 mar. 09:56] =>  0:36
 CLOCK: [2024-11-08 ven. 10:16]--[2024-11-08 ven. 10:23] =>  0:07
 CLOCK: [2024-10-21 lun. 10:40]--[2024-10-21 lun. 10:44] =>  0:04
@@ -172,7 +173,9 @@ see README.md for commands, then test and build
   | 08 Nov. 2024 | x/sys+crypto+text+sync                          |
   | 03 Dec. 2024 | go-spew snappy go-cmp compress mongo-driver x/* |
   | 31 Dec. 2024 | X/sys+crypto+sync+text                          |
-  | 28 Jan. 2025 | mongo-driver + s-sys+crypto +                   |
+  | 28 Jan. 2025 | mongo-driver + s-sys+crypto + others            |
+  | 24 Feb. 2025 | go=>1.23.0 + sys + sync + crypto + compress     |
+  |              |                                                 |
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:
