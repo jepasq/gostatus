@@ -22,22 +22,23 @@
 	    <th scope="col">Status</th>
 	    <th scope="col">Action</th>
 	  </thead>
-	  <tbody>
-	    <td>ID</td>
-	    <td>type</td>
-	    <td>params</td>
-	    <td>Listening?</td>
-	    <td>
-	      <button type="button" class="btn btn-secondary">
-		<i class="bi bi-stop-btn"></i>
-	      </button>
-	      <button type="button" class="btn btn-secondary">
-		<i class="bi bi-pause-btn"></i>
-	      </button>
-	      <button type="button" class="btn btn-secondary">
-		<i class="bi bi-trash"></i>
-	      </button>
-	      /Resume/Delete</td>
+	  <tbody id="servicesTableBody">
+	    <tr>
+	      <td>ID</td>
+	      <td>type</td>
+	      <td>params</td>
+	      <td>Listening?</td>
+	      <td>
+		<button type="button" class="btn btn-secondary">
+		  <i class="bi bi-stop-btn"></i>
+		</button>
+		<button type="button" class="btn btn-secondary">
+		  <i class="bi bi-pause-btn"></i>
+		</button>
+		<button type="button" class="btn btn-secondary">
+		  <i class="bi bi-trash"></i>
+		</button>/Resume/Delete</td>
+	      </tr>
 	  </tbody>
 	</table>
 	<form>
@@ -78,7 +79,7 @@
       </div> <!-- flex -->
       </div> <!-- row -->
     </main>
-    <script type="text/javascript" src="static/js/admin.js?v1"></script>
+    <script type="text/javascript" src="static/js/admin.js?v2"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $("#addListener").on('click', addListenerCallback);
