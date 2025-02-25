@@ -6,12 +6,5 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     Add a git tag for r-1 then push --tags for each revision
     SLOC is the result of `sloc src/ static/js/`
 
-* v0.0.1-16 (31 Dec. 2024 - ???) SLOC ???
-- (8) Started to implement a partial services load function
-- Remove referred Client.disconnect to fix actual error
-- First mongo InsertOne call after a db type cast
-- Add table style to improve its readability
-- Add and use the full-width-row CSS rule on all pages
-- Fix second row width issue on all templates
-- Fix sidebar width issue on large screens
-- Add Service type with bson attributes
+* v0.0.1-17 (25 Feb. 2025 - ???) SLOC ???
+

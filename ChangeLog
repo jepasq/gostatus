@@ -1,3 +1,13 @@
+* v0.0.1-16 (31 Dec. 2024 - 25 Feb. 2025) SLOC 746
+- Started to implement a partial services load function
+- Remove referred Client.disconnect to fix actual error
+- First mongo InsertOne call after a db type cast
+- Add table style to improve its readability
+- Add and use the full-width-row CSS rule on all pages
+- Fix second row width issue on all templates
+- Fix sidebar width issue on large screens
+- Add Service type with bson attributes
+
 * v0.0.1-15 (21 Oct. 2024 - 31 Dec. 2024) SLOC 712
 - Pass connected db via Context.WithValue
 - Fix missingh parenthesis in addListenerCallback definition
