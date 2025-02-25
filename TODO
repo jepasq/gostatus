@@ -7,7 +7,8 @@ gostatus - AGPLv3 - A microservices monitoring web application.
     SLOC is the result of `sloc src/ static/js/`
 
 * v0.0.1-16 (31 Dec. 2024 - ???) SLOC ???
-- (5) Add table style to improve its readability
+- (6) First mongo InsertOne call after a db type cast
+- Add table style to improve its readability
 - Add and use the full-width-row CSS rule on all pages
 - Fix second row width issue on all templates
 - Fix sidebar width issue on large screens

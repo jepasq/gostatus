@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 	//	"io/ioutil"
-	//	"context"
+	"context"
 	"net/http"
 )
 
@@ -48,12 +48,13 @@ func (l SystemCtlListener) status() string {
 func ServiceListenerAdd(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
-	db := ctx.Value("db");
-	if db == nil {
+	// db is the objet returned by Connect(). We have to cast it
+	db := ctx.Value("db").(Database) 
+	/*	if db == nil {
 		fmt.Printf("ERR: db from Context is nil. Can't continue.")
 		return
 	}
-	
+	*/
 	id := r.URL.Query().Get("name")
 	typ:= r.URL.Query().Get("type")
 	
@@ -65,13 +66,13 @@ func ServiceListenerAdd(w http.ResponseWriter, r *http.Request) {
 	
 	// Insert value
 	newService := Service{Name: id, Stype: typ}
-	/*
+	
 	coll := db.Client.Database("goStatus").Collection("services")
 	result, err := coll.InsertOne(context.TODO(), newService)
 	if err != nil {
 		panic(err)
 	}
-	*/
-	fmt.Printf("New service insertion result '%s'\n", newService /*result */)
+	
+	fmt.Printf("New service insertion result '%s'\n", result)
 }
 
