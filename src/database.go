@@ -53,11 +53,14 @@ func Connect() (Database) {
 	/*	dba := client.Database("goStatus")
 	ret.OpenedDb = dba
 	*/
-	defer func() {
+
+	// This function disconnect the database client ar the end of the
+	// function but we need it in services addition
+	/*defer func() {
 		if err = client.Disconnect(context.TODO()); err != nil {
 			panic(err)
 		}
-	}()
+	}()*/
 
 	return ret
 }

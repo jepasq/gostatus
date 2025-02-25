@@ -67,7 +67,7 @@ func ServiceListenerAdd(w http.ResponseWriter, r *http.Request) {
 	// Insert value
 	newService := Service{Name: id, Stype: typ}
 	
-	coll := db.Client.Database("goStatus").Collection("services")
+	coll := db.Client.Database("gostatus").Collection("services")
 	result, err := coll.InsertOne(context.TODO(), newService)
 	if err != nil {
 		panic(err)
