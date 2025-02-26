@@ -4,15 +4,19 @@ package main
 
 import (
 	"fmt"
+	"log"
 	//	"io/ioutil"
 	"context"
 	"net/http"
+	"encoding/json"
+	
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 
 type Service struct {
 	Name  string
-	Stype string        `bson:"restaurant_id,omitempty"`
+	Stype string        `bson:"service_id,omitempty"`
 }
 
 /// A listener abstract type used to monitor a service
@@ -76,3 +80,42 @@ func ServiceListenerAdd(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("New service insertion result '%s'\n", result)
 }
 
+func GetServicesJson(w http.ResponseWriter, r *http.Request) {
+	db := r.Context().Value("db").(Database) 
+	coll := db.Client.Database("gostatus").Collection("services")
+	// ctx := r.Context()
+
+	//find records
+	//pass these options to the Find method
+	//	findOptions := options.Find()
+	//Set the limit of the number of record to find
+	//	findOptions.SetLimit(5)
+	//Define an array in which you can store the decoded documents
+	var results []Service
+
+	//Passing the bson.D{{}} as the filter matches docs in the collection
+	cur, err := coll.Find(context.TODO(), bson.D{{}}/*, findOptions*/)
+	if err !=nil {
+		log.Fatal(err)
+	}
+
+	// results to JSON
+	for cur.Next(context.TODO()) {
+		//Create a value into which the single document can be decoded
+		var elem Service
+		err := cur.Decode(&elem)
+		if err != nil {
+			log.Fatal(err)
+		}
+		results =append(results, elem)
+	}
+	
+	b, err := json.Marshal(results)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	
+	//	writeTemplate(w, "%s", "{}")
+	fmt.Fprintf(w, "%s", string(b))
+}

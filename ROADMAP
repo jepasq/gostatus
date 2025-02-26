@@ -101,6 +101,7 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   jsdoc --destination doc/js/ 
 **** TODO Start to use mongodb
 :LOGBOOK:
+CLOCK: [2025-02-26 mer. 10:02]--[2025-02-26 mer. 10:27] =>  0:25
 CLOCK: [2025-02-25 mar. 09:57]--[2025-02-25 mar. 10:15] =>  0:18
 CLOCK: [2025-02-25 mar. 09:50]--[2025-02-25 mar. 09:56] =>  0:06
 CLOCK: [2025-02-25 mar. 09:15]--[2025-02-25 mar. 09:35] =>  0:20
@@ -138,7 +139,12 @@ CLOCK: [2024-07-26 ven. 08:09]--[2024-07-26 ven. 08:46] =>  0:37
   - [-] Implement db.InsertService
     Have issue calling OpenendDb from Database object from context
     - [X] We now have a =client is disconnected= error
-    - [ ] Should refresh page after success
+    - [X] Should refresh table after success
+      - [X] Write a function to retrieve all services from DB
+      - [X] Use json.Marshall to convert Go struct to JSON
+	https://stackoverflow.com/a/8271160
+      - [ ] JS code retrive this JSON list from *api/services.json* endpoint
+	and update HTTP table	
     - [ ] Now, list services from db    
 - [ ] See main if we want to use godotenv  
 **** TODO go dependency upgrades
@@ -347,4 +353,5 @@ CLOCK: [2022-11-23 mer. 06:33]--[2022-11-23 mer. 06:49] =>  0:16
   - [X] Must create a new _test file
   - [X] Explain in README  
 - [X] May be multi interfaces (web, CLI, TUI)
+  
   

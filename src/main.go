@@ -131,6 +131,7 @@ func main() {
 	mux.HandleFunc("/", getHome)
 	mux.HandleFunc("/admin", getAdmin)
 	mux.HandleFunc("/form",  getForm)
+	mux.HandleFunc("/api/services.json",  GetServicesJson)
 
 	// Trying to handle static content (from https://lets-go.alexedwards
 	//    .net/sample/02.09-serving-static-files.html
