@@ -1,7 +1,33 @@
+function tableData(str) {
+    return "<tr>" + str + "</tr>"
+}
+
+function elementToTableRow(elem) {
+    return "<tr>" + tableData(elem.Name) + tableData(elem.Stype) + "</tr>";
+}
+
 function loadServicesTable() {
     $("#servicesTableBody tr").detach();
-    // must contact server to get service list as JSON
-    $('#servicesTableBody').append('<tr><td>my data</td><td>more data</td></tr>');
+
+    $.ajax({
+	url: "http://localhost:3333/api/services.json",
+	method: "GET",
+	success: function(data) {
+	    let jsonObj = JSON.parse(data);
+	    console.log(typeof jsonObj)
+	    let row = $('<tr></tr>');
+	    jsonObj.forEach(function(element) {
+		console.log(element);
+		row.append(tableData(element.Name));
+		row.append(tableData(element.Stype));
+	    });
+	    $('#servicesTableBody').append(row);
+	},
+	error: function(jqXHR, textStatus, errorThrown) {
+	    msg = 'Erreur :' + textStatus + errorThrown;
+	    alert(msg);
+	}
+    });
 }
 
 function addListenerCallback() {
@@ -17,8 +43,10 @@ function addListenerCallback() {
 	method: "GET",
 	success: function(data) {
 	    loadServicesTable();
-	    alert("Success. reloading");
-//	    location.reload(true); // Or partially reload the table
 	},
+	error: function(jqXHR, textStatus, errorThrown) {
+	    msg = 'Erreur :' + textStatus + errorThrown;
+	    alert(msg);
+	}
     });
 }

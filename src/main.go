@@ -141,7 +141,6 @@ func main() {
 	
 	// Listener related CRUD
 	mux.HandleFunc("/listener/add",  ServiceListenerAdd)
-
 	
 	// Auto-open browser at startup
 	err := browser.OpenURL("localhost:3333");
