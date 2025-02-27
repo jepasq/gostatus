@@ -187,7 +187,7 @@ see README.md for commands, then test and build
   | 31 Dec. 2024 | X/sys+crypto+sync+text                          |
   | 28 Jan. 2025 | mongo-driver + s-sys+crypto + others            |
   | 24 Feb. 2025 | go=>1.23.0 + sys + sync + crypto + compress     |
-  |              |                                                 |
+  | 27 Feb. 2025 | mongo-driver + x                                |
 *** DONE v0.0.1
 **** DONE Continue array-based sidebar implementation (1)
 :LOGBOOK:
