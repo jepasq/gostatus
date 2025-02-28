@@ -101,11 +101,12 @@ CLOCK: [2023-05-03 mer. 11:33]--[2023-05-03 mer. 11:49] =>  0:16
   jsdoc --destination doc/js/ 
 **** TODO Admin page should list services stored in mongodb collection
 :LOGBOOK:
+CLOCK: [2025-02-28 ven. 09:35]--[2025-02-28 ven. 09:45] =>  0:10
 CLOCK: [2025-02-28 ven. 09:17]--[2025-02-28 ven. 09:32] =>  0:15
 :END:
 - [X] JS doesn't really add services to the table
 - [X] Also load it at startup, maybe with the same function ?
-- [ ] Essayer d'ajouter un spinner loading de jquery
+- [X] Essayer d'ajouter un spinner loading de jquery
 - [ ] See main if we want to use godotenv  
 **** TODO go dependency upgrades
 :LOGBOOK:

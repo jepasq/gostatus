@@ -22,6 +22,16 @@
 	    <th scope="col">Status</th>
 	    <th scope="col">Action</th>
 	  </thead>
+	  <!-- The following loading spinner table row is added outside (and
+	       before) tbody because the JS code calls ('tbode tr').detach()
+	       wich will result in loading message missing. -->
+	  <tr id="loadingRow" style="display: none;">
+	    <td colspan="5" style="text-align: center;">
+	      <div id="loading">
+		<i class="fa fa-spinner fa-spin"></i> Loading...
+	      </div>
+	    </td>
+	  </tr>
 	  <tbody id="servicesTableBody">
 	  </tbody>
 	</table>
@@ -66,7 +76,7 @@
     <script type="text/javascript" src="static/js/admin.js?v4"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        loadServicesTable(); 
+      loadServicesTable(); 
         $("#addListener").on('click', addListenerCallback);
       });
     </script>

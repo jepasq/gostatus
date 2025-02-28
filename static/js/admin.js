@@ -21,6 +21,7 @@ function elementToTableRow(elem) {
 
 function loadServicesTable() {
     $("#servicesTableBody tr").detach();
+    $('#loadingRow').show();
 
     $.ajax({
 	url: "http://localhost:3333/api/services.json",
@@ -42,7 +43,8 @@ function loadServicesTable() {
 	    msg = 'Erreur :' + textStatus + errorThrown;
 	    alert(msg);
 	}
-	});
+    });
+    $('#loadingRow').hide();
 }
 
 function addListenerCallback() {
