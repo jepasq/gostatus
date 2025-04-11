@@ -1,3 +1,13 @@
+* v0.0.1-17 (25 Feb. 2025 - 11 Apr. 2025) SLOC 834
+- Close a new deps update ROADMAP section
+- Upgrade to golang snappy v1 + other x/ dependencies
+- Add a loading message inside the table
+- Really load services table in JS using API data
+- Close a services/mongodb-related ROADMAP section
+- JS retrieve services from API/mongo but don't add it to HTML table
+- Upgrade mongo-driver + x dependencies
+- Add an api/services.json endpoint to retrieve all DB services
+
 * v0.0.1-16 (31 Dec. 2024 - 25 Feb. 2025) SLOC 746
 - Started to implement a partial services load function
 - Remove referred Client.disconnect to fix actual error
