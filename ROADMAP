@@ -125,6 +125,11 @@ CLOCK: [2023-04-25 mar. 11:41]--[2023-04-25 mar. 11:41] =>  0:00
 :END:
 
 see README.md for commands, then test and build
+- [ ] Table versionning
+  | *Date*       | *Upgraded packages*                                |
+  | 11 Apr. 2025 | golang/snappy + x/sys + crypto + sync + sys + text |
+  |              |                                                    |
+**** DONE Previous dependencies update sessions
 - [X] 13 Jul. 2023 : Upgrade x/sys from 0.9.0 to 0.10.0
 - [X] 18 Aug. 2023 : Upgrade x/sys from 0.10 to 0.11
 - [X] 08 Jan. 2024 : Upgrade x/sys from 0.15 to 0.16
@@ -138,7 +143,7 @@ see README.md for commands, then test and build
 - [X] 11 Jun. 2024 : Upgrade x/sys from 0.20 tp 0.21
 - [X] 08 Jul. 2024 : Upgrade x/sys from 0.21 tp 0.22
 - [X] 25 Jul. 2024 : none
-- [ ] Table versionning
+- [X] Table versionning
   | *Date*       | *Upgraded packages*                                |
   | 20 Aug. 2024 | mongo-driver, crypto, sync, sys, text              |
   | 09 Sep. 2024 | crypto, sys, text                                  |
@@ -150,8 +155,6 @@ see README.md for commands, then test and build
   | 28 Jan. 2025 | mongo-driver + s-sys+crypto + others               |
   | 24 Feb. 2025 | go=>1.23.0 + sys + sync + crypto + compress        |
   | 27 Feb. 2025 | mongo-driver + x                                   |
-  | 11 Apr. 2025 | golang/snappy + x/sys + crypto + sync + sys + text |
-  |              |                                                    |
 **** DONE Start to use mongodb
 :LOGBOOK:
 CLOCK: [2025-02-27 jeu. 09:55]--[2025-02-27 jeu. 10:18] =>  0:23
