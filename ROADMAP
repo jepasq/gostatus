@@ -110,6 +110,7 @@ CLOCK: [2025-02-28 ven. 09:17]--[2025-02-28 ven. 09:32] =>  0:15
 - [ ] See main if we want to use godotenv  
 **** TODO go dependency upgrades
 :LOGBOOK:
+CLOCK: [2025-04-11 ven. 10:12]--[2025-04-11 ven. 10:17] =>  0:05
 CLOCK: [2025-02-24 lun. 09:34]--[2025-02-24 lun. 09:40] =>  0:06
 CLOCK: [2024-12-31 mar. 09:20]--[2024-12-31 mar. 09:56] =>  0:36
 CLOCK: [2024-11-08 ven. 10:16]--[2024-11-08 ven. 10:23] =>  0:07
@@ -138,17 +139,19 @@ see README.md for commands, then test and build
 - [X] 08 Jul. 2024 : Upgrade x/sys from 0.21 tp 0.22
 - [X] 25 Jul. 2024 : none
 - [ ] Table versionning
-  | *Date*       | *Upgraded packages*                             |
-  | 20 Aug. 2024 | mongo-driver, crypto, sync, sys, text           |
-  | 09 Sep. 2024 | crypto, sys, text                               |
-  | 27 Sep. 2024 | mongo-driver and compress                       |
-  | 21 Oct. 2024 | x/sys+crypto+text, mongo-driver, compress       |
-  | 08 Nov. 2024 | x/sys+crypto+text+sync                          |
-  | 03 Dec. 2024 | go-spew snappy go-cmp compress mongo-driver x/* |
-  | 31 Dec. 2024 | X/sys+crypto+sync+text                          |
-  | 28 Jan. 2025 | mongo-driver + s-sys+crypto + others            |
-  | 24 Feb. 2025 | go=>1.23.0 + sys + sync + crypto + compress     |
-  | 27 Feb. 2025 | mongo-driver + x                                |
+  | *Date*       | *Upgraded packages*                                |
+  | 20 Aug. 2024 | mongo-driver, crypto, sync, sys, text              |
+  | 09 Sep. 2024 | crypto, sys, text                                  |
+  | 27 Sep. 2024 | mongo-driver and compress                          |
+  | 21 Oct. 2024 | x/sys+crypto+text, mongo-driver, compress          |
+  | 08 Nov. 2024 | x/sys+crypto+text+sync                             |
+  | 03 Dec. 2024 | go-spew snappy go-cmp compress mongo-driver x/*    |
+  | 31 Dec. 2024 | X/sys+crypto+sync+text                             |
+  | 28 Jan. 2025 | mongo-driver + s-sys+crypto + others               |
+  | 24 Feb. 2025 | go=>1.23.0 + sys + sync + crypto + compress        |
+  | 27 Feb. 2025 | mongo-driver + x                                   |
+  | 11 Apr. 2025 | golang/snappy + x/sys + crypto + sync + sys + text |
+  |              |                                                    |
 **** DONE Start to use mongodb
 :LOGBOOK:
 CLOCK: [2025-02-27 jeu. 09:55]--[2025-02-27 jeu. 10:18] =>  0:23
